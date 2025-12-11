@@ -6,7 +6,7 @@ import { CartContext } from "../CartContext";
 import html2canvas from "https://cdn.jsdelivr.net/npm/html2canvas@latest/dist/html2canvas.esm.js";
 import TransformControls from "./TransformControls";
 import Removebg from "./Removebg";
-import { compressImageIfNeeded } from '../imagecompressor/imagecompressor.js'; // Adjust the path accordingly
+import { compressImageIfNeeded } from "../imagecompressor/imagecompressor.js"; // Adjust the path accordingly
 
 const NSPersonalize = () => {
   const persImgContRef = useRef(null);
@@ -30,9 +30,8 @@ const NSPersonalize = () => {
   const [isremovebg, setremovebg] = useState(false);
   const offer = JSON.parse(sessionStorage.getItem("Nameslipoffer")) || 100;
 
-
-
-  const studentDetail = JSON.parse(sessionStorage.getItem("studentDetails")) || null;
+  const studentDetail =
+    JSON.parse(sessionStorage.getItem("studentDetails")) || null;
   const calculateFontSize = (
     textLength,
     baseFontSize = 38,
@@ -42,6 +41,7 @@ const NSPersonalize = () => {
     const fontSize = baseFontSize - textLength * 0.3; // Adjust the multiplier (0.5) as needed
     return Math.max(fontSize, minFontSize); // Ensure font size doesn't go below the minimum
   };
+
   const [transformations, setTransformations] = useState({
     scale: 1, // Zoom level
     rotate: 0, // Rotation angle
@@ -53,32 +53,38 @@ const NSPersonalize = () => {
   const fontdetails = JSON.parse(sessionStorage.getItem("detailsFont") || null);
 
   const [nameTrans, setNameTrans] = useState({
-
     fontSize: editedproduct?.labels?.[0]?.text?.length
       ? calculateFontSize(editedproduct.labels[0].text.length) + 10
       : studentDetail?.name?.length
-        ? calculateFontSize(studentDetail.name.length) + 10
-        : 30, scale: editedproduct ? parseInt(editedproduct.labels[0].scale) : 1, // Zoom level
+      ? calculateFontSize(studentDetail.name.length) + 10
+      : 30,
+    scale: editedproduct ? parseInt(editedproduct.labels[0].scale) : 1, // Zoom level
     rotate: 0, // Rotation angle
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[0] ? editedproduct.labels[0].fontColor : fontdetails?.[0]?.color ? fontdetails?.[0]?.color : "#292d9e",
-
+    color: editedproduct?.labels?.[0]
+      ? editedproduct.labels[0].fontColor
+      : fontdetails?.[0]?.color
+      ? fontdetails?.[0]?.color
+      : "#292d9e",
   });
   const [schooltrans, setschooltrans] = useState({
     fontSize: editedproduct?.labels?.[1]?.text?.length
       ? calculateFontSize(editedproduct.labels[1].text.length)
       : studentDetail?.schoolName?.length
-        ? calculateFontSize(studentDetail.schoolName.length)
-        : 30,
+      ? calculateFontSize(studentDetail.schoolName.length)
+      : 30,
     scale: editedproduct ? parseInt(editedproduct.labels[1].scale) : 1, // Zoom level
     rotate: 0, // Rotation angle
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[1] ? editedproduct.labels[1].fontColor : fontdetails?.[1]?.color ? fontdetails[1].color : "#292d9e",
-
+    color: editedproduct?.labels?.[1]
+      ? editedproduct.labels[1].fontColor
+      : fontdetails?.[1]?.color
+      ? fontdetails[1].color
+      : "#292d9e",
   });
   const [subjecttrans, setsubjecttrans] = useState({
     fontSize: editedproduct ? parseInt(editedproduct.labels[2].fontSize) : 30,
@@ -87,48 +93,62 @@ const NSPersonalize = () => {
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[2] ? editedproduct.labels[2].fontColor : fontdetails?.[2]?.color ? fontdetails[2].color : "#292d9e",
-
+    color: editedproduct?.labels?.[2]
+      ? editedproduct.labels[2].fontColor
+      : fontdetails?.[2]?.color
+      ? fontdetails[2].color
+      : "#292d9e",
   });
   const [rollnotrans, setrollnotrans] = useState({
     fontSize: editedproduct?.labels?.[3]?.text?.length
       ? calculateFontSize(editedproduct.labels[3].text.length)
       : studentDetail?.rollNumber?.length
-        ? calculateFontSize(studentDetail.rollNumber.length)
-        : 30,
+      ? calculateFontSize(studentDetail.rollNumber.length)
+      : 30,
     scale: editedproduct ? parseInt(editedproduct.labels[3].scale) : 1, // Zoom level
     rotate: 0, // Rotation angle
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[3] ? editedproduct.labels[3].fontColor : fontdetails?.[3]?.color ? fontdetails[3].color : "#292d9e",
-
+    color: editedproduct?.labels?.[3]
+      ? editedproduct.labels[3].fontColor
+      : fontdetails?.[3]?.color
+      ? fontdetails[3].color
+      : "#292d9e",
   });
   const [sectiontrans, setsectiontrans] = useState({
     fontSize: editedproduct?.labels?.[4]?.text?.length
       ? calculateFontSize(editedproduct.labels[4].text.length)
       : studentDetail?.section?.length
-        ? calculateFontSize(studentDetail.section.length)
-        : 30, scale: editedproduct ? parseInt(editedproduct.labels[4].scale) : 1, // Zoom level
+      ? calculateFontSize(studentDetail.section.length)
+      : 30,
+    scale: editedproduct ? parseInt(editedproduct.labels[4].scale) : 1, // Zoom level
     rotate: 0, // Rotation angle
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[4] ? editedproduct.labels[4].fontColor : fontdetails?.[4]?.color ? fontdetails[4].color : "#292d9e",
-
+    color: editedproduct?.labels?.[4]
+      ? editedproduct.labels[4].fontColor
+      : fontdetails?.[4]?.color
+      ? fontdetails[4].color
+      : "#292d9e",
   });
   const [classtrans, setclasstrans] = useState({
     fontSize: editedproduct?.labels?.[5]?.text?.length
       ? calculateFontSize(editedproduct.labels[5].text.length)
       : studentDetail?.class?.length
-        ? calculateFontSize(studentDetail.class.length)
-        : 30, scale: editedproduct ? parseInt(editedproduct.labels[5].scale) : 1, // Zoom level
+      ? calculateFontSize(studentDetail.class.length)
+      : 30,
+    scale: editedproduct ? parseInt(editedproduct.labels[5].scale) : 1, // Zoom level
     rotate: 0, // Rotation angle
     translateX: 0, // Horizontal movement
     translateY: 0, // Vertical movement
     mirror: 1,
-    color: editedproduct?.labels?.[5] ? editedproduct.labels[5].fontColor : fontdetails?.[5]?.color ? fontdetails[5].color : "#292d9e",
-
+    color: editedproduct?.labels?.[5]
+      ? editedproduct.labels[5].fontColor
+      : fontdetails?.[5]?.color
+      ? fontdetails[5].color
+      : "#292d9e",
   });
   const [orderData, setOrderData] = useState(() => {
     try {
@@ -140,60 +160,109 @@ const NSPersonalize = () => {
     }
   });
 
-  const [selectedImage, setSelectedImage] = useState(sessionStorage.getItem("personImage") ||
-    orderData?.personImage || null
+  const [selectedImage, setSelectedImage] = useState(
+    sessionStorage.getItem("personImage") || orderData?.personImage || null
   );
+
   const str = orderData?.labels?.[2]?.text;
 
   const formattedStr = Array.isArray(str) ? str[0] : str;
 
   // Convert string to an array
-  const arr = typeof formattedStr === "string"
-    ? formattedStr.split(",").map(item => item.trim()).filter(item => item !== "")
-    : [];
+  const arr =
+    typeof formattedStr === "string"
+      ? formattedStr
+          .split(",")
+          .map((item) => item.trim())
+          .filter((item) => item !== "")
+      : [];
 
   const [studentDetails, setStudentDetails] = useState({
-    name: editedproduct?.labels?.[0]?.text || studentDetail?.name || orderData?.labels?.[0]?.text || "",
-    schoolName: editedproduct?.labels?.[1]?.text || studentDetail?.schoolName || orderData?.labels?.[1]?.text || "",
-    subject: editedproduct?.labels?.[2]?.text || studentDetail?.subject || orderData && arr || [],
-    rollNumber: editedproduct?.labels?.[3]?.text || studentDetail?.rollNumber || orderData?.labels?.[3]?.text || "",
-    section: editedproduct?.labels?.[4]?.text || studentDetail?.section || orderData?.labels?.[4]?.text || "",
-    class: editedproduct?.labels?.[5]?.text || studentDetail?.class || orderData?.labels?.[5]?.text || "",
-
+    name:
+      editedproduct?.labels?.[0]?.text ||
+      studentDetail?.name ||
+      orderData?.labels?.[0]?.text ||
+      "",
+    schoolName:
+      editedproduct?.labels?.[1]?.text ||
+      studentDetail?.schoolName ||
+      orderData?.labels?.[1]?.text ||
+      "",
+    subject:
+      editedproduct?.labels?.[2]?.text ||
+      studentDetail?.subject ||
+      (orderData && arr) ||
+      [],
+    rollNumber:
+      editedproduct?.labels?.[3]?.text ||
+      studentDetail?.rollNumber ||
+      orderData?.labels?.[3]?.text ||
+      "",
+    section:
+      editedproduct?.labels?.[4]?.text ||
+      studentDetail?.section ||
+      orderData?.labels?.[4]?.text ||
+      "",
+    class:
+      editedproduct?.labels?.[5]?.text ||
+      studentDetail?.class ||
+      orderData?.labels?.[5]?.text ||
+      "",
   });
-  sessionStorage.setItem("studentDetails", JSON.stringify(studentDetails) || null);
-  sessionStorage.setItem("detailsFont", JSON.stringify([nameTrans, schooltrans, subjecttrans, rollnotrans, sectiontrans, classtrans] || null));
+  sessionStorage.setItem(
+    "studentDetails",
+    JSON.stringify(studentDetails) || null
+  );
+  sessionStorage.setItem(
+    "detailsFont",
+    JSON.stringify(
+      [
+        nameTrans,
+        schooltrans,
+        subjecttrans,
+        rollnotrans,
+        sectiontrans,
+        classtrans,
+      ] || null
+    )
+  );
   useEffect(() => {
-
     if (labelType === "matte") {
-      setPrice(Math.round(offer.original_price_matte
-        * (1 - offer.
-          offer_percentage_matte / 100)
-      ) || 100);
+      setPrice(
+        Math.round(
+          offer.original_price_matte * (1 - offer.offer_percentage_matte / 100)
+        ) || 100
+      );
       if (studentDetails.subject.length > 0) {
-        setPrice(Math.round(offer.original_price_matte
-          * (1 - offer.
-            offer_percentage_matte / 100)
-        ) + 30 || 100 + 30);
+        setPrice(
+          Math.round(
+            offer.original_price_matte *
+              (1 - offer.offer_percentage_matte / 100)
+          ) + 30 || 100 + 30
+        );
       }
     }
     if (labelType === "glossy") {
-      setPrice(Math.round(
-        offer.original_price_glossy * (1 - offer.
-          offer_percentage_glossy / 100)
-      ) || 160)
+      setPrice(
+        Math.round(
+          offer.original_price_glossy *
+            (1 - offer.offer_percentage_glossy / 100)
+        ) || 160
+      );
       if (studentDetails.subject.length > 0) {
-        setPrice(Math.round(
-          offer.original_price_glossy * (1 - offer.
-            offer_percentage_glossy / 100) + 30
-        ) || 160 + 30)
+        setPrice(
+          Math.round(
+            offer.original_price_glossy *
+              (1 - offer.offer_percentage_glossy / 100) +
+              30
+          ) || 160 + 30
+        );
       }
-    };
-  }, [offer, labelType, studentDetails.subject])
-
+    }
+  }, [offer, labelType, studentDetails.subject]);
 
   useEffect(() => {
-    let offer = null
+    let offer = null;
     const fetchOfferAndCheckCart = async () => {
       try {
         const response = await fetch("/offer.json");
@@ -225,10 +294,9 @@ const NSPersonalize = () => {
           if (labelType === "matte") {
             setPrice(0);
           }
-
         }
-      };
-    }
+      }
+    };
     fetchOfferAndCheckCart();
   }, [orderData, labelType]);
 
@@ -246,12 +314,9 @@ const NSPersonalize = () => {
     // window.open(whatsappLink);
   }
 
-
-
   const [fontColor, setFontColor] = useState(
     editedproduct ? editedproduct.labels[0].fontColor : "#0000FF"
   );
-
 
   const [fontFamily, setFontFamily] = useState(
     editedproduct ? editedproduct.labels[0].fontFamily : "Arial"
@@ -571,15 +636,15 @@ const NSPersonalize = () => {
 
     const file = event.target.files[0];
     if (file) {
-      setLoadingimage(true)
+      setLoadingimage(true);
 
       const reader = new FileReader();
       const compressedFile = await compressImageIfNeeded(file);
       // When the file is read, update the state with the image's base64 string
       reader.onload = (e) => {
         setSelectedImage(e.target.result);
-        setinitialimage(e.target.result)
-        sessionStorage.setItem("personImage", e.target.result)
+        setinitialimage(e.target.result);
+        sessionStorage.setItem("personImage", e.target.result);
         sessionStorage.setItem("initialimage", e.target.result);
 
         setLoadingimage(false);
@@ -592,8 +657,6 @@ const NSPersonalize = () => {
   // Handle slider changes
   const handleBrightnessChange = (e) => setBrightness(e.target.value);
   const handleContrastChange = (e) => setContrast(e.target.value);
-
-
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -821,7 +884,9 @@ const NSPersonalize = () => {
     });
   };
   const [manualSubject, setManualSubject] = useState("");
-  const [manualSubjects, setManualSubjects] = useState(JSON.parse(localStorage.getItem("manuallyaddedsubject")) || []);
+  const [manualSubjects, setManualSubjects] = useState(
+    JSON.parse(localStorage.getItem("manuallyaddedsubject")) || []
+  );
   const handleManualInputChange = (e) => {
     const value = e.target.value;
     const regex =
@@ -829,7 +894,6 @@ const NSPersonalize = () => {
     // Only set value if valid
     if (regex.test(value) || value === "") {
       setManualSubject(value);
-
     }
   };
 
@@ -852,7 +916,7 @@ const NSPersonalize = () => {
                 <div className="spinner"></div>
               </div>
             )}
-            {selectedImage && !loadingimage &&
+            {selectedImage && !loadingimage && (
               <img
                 id="perimg1"
                 className="personImage1"
@@ -867,7 +931,7 @@ const NSPersonalize = () => {
                   transition: "transform 0.2s",
                 }}
               />
-            }
+            )}
           </div>
           <label
             className="studentname-lab1"
@@ -919,7 +983,7 @@ const NSPersonalize = () => {
               fontFamily: fontFamily,
               transform: `scale(${rollnotrans.scale}) rotate(${rollnotrans.rotate}deg) translate(${rollnotrans.translateX}px, ${rollnotrans.translateY}px) scaleX(${rollnotrans.mirror})`,
               transition: "transform 0.2s",
-              display: "none"
+              display: "none",
             }}
           >
             {studentDetails.rollNumber}
@@ -1127,9 +1191,9 @@ const NSPersonalize = () => {
                     type === "color"
                       ? setNameTrans((prev) => ({ ...prev, [type]: value }))
                       : setNameTrans((prev) => ({
-                        ...prev,
-                        [type]: prev[type] + value,
-                      }))
+                          ...prev,
+                          [type]: prev[type] + value,
+                        }))
                   }
                   fontSize={nameTrans.fontSize * nameTrans.scale}
                 />
@@ -1173,9 +1237,9 @@ const NSPersonalize = () => {
                     type === "color"
                       ? setschooltrans((prev) => ({ ...prev, [type]: value }))
                       : setschooltrans((prev) => ({
-                        ...prev,
-                        [type]: prev[type] + value,
-                      }))
+                          ...prev,
+                          [type]: prev[type] + value,
+                        }))
                   }
                   fontSize={schooltrans.fontSize * schooltrans.scale}
                 />
@@ -1245,9 +1309,9 @@ const NSPersonalize = () => {
                       type === "color"
                         ? setclasstrans((prev) => ({ ...prev, [type]: value }))
                         : setclasstrans((prev) => ({
-                          ...prev,
-                          [type]: prev[type] + value,
-                        }))
+                            ...prev,
+                            [type]: prev[type] + value,
+                          }))
                     }
                     fontSize={classtrans.fontSize * classtrans.scale}
                   />
@@ -1286,13 +1350,13 @@ const NSPersonalize = () => {
                     onUpdateTransform={(type, value) =>
                       type === "color"
                         ? setsectiontrans((prev) => ({
-                          ...prev,
-                          [type]: value,
-                        }))
+                            ...prev,
+                            [type]: value,
+                          }))
                         : setsectiontrans((prev) => ({
-                          ...prev,
-                          [type]: prev[type] + value,
-                        }))
+                            ...prev,
+                            [type]: prev[type] + value,
+                          }))
                     }
                     fontSize={sectiontrans.fontSize * sectiontrans.scale}
                   />
@@ -1305,7 +1369,9 @@ const NSPersonalize = () => {
                 name="subject"
                 placeholder="Subject"
                 value={selectedOption || studentDetails.subject}
-                onFocus={() => { setShowOptions(true) }}
+                onFocus={() => {
+                  setShowOptions(true);
+                }}
                 // onInput={handleInputChange}
                 readOnly
                 className="studentDetails"
@@ -1404,13 +1470,25 @@ const NSPersonalize = () => {
                             ...prev,
                             subject: [...prev.subject, manualSubject],
                           }));
-                          const existedsubjects = JSON.parse(localStorage.getItem("manuallyaddedsubject")) || []
-                          localStorage.setItem("manuallyaddedsubject", JSON.stringify([manualSubject]));
+                          const existedsubjects =
+                            JSON.parse(
+                              localStorage.getItem("manuallyaddedsubject")
+                            ) || [];
+                          localStorage.setItem(
+                            "manuallyaddedsubject",
+                            JSON.stringify([manualSubject])
+                          );
 
                           if (existedsubjects.length > 0) {
-                            const manuallyadded = [...existedsubjects, manualSubject]
+                            const manuallyadded = [
+                              ...existedsubjects,
+                              manualSubject,
+                            ];
 
-                            localStorage.setItem("manuallyaddedsubject", JSON.stringify(manuallyadded));
+                            localStorage.setItem(
+                              "manuallyaddedsubject",
+                              JSON.stringify(manuallyadded)
+                            );
                           }
                           setManualSubject("");
                         }
@@ -1432,22 +1510,26 @@ const NSPersonalize = () => {
                 />
               </button>
             </div>
-
-            count: {
-              studentDetails?.subject?.filter(sub => sub.trim() !== '').length
-            }
-            <button onClick={() => setStudentDetails(prev => ({
-              ...prev,
-              subject: []
-            }))}>clear all subjects</button>
+            count:{" "}
+            {studentDetails?.subject?.filter((sub) => sub.trim() !== "").length}
+            <button
+              onClick={() =>
+                setStudentDetails((prev) => ({
+                  ...prev,
+                  subject: [],
+                }))
+              }
+            >
+              clear all subjects
+            </button>
             <br />
             You need to pay extra ₹ 30 for adding subjects
             <p style={{ color: "red", fontSize: "12px", marginTop: "5px" }}>
               {studentDetails.subject.length > 29
                 ? "⚠ You can only select up to 30 subjects!"
                 : studentDetails.subject.length < 1
-                  ? "⚠ You can only select up to 30 subjects!"
-                  : ""}
+                ? "⚠ You can only select up to 30 subjects!"
+                : ""}
             </p>
           </div>
           <div id="fontcenter">
@@ -1532,10 +1614,19 @@ const NSPersonalize = () => {
                 style={{ width: "50px" }}
               />
             </div>
-            <label id="price" className="price-label" title={`₹${price} x ${quantity} = ₹${price * quantity}`}>
-              Price: {price === 0 ? ("Free") : (<span className="price-value">
-                ₹{(price * quantity).toLocaleString('en-IN')}
-              </span>)}
+            <label
+              id="price"
+              className="price-label"
+              title={`₹${price} x ${quantity} = ₹${price * quantity}`}
+            >
+              Price:{" "}
+              {price === 0 ? (
+                "Free"
+              ) : (
+                <span className="price-value">
+                  ₹{(price * quantity).toLocaleString("en-IN")}
+                </span>
+              )}
             </label>
             <br />
             <button id="add" onClick={handleAddToCart}>

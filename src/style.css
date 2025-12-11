@@ -1072,3 +1072,28 @@ li {
 .scroller.stop {
   animation-play-state: paused;
 }
+
+/* New Classes */
+/* custom scroll bar css classNew */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #12345a transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #12345a;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}

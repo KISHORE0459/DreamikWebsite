@@ -1,9 +1,10 @@
 // Products.jsx
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import ProductDescription from "../../AppComponents/NameSlipComps/ProductDescription";
 import NameSlipFramePicker from "../../AppComponents/NameSlipComps/NameSlipFramePicker";
+import ProductPreviewComp from "../../AppComponents/PreviewComp/ProductPreviewComp";
 
 const Products = () => {
   const { productcode } = useParams();
@@ -122,7 +123,7 @@ const Products = () => {
     }
 
     localStorage.setItem("keyid", id);
-    navigate(`/NS${template}/${productcodeParam}`);
+    navigate(`/name-slip/${template}/${productcodeParam}`);
   };
 
   // --- Helpers for mask src & offer calculation ---
@@ -171,13 +172,11 @@ const Products = () => {
   }
 
   return (
-    <section className="px-4! py-8!">
+    <section className="flex flex-col gap-[30px] px-4! py-8!">
       <div className="grid grid-cols-12 gap-6 items-start">
-        {/* LEFT: Visuals (7 columns) */}
         <div className="col-span-12 lg:col-span-5 px-2!">
-          {/* Main visual area */}
-          <div className="bg-white rounded overflow-hidden">
-            <div className="w-full h-[420px] bg-gray-50">
+          <div className="bg-white rounded overflow-hidden flex flex-col gap-10!">
+            <div className="w-full max-h-[420px] bg-gray-50">
               {/* Container to keep main label size stable */}
               <div className="relative w-full max-h-[420px] flex items-center justify-center">
                 {/* Base product source */}
@@ -202,7 +201,6 @@ const Products = () => {
                 ) : null}
               </div>
             </div>
-
             <NameSlipFramePicker
               frames={product.gallery}
               currentIndex={currentIndex}
@@ -230,29 +228,11 @@ const Products = () => {
           />
         </div>
       </div>
-
-      {/* Output preview horizontally below */}
-      <div className="mt-8">
-        <Typography variant="h6" className="mb-3">
-          Output of labels
-        </Typography>
-        <div className="h-1 bg-black mb-4" />
-        <div className="overflow-x-auto py-4">
-          <div className="flex gap-4">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <img
-                key={i}
-                src={`/image/Nsdemo/Nsdemo${(i % 3) + 1}.jpeg`}
-                alt={`out-${i}`}
-                width={250}
-                height={250}
-                className="object-cover rounded-lg shadow"
-              />
-            ))}
-          </div>
-        </div>
-        <div className="h-1 bg-black mt-6" />
-      </div>
+      <ProductPreviewComp
+        images={Array.from({ length: 12 }).map(
+          (_, i) => `/image/Nsdemo/Nsdemo${(i % 3) + 1}.jpeg`
+        )}
+      />
     </section>
   );
 };
