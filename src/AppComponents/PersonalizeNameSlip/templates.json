@@ -1,0 +1,85 @@
+{
+  "template1": {
+    "name": "Default Blue Label",
+
+    "background": "/images/templates/template1-bg.png",
+
+    "image": {
+      "enabled": true,
+      "top": "35%",
+      "left": "67%",
+      "width": "30%",
+      "maxWidth": "36%",
+      "maxHeight": "33%",
+      "shape": "square"
+    },
+
+    "labels": {
+      "name": { "top": "34%", "left": "22%", "defaultSize": 35 },
+      "school": { "top": "77%", "left": "22%", "defaultSize": 35 },
+      "subject": { "top": "67%", "left": "25%", "defaultSize": 35 },
+      "roll": { "top": "10000%", "left": "25%", "defaultSize": 30 },
+      "section": { "top": "52%", "left": "50%", "defaultSize": 35 },
+      "class": { "top": "53%", "left": "23%", "defaultSize": 35 }
+    },
+
+    "watermark": {
+      "enabled": true,
+      "src": "/images/watermarks/template1-mark.png",
+      "top": "85%",
+      "left": "10%",
+      "opacity": 0.2
+    }
+  },
+  "template2": {
+    "name": "Red Classic Label",
+
+    "background": "/images/templates/template2-bg.png",
+
+    "image": {
+      "enabled": true,
+      "top": "40%",
+      "left": "60%",
+      "width": "28%",
+      "maxWidth": "30%",
+      "maxHeight": "30%",
+      "shape": "circle"
+    },
+
+    "labels": {
+      "name": { "top": "32%", "left": "20%", "defaultSize": 32 },
+      "school": { "top": "75%", "left": "20%", "defaultSize": 30 },
+      "subject": { "top": "65%", "left": "22%", "defaultSize": 28 },
+      "class": { "top": "50%", "left": "20%", "defaultSize": 30 },
+      "section": { "top": "50%", "left": "45%", "defaultSize": 30 }
+    },
+
+    "watermark": {
+      "enabled": false
+    }
+  },
+
+  "template3": {
+    "name": "Minimal Black Label",
+
+    "background": "/images/templates/template3-bg.png",
+
+    "image": {
+      "enabled": false
+    },
+
+    "labels": {
+      "name": { "top": "30%", "left": "10%", "defaultSize": 40 },
+      "school": { "top": "50%", "left": "10%", "defaultSize": 30 },
+      "class": { "top": "70%", "left": "10%", "defaultSize": 28 }
+    },
+
+    "watermark": {
+      "enabled": true,
+      "src": "/images/watermarks/mono.png",
+      "top": "80%",
+      "left": "5%",
+      "opacity": 0.1
+    }
+  }
+}

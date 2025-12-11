@@ -75,6 +75,7 @@ import Myorder from "./components/Myorder";
 import NSPersonalize from "./components/Laserprinter";
 import Fullcashondelivery from "./components/Fullcashondelivery";
 import NameSlip from "./components/nameslip/NameSlips";
+import NameSlipPersonalize from "./AppComponents/PersonalizeNameSlip/PersonalizeNameSlip";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -280,6 +281,10 @@ function AppContent() {
                   <Route path="/location" element={<Location />} />
                   <Route path="/adminpanel" element={<Adminpanel />} />
                   <Route path="/termsandcondition" element={<Terms />} />
+                  <Route
+                    path="/name-slip/:templateID/:id"
+                    element={<NameSlipPersonalize />}
+                  />
                   <Route path="/NStemplate1/:id" element={<NStemplate1 />} />
                   <Route path="/NStemplate2/:id" element={<NStemplate2 />} />
                   <Route path="/NStemplate3/:id" element={<NStemplate3 />} />

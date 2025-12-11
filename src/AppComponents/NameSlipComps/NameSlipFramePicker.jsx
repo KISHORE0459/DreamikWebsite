@@ -1,4 +1,6 @@
 import { useRef, useEffect } from "react";
+import { IoMdArrowDropleftCircle } from "react-icons/io";
+import { IoMdArrowDroprightCircle } from "react-icons/io";
 
 const NameSlipFramePicker = ({
   frames = [],
@@ -25,34 +27,26 @@ const NameSlipFramePicker = ({
 
   return (
     <div className="px-4 py-3 w-full">
-      {/* Header + Buttons */}
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-[18px]! font-medium text-[#1A1A1A]! leading-4!">
+      <div className="flex items-center justify-between h-[50px]">
+        <h3 className="text-[18px]! font-medium! text-[#1A1A1A]! leading-4!">
           Select name frame
         </h3>
 
         <div className="flex gap-2">
-          <button
+          <IoMdArrowDropleftCircle
             onClick={onPrev}
-            aria-label="prev"
-            className="px-3 py-1 rounded border text-sm hover:bg-gray-100"
-          >
-            ◀
-          </button>
-
-          <button
+            className="w-[30px] h-[30px] hover:cursor-pointer!"
+          />
+          <IoMdArrowDroprightCircle
             onClick={onNext}
-            aria-label="next"
-            className="px-3 py-1 rounded border text-sm hover:bg-gray-100"
-          >
-            ▶
-          </button>
+            className="w-[30px] h-[30px] hover:cursor-pointer!"
+          />
         </div>
       </div>
 
       <div
         ref={containerRef}
-        className="flex gap-3 h-[120px]! overflow-x-auto py-2! px-3!"
+        className={`flex gap-3 h-[120px]! overflow-x-auto py-2! px-4! custom-scrollbar`}
         style={{ scrollBehavior: "smooth" }}
       >
         {frames.map((img, index) => (
