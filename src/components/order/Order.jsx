@@ -85,10 +85,10 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
       let allprodprice = 0;
 
       const updatedcart = orderData.map((prod) => {
-        if (prod.productcode.startsWith("NSCRT")) {
+        if (prod.productcode?.startsWith("NSCRT")) {
           addamount = 340;
           allprodprice += 340;
-        } else if (prod.productcode.startsWith("NS")) {
+        } else if (prod.productcode?.startsWith("NS")) {
           addamount = 100;
           allprodprice += 100;
         }
@@ -109,7 +109,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
       let addamount = 0;
       let allprodprice = 0;
       const updatedcart = orderData.map((prod) => {
-        if (prod.productcode.startsWith("NSCRT")) {
+        if (prod?.productcode?.startsWith("NSCRT")) {
           addamount =
             Math.round(
               parseInt(offercutout?.original_price) *
@@ -120,7 +120,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
               parseInt(offercutout?.original_price) *
                 (1 - parseInt(offercutout?.offer_percentage) / 100)
             ) || 340;
-        } else if (prod.productcode.startsWith("NS")) {
+        } else if (prod?.productcode?.startsWith("NS")) {
           if (prod.labeltype === "glossy") {
             addamount =
               Math.round(
@@ -163,10 +163,10 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     let addamount = 0;
     let allprodprice = 0;
     const updatedcart = orderData.map((prod) => {
-      if (prod.productcode.startsWith("NSCRT")) {
+      if (prod?.productcode?.startsWith("NSCRT")) {
         addamount = 340;
         allprodprice += 340;
-      } else if (prod.productcode.startsWith("NS")) {
+      } else if (prod?.productcode?.startsWith("NS")) {
         if (prod.labeltype === "glossy") {
           addamount = 160;
           allprodprice += 160;

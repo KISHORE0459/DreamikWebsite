@@ -126,114 +126,119 @@ export default function ImagePersonalizationComp({
   ];
 
   return (
-    <div className="flex gap-6 items-start">
-      {/* Upload + preview box */}
-      <label
-        className="cursor-pointer"
-        onClick={() => document.getElementById("ns-upload-input")?.click()}
-      >
-        <input
-          id="ns-upload-input"
-          type="file"
-          accept="image/*"
-          onChange={handleFileChangeLocal}
-          className="hidden"
-        />
+    <div className="flex flex-col gap-2.5">
+      <div className="flex gap-6 items-start">
+        {/* Upload + preview box */}
+        <label
+          className="cursor-pointer"
+          onClick={() => document.getElementById("ns-upload-input")?.click()}
+        >
+          <input
+            id="ns-upload-input"
+            type="file"
+            accept="image/*"
+            onChange={handleFileChangeLocal}
+            className="hidden"
+          />
 
-        {selectedImage ? (
-          <div className="w-40 h-36 rounded-lg border! border-gray-300! overflow-hidden flex items-center justify-center bg-gray-50!">
-            <img
-              src={selectedImage}
-              alt="uploaded preview"
-              className="max-w-full max-h-full object-contain"
-              style={{
-                borderRadius: circleImage ? "9999px" : undefined,
-                border: imageBorder ? "2px solid #000" : "none",
-              }}
-            />
-          </div>
-        ) : (
-          <div className="w-40 h-36 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center">
-            <UploadIcon style={{ fontSize: 34, color: "#6b7280" }} />
-            <div className="text-xs text-gray-500 mt-2">Upload your image</div>
-          </div>
-        )}
-      </label>
-
-      {/* Controls */}
-      <div className="flex flex-col gap-4 flex-1 border! border-[#12345A]! p-2! rounded-lg min-h-[100px]">
-        {selectedImage ? (
-          <>
-            {/* Toolbar */}
-            <div className="flex flex-wrap gap-2 p-2 rounded-lg">
-              {imageToolButtons.map((btn, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className="w-10 h-10 rounded-lg bg-white! border! border-gray-300! flex justify-center items-center text-[#1A1A1A]! p-0!"
-                  title={btn.title}
-                  onClick={btn.onClick}
-                >
-                  {btn.icon}
-                </button>
-              ))}
-            </div>
-
-            {/* Delete + checkboxes */}
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
-                className="w-10 h-10 rounded-lg bg-white! border! border-red-600! text-red-600! hover:bg-red-600! hover:text-white! flex justify-center items-center p-0!"
-                title="Delete"
-                onClick={() => {
-                  setSelectedImage(null);
-                  handleDeleteImage && handleDeleteImage();
+          {selectedImage ? (
+            <div className="w-40 h-36 rounded-lg border! border-gray-300! overflow-hidden flex items-center justify-center bg-gray-50!">
+              <img
+                src={selectedImage}
+                alt="uploaded preview"
+                className="max-w-full max-h-full object-contain"
+                style={{
+                  borderRadius: circleImage ? "9999px" : undefined,
+                  border: imageBorder ? "2px solid #000" : "none",
                 }}
-              >
-                <IoTrashBin size={20} />
-              </button>
-
-              <Controller
-                name="imageBorder"
-                control={control}
-                render={({ field }) => (
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        {...field}
-                        checked={!!field.value}
-                        onChange={(e) => field.onChange(e.target.checked)}
-                      />
-                    }
-                    label="Image Border"
-                  />
-                )}
-              />
-
-              <Controller
-                name="circleImage"
-                control={control}
-                render={({ field }) => (
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        {...field}
-                        checked={!!field.value}
-                        onChange={(e) => field.onChange(e.target.checked)}
-                      />
-                    }
-                    label="Circle Crop"
-                  />
-                )}
               />
             </div>
-          </>
-        ) : (
-          <div className="min-h-[100px] flex justify-center items-center text-sm text-gray-500">
-            Upload an image to see controls
-          </div>
-        )}
+          ) : (
+            <div className="w-40 h-36 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center">
+              <UploadIcon style={{ fontSize: 34, color: "#6b7280" }} />
+              <div className="text-xs text-gray-500 mt-2">
+                Upload your image
+              </div>
+            </div>
+          )}
+        </label>
+
+        {/* Controls */}
+        <div className="flex flex-col gap-4 flex-1 border! border-[#979DAC]! p-2! rounded-lg min-h-[100px] shadow-md!">
+          {selectedImage ? (
+            <>
+              {/* Toolbar */}
+              <div className="flex flex-wrap gap-2 p-2 rounded-lg">
+                {imageToolButtons.map((btn, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className="w-10 h-10 rounded-lg bg-white! border! border-gray-300! flex justify-center items-center text-[#1A1A1A]! p-0! shadow-md! hover:shadow-lg!"
+                    title={btn.title}
+                    onClick={btn.onClick}
+                  >
+                    {btn.icon}
+                  </button>
+                ))}
+              </div>
+
+              {/* Delete + checkboxes */}
+              <div className="flex items-center gap-4">
+                <button
+                  type="button"
+                  className="w-10 h-10 rounded-lg bg-white! border! border-red-600! text-red-600! hover:bg-red-600! hover:text-white! flex justify-center items-center p-0!"
+                  title="Delete"
+                  onClick={() => {
+                    setSelectedImage(null);
+                    handleDeleteImage && handleDeleteImage();
+                  }}
+                >
+                  <IoTrashBin size={20} />
+                </button>
+
+                <Controller
+                  name="imageBorder"
+                  control={control}
+                  render={({ field }) => (
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          {...field}
+                          checked={!!field.value}
+                          onChange={(e) => field.onChange(e.target.checked)}
+                        />
+                      }
+                      label="Image Border"
+                    />
+                  )}
+                />
+
+                <Controller
+                  name="circleImage"
+                  control={control}
+                  render={({ field }) => (
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          {...field}
+                          checked={!!field.value}
+                          onChange={(e) => field.onChange(e.target.checked)}
+                        />
+                      }
+                      label="Circle Crop"
+                    />
+                  )}
+                />
+              </div>
+            </>
+          ) : (
+            <div className="min-h-[100px] flex justify-center items-center text-sm text-gray-500">
+              Upload an image to see controls
+            </div>
+          )}
+        </div>
       </div>
+      <div className="h-px! w-full! bg-[#434343]! my-2.5!"></div>
     </div>
   );
 }

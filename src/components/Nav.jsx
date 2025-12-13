@@ -94,7 +94,7 @@ function Navbar({
   const menuItems = [
     { label: "Cart", onClick: () => handleCartClick() },
     { label: "Reseller Login", onClick: () => setShowResellerLogin(true) },
-    { label: "Name Slips", onClick: () => handleProductClick("/NameSlips") },
+    { label: "Name Slips", onClick: () => handleProductClick("/name-slip") },
     {
       label: "Cutout Nameslips",
       onClick: () => handleProductClick("/CutoutNameslips"),

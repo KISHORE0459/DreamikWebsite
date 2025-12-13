@@ -6,7 +6,7 @@ import ProductDescription from "../../AppComponents/NameSlipComps/ProductDescrip
 import NameSlipFramePicker from "../../AppComponents/NameSlipComps/NameSlipFramePicker";
 import ProductPreviewComp from "../../AppComponents/PreviewComp/ProductPreviewComp";
 
-const Products = () => {
+const NameSlipDetail = () => {
   const { productcode } = useParams();
   const navigate = useNavigate();
 
@@ -108,7 +108,6 @@ const Products = () => {
     setMainImage(product.gallery[newIndex]);
   };
 
-  // --- Personalize & add to cart (keeps your logic) ---
   const handlePersonalizeAndAddToCart = (id, template, productcodeParam) => {
     localStorage.removeItem("editedproduct");
 
@@ -237,4 +236,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default NameSlipDetail;

@@ -1,5 +1,4 @@
 {
-  
   "1": {
     "name": "WhiteBK-FlowerTheme-Type2-ImageLeft",
     "id": "1",
@@ -30,7 +29,6 @@
     "template": "template4",
     "productcode": "NSHRT00002"
   },
-
   "3": {
     "name": "WhiteBK-RocketTheme-Type2-ImageLeft",
     "id": "3",
@@ -61,7 +59,7 @@
     "template": "template8",
     "productcode": "NSHRT00004",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -88,7 +86,7 @@
     "template": "template8",
     "productcode": "NSHRT00005",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -97,7 +95,6 @@
       "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHRT01.png",
       "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHRT02.png",
       "/image/waterlabel/FERT.png"
-      
     ]
   },
   "6": {
@@ -115,14 +112,14 @@
     "template": "template12",
     "productcode": "NSHRT00006",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
 
@@ -141,18 +138,18 @@
     "template": "template12",
     "productcode": "NSHRT00007",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png",
+      "/image/waterlabel/FELT.png"
     ]
   },
-  
+
   "8": {
     "name": "new image",
     "id": "8",
@@ -192,7 +189,7 @@
     "template": "template3",
     "productcode": "NSHRT00009",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -234,7 +231,7 @@
     "template": "template9",
     "productcode": "NSHRT00011",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -243,7 +240,6 @@
       "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHRT01.webp",
       "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHRT02.webp",
       "/image/waterlabel/FERT.png"
-      
     ]
   },
 
@@ -262,7 +258,7 @@
     "template": "template3",
     "productcode": "NSHRT00012",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -288,7 +284,7 @@
     "template": "template3",
     "productcode": "NSHRT00013",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -315,7 +311,7 @@
     "template": "template3",
     "productcode": "NSHRT00014",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -342,7 +338,7 @@
     "template": "template3",
     "productcode": "NSHRT00015",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -368,7 +364,7 @@
     "template": "template3",
     "productcode": "NSHRT00016",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -394,7 +390,7 @@
     "template": "template8",
     "productcode": "NSHRT00017",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -420,7 +416,7 @@
     "template": "template8",
     "productcode": "NSHRT00018",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -477,7 +473,7 @@
     "template": "template8",
     "productcode": "NSHRT00021",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -519,7 +515,7 @@
     "template": "template8",
     "productcode": "NSHRT00023",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -545,7 +541,7 @@
     "template": "template8",
     "productcode": "NSHRT00024",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -571,7 +567,7 @@
     "template": "template8",
     "productcode": "NSHRT00025",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -598,7 +594,7 @@
     "template": "template8",
     "productcode": "NSHRT00026",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -624,7 +620,7 @@
     "template": "template8",
     "productcode": "NSHRT00027",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -650,7 +646,7 @@
     "template": "template8",
     "productcode": "NSHRT00028",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -676,7 +672,7 @@
     "template": "template8",
     "productcode": "NSHRT00029",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -702,7 +698,7 @@
     "template": "template8",
     "productcode": "NSHRT00030",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -744,7 +740,7 @@
     "template": "template8",
     "productcode": "NSHRT00032",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -794,7 +790,7 @@
     "template": "template8",
     "productcode": "NSHRT00034",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -820,7 +816,7 @@
     "template": "template8",
     "productcode": "NSHRT00035",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -846,7 +842,7 @@
     "template": "template8",
     "productcode": "NSHRT00036",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -872,7 +868,7 @@
     "template": "template8",
     "productcode": "NSHRT00037",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -898,7 +894,7 @@
     "template": "template8",
     "productcode": "NSHRT00038",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -925,7 +921,7 @@
     "template": "template8",
     "productcode": "NSHRT00039",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -951,7 +947,7 @@
     "template": "template8",
     "productcode": "NSHRT00040",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -977,7 +973,7 @@
     "template": "template8",
     "productcode": "NSHRT00041",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1003,7 +999,7 @@
     "template": "template8",
     "productcode": "NSHRT00042",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1036,7 +1032,7 @@
     "template": "template8",
     "productcode": "NSHRT00043",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1062,7 +1058,7 @@
     "template": "template3",
     "productcode": "NSHRT000044",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1088,7 +1084,7 @@
     "template": "template8",
     "productcode": "NSHRT00045",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1114,7 +1110,7 @@
     "template": "template8",
     "productcode": "NSHRT00046",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1140,7 +1136,7 @@
     "template": "template8",
     "productcode": "NSHRT00047",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1166,7 +1162,7 @@
     "template": "template8",
     "productcode": "NSHRT00048",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1192,7 +1188,7 @@
     "template": "template8",
     "productcode": "NSHRT00049",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1218,7 +1214,7 @@
     "template": "template8",
     "productcode": "NSHRT00050",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -1244,7 +1240,7 @@
     "template": "template9",
     "productcode": "NSHRT00051",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1270,7 +1266,7 @@
     "template": "template9",
     "productcode": "NSHRT00052",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1296,7 +1292,7 @@
     "template": "template9",
     "productcode": "NSHRT00053",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1322,7 +1318,7 @@
     "template": "template9",
     "productcode": "NSHRT00054",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1348,7 +1344,7 @@
     "template": "template9",
     "productcode": "NSHRT00055",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1374,7 +1370,7 @@
     "template": "template9",
     "productcode": "NSHRT00056",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1400,7 +1396,7 @@
     "template": "template9",
     "productcode": "NSHRT00057",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1426,7 +1422,7 @@
     "template": "template9",
     "productcode": "NSHRT00058",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1452,7 +1448,7 @@
     "template": "template9",
     "productcode": "NSHRT00059",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1478,7 +1474,7 @@
     "template": "template9",
     "productcode": "NSHRT00060",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1504,7 +1500,7 @@
     "template": "template9",
     "productcode": "NSHRT00061",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1530,7 +1526,7 @@
     "template": "template9",
     "productcode": "NSHRT00062",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1556,7 +1552,7 @@
     "template": "template9",
     "productcode": "NSHRT00063",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1582,7 +1578,7 @@
     "template": "template9",
     "productcode": "NSHRT00064",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1608,7 +1604,7 @@
     "template": "template9",
     "productcode": "NSHRT00065",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1634,7 +1630,7 @@
     "template": "template9",
     "productcode": "NSHRT00066",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1660,7 +1656,7 @@
     "template": "template9",
     "productcode": "NSHRT00067",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1686,7 +1682,7 @@
     "template": "template9",
     "productcode": "NSHRT00068",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1712,7 +1708,7 @@
     "template": "template9",
     "productcode": "NSHRT00069",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1738,7 +1734,7 @@
     "template": "template9",
     "productcode": "NSHRT00070",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1764,7 +1760,7 @@
     "template": "template9",
     "productcode": "NSHRT00071",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1790,7 +1786,7 @@
     "template": "template9",
     "productcode": "NSHRT00072",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1816,7 +1812,7 @@
     "template": "template9",
     "productcode": "NSHRT00073",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1842,7 +1838,7 @@
     "template": "template9",
     "productcode": "NSHRT00074",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1868,7 +1864,7 @@
     "template": "template9",
     "productcode": "NSHRT00075",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1894,7 +1890,7 @@
     "template": "template9",
     "productcode": "NSHRT00076",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1920,7 +1916,7 @@
     "template": "template9",
     "productcode": "NSHRT00077",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1946,7 +1942,7 @@
     "template": "template9",
     "productcode": "NSHRT00078",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1973,7 +1969,7 @@
     "template": "template9",
     "productcode": "NSHRT00079",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -1999,7 +1995,7 @@
     "template": "template9",
     "productcode": "NSHRT00080",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2025,7 +2021,7 @@
     "template": "template9",
     "productcode": "NSHRT00081",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2051,7 +2047,7 @@
     "template": "template9",
     "productcode": "NSHRT00082",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2077,7 +2073,7 @@
     "template": "template9",
     "productcode": "NSHRT00083",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2103,7 +2099,7 @@
     "template": "template9",
     "productcode": "NSHRT00084",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2129,7 +2125,7 @@
     "template": "template9",
     "productcode": "NSHRT00085",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2155,7 +2151,7 @@
     "template": "template9",
     "productcode": "NSHRT00086",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2181,7 +2177,7 @@
     "template": "template9",
     "productcode": "NSHRT00087",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2207,7 +2203,7 @@
     "template": "template9",
     "productcode": "NSHRT00088",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2233,7 +2229,7 @@
     "template": "template9",
     "productcode": "NSHRT00089",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2259,7 +2255,7 @@
     "template": "template9",
     "productcode": "NSHRT00090",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2285,7 +2281,7 @@
     "template": "template9",
     "productcode": "NSHRT00091",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2311,7 +2307,7 @@
     "template": "template9",
     "productcode": "NSHRT00092",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2337,7 +2333,7 @@
     "template": "template9",
     "productcode": "NSHRT00093",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2363,7 +2359,7 @@
     "template": "template9",
     "productcode": "NSHRT00094",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2389,7 +2385,7 @@
     "template": "template9",
     "productcode": "NSHRT00095",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2415,7 +2411,7 @@
     "template": "template9",
     "productcode": "NSHRT00096",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2441,7 +2437,7 @@
     "template": "template9",
     "productcode": "NSHRT00097",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2467,7 +2463,7 @@
     "template": "template9",
     "productcode": "NSHRT00098",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2493,7 +2489,7 @@
     "template": "template9",
     "productcode": "NSHRT00099",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2519,7 +2515,7 @@
     "template": "template9",
     "productcode": "NSHRT00100",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2545,7 +2541,7 @@
     "template": "template9",
     "productcode": "NSHRT00101",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2571,7 +2567,7 @@
     "template": "template9",
     "productcode": "NSHRT00102",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2597,7 +2593,7 @@
     "template": "template9",
     "productcode": "NSHRT00103",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2623,7 +2619,7 @@
     "template": "template9",
     "productcode": "NSHRT00104",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2649,7 +2645,7 @@
     "template": "template9",
     "productcode": "NSHRT00105",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2675,7 +2671,7 @@
     "template": "template9",
     "productcode": "NSHRT00106",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2701,7 +2697,7 @@
     "template": "template9",
     "productcode": "NSHRT00107",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2727,7 +2723,7 @@
     "template": "template9",
     "productcode": "NSHRT00108",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2753,7 +2749,7 @@
     "template": "template9",
     "productcode": "NSHRT00109",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2779,7 +2775,7 @@
     "template": "template9",
     "productcode": "NSHRT00110",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2805,7 +2801,7 @@
     "template": "template9",
     "productcode": "NSHRT00111",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2831,7 +2827,7 @@
     "template": "template9",
     "productcode": "NSHRT00112",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2857,7 +2853,7 @@
     "template": "template9",
     "productcode": "NSHRT00113",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2883,7 +2879,7 @@
     "template": "template9",
     "productcode": "NSHRT00114",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2909,7 +2905,7 @@
     "template": "template9",
     "productcode": "NSHRT00115",
     "gallery": [
-     "/image/waterlabel.webp",
+      "/image/waterlabel.webp",
       "/image/waterlabel1.webp",
       "/image/waterlabel2.webp",
       "/image/waterlabel/4.webp",
@@ -2980,14 +2976,14 @@
     "template": "template11",
     "productcode": "NSHLT00001",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "120": {
@@ -3005,14 +3001,14 @@
     "template": "template11",
     "productcode": "NSHLT00002",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "121": {
@@ -3030,14 +3026,14 @@
     "template": "template11",
     "productcode": "NSHLT00003",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "122": {
@@ -3055,14 +3051,14 @@
     "template": "template11",
     "productcode": "NSHLT00004",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "123": {
@@ -3080,14 +3076,14 @@
     "template": "template11",
     "productcode": "NSHLT00005",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "124": {
@@ -3105,14 +3101,14 @@
     "template": "template11",
     "productcode": "NSHLT00006",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "125": {
@@ -3130,14 +3126,14 @@
     "template": "template11",
     "productcode": "NSHLT00007",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "126": {
@@ -3155,14 +3151,14 @@
     "template": "template11",
     "productcode": "NSHLT00008",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "127": {
@@ -3180,14 +3176,14 @@
     "template": "template11",
     "productcode": "NSHLT00009",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "128": {
@@ -3205,14 +3201,14 @@
     "template": "template11",
     "productcode": "NSHLT00010",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "129": {
@@ -3230,14 +3226,14 @@
     "template": "template11",
     "productcode": "NSHLT00011",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "130": {
@@ -3255,14 +3251,14 @@
     "template": "template11",
     "productcode": "NSHLT00012",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "131": {
@@ -3280,14 +3276,14 @@
     "template": "template11",
     "productcode": "NSHLT00013",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "132": {
@@ -3305,14 +3301,14 @@
     "template": "template11",
     "productcode": "NSHLT00014",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "133": {
@@ -3330,14 +3326,14 @@
     "template": "template11",
     "productcode": "NSHLT00015",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "134": {
@@ -3355,14 +3351,14 @@
     "template": "template11",
     "productcode": "NSHLT00016",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "135": {
@@ -3380,14 +3376,14 @@
     "template": "template11",
     "productcode": "NSHLT00017",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "136": {
@@ -3405,14 +3401,14 @@
     "template": "template11",
     "productcode": "NSHLT00018",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "137": {
@@ -3430,14 +3426,14 @@
     "template": "template11",
     "productcode": "NSHLT00019",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "138": {
@@ -3455,14 +3451,14 @@
     "template": "template11",
     "productcode": "NSHLT00020",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "139": {
@@ -3480,14 +3476,14 @@
     "template": "template11",
     "productcode": "NSHLT00021",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "140": {
@@ -3505,14 +3501,14 @@
     "template": "template11",
     "productcode": "NSHLT00022",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "141": {
@@ -3530,14 +3526,14 @@
     "template": "template11",
     "productcode": "NSHLT00023",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "142": {
@@ -3555,14 +3551,14 @@
     "template": "template11",
     "productcode": "NSHLT00024",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "143": {
@@ -3587,14 +3583,14 @@
     "template": "template11",
     "productcode": "NSHLT00025",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "144": {
@@ -3612,14 +3608,14 @@
     "template": "template11",
     "productcode": "NSHLT00026",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "145": {
@@ -3637,14 +3633,14 @@
     "template": "template11",
     "productcode": "NSHLT00027",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "146": {
@@ -3662,14 +3658,14 @@
     "template": "template11",
     "productcode": "NSHLT00028",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "147": {
@@ -3687,14 +3683,14 @@
     "template": "template11",
     "productcode": "NSHLT00029",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "148": {
@@ -3719,14 +3715,14 @@
     "template": "template11",
     "productcode": "NSHLT00030",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "149": {
@@ -3744,14 +3740,14 @@
     "template": "template11",
     "productcode": "NSHLT00031",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "150": {
@@ -3769,14 +3765,14 @@
     "template": "template11",
     "productcode": "NSHLT00032",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "151": {
@@ -3794,14 +3790,14 @@
     "template": "template11",
     "productcode": "NSHLT00033",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "152": {
@@ -3826,14 +3822,14 @@
     "template": "template11",
     "productcode": "NSHLT00034",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "153": {
@@ -3858,14 +3854,14 @@
     "template": "template11",
     "productcode": "NSHLT00035",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "154": {
@@ -3883,14 +3879,14 @@
     "template": "template11",
     "productcode": "NSHLT00036",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "155": {
@@ -3908,14 +3904,14 @@
     "template": "template11",
     "productcode": "NSHLT00037",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "156": {
@@ -3933,14 +3929,14 @@
     "template": "template11",
     "productcode": "NSHLT00038",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "157": {
@@ -3958,14 +3954,14 @@
     "template": "template11",
     "productcode": "NSHLT00039",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "158": {
@@ -3983,14 +3979,14 @@
     "template": "template11",
     "productcode": "NSHLT00040",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "159": {
@@ -4008,14 +4004,14 @@
     "template": "template11",
     "productcode": "NSHLT00041",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "160": {
@@ -4033,14 +4029,14 @@
     "template": "template11",
     "productcode": "NSHLT00042",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "161": {
@@ -4058,14 +4054,14 @@
     "template": "template11",
     "productcode": "NSHLT00043",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "162": {
@@ -4083,14 +4079,14 @@
     "template": "template11",
     "productcode": "NSHLT00044",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "163": {
@@ -4108,14 +4104,14 @@
     "template": "template11",
     "productcode": "NSHLT00045",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "164": {
@@ -4133,14 +4129,14 @@
     "template": "template11",
     "productcode": "NSHLT00046",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "165": {
@@ -4158,14 +4154,14 @@
     "template": "template11",
     "productcode": "NSHLT00047",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "166": {
@@ -4183,14 +4179,14 @@
     "template": "template11",
     "productcode": "NSHLT00048",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "167": {
@@ -4208,14 +4204,14 @@
     "template": "template11",
     "productcode": "NSHLT00049",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "168": {
@@ -4233,14 +4229,14 @@
     "template": "template11",
     "productcode": "NSHLT00050",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "169": {
@@ -4258,14 +4254,14 @@
     "template": "template11",
     "productcode": "NSHLT00051",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "170": {
@@ -4283,14 +4279,14 @@
     "template": "template11",
     "productcode": "NSHLT00052",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "171": {
@@ -4307,14 +4303,14 @@
     "glossy": 60,
     "template": "template11",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "172": {
@@ -4332,14 +4328,14 @@
     "template": "template11",
     "productcode": "NSHLT00054",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "173": {
@@ -4364,14 +4360,14 @@
     "template": "template11",
     "productcode": "NSHLT00055",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "174": {
@@ -4396,14 +4392,14 @@
     "template": "template11",
     "productcode": "NSHLT00056",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "175": {
@@ -4421,14 +4417,14 @@
     "template": "template11",
     "productcode": "NSHLT00057",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "176": {
@@ -4446,14 +4442,14 @@
     "template": "template11",
     "productcode": "NSHLT00058",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "177": {
@@ -4478,14 +4474,14 @@
     "template": "template11",
     "productcode": "NSHLT00059",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "178": {
@@ -4503,14 +4499,14 @@
     "template": "template11",
     "productcode": "NSHLT00060",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "179": {
@@ -4528,14 +4524,14 @@
     "template": "template11",
     "productcode": "NSHLT00061",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "180": {
@@ -4553,14 +4549,14 @@
     "template": "template12",
     "productcode": "NSHLT00062",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "181": {
@@ -4578,14 +4574,14 @@
     "template": "template12",
     "productcode": "NSHLT00063",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "182": {
@@ -4603,14 +4599,14 @@
     "template": "template12",
     "productcode": "NSHLT00064",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "183": {
@@ -4628,14 +4624,14 @@
     "template": "template12",
     "productcode": "NSHLT00065",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "184": {
@@ -4653,14 +4649,14 @@
     "template": "template12",
     "productcode": "NSHLT00066",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "185": {
@@ -4678,14 +4674,14 @@
     "template": "template12",
     "productcode": "NSHLT00067",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "186": {
@@ -4703,14 +4699,14 @@
     "template": "template12",
     "productcode": "NSHLT00068",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "187": {
@@ -4728,14 +4724,14 @@
     "template": "template12",
     "productcode": "NSHLT00069",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "188": {
@@ -4753,14 +4749,14 @@
     "template": "template12",
     "productcode": "NSHLT00070",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "189": {
@@ -4778,14 +4774,14 @@
     "template": "template12",
     "productcode": "NSHLT00071",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "190": {
@@ -4803,14 +4799,14 @@
     "template": "template12",
     "productcode": "NSHLT00072",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "191": {
@@ -4828,14 +4824,14 @@
     "template": "template12",
     "productcode": "NSHLT00073",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "192": {
@@ -4853,14 +4849,14 @@
     "template": "template12",
     "productcode": "NSHLT00074",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "193": {
@@ -4878,14 +4874,14 @@
     "template": "template12",
     "productcode": "NSHLT00075",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "194": {
@@ -4903,14 +4899,14 @@
     "template": "template12",
     "productcode": "NSHLT00076",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "195": {
@@ -4928,14 +4924,14 @@
     "template": "template12",
     "productcode": "NSHLT00077",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "196": {
@@ -4953,14 +4949,14 @@
     "template": "template12",
     "productcode": "NSHLT00078",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "197": {
@@ -4978,14 +4974,14 @@
     "template": "template12",
     "productcode": "NSHLT00079",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "198": {
@@ -5003,14 +4999,14 @@
     "template": "template12",
     "productcode": "NSHLT00080",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "199": {
@@ -5028,14 +5024,14 @@
     "template": "template12",
     "productcode": "NSHLT00081",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "200": {
@@ -5053,14 +5049,14 @@
     "template": "template12",
     "productcode": "NSHLT00082",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "201": {
@@ -5078,14 +5074,14 @@
     "template": "template12",
     "productcode": "NSHLT00083",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "202": {
@@ -5103,14 +5099,14 @@
     "template": "template12",
     "productcode": "NSHLT00084",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "203": {
@@ -5128,14 +5124,14 @@
     "template": "template12",
     "productcode": "NSHLT00085",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "204": {
@@ -5153,14 +5149,14 @@
     "template": "template12",
     "productcode": "NSHLT00086",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "205": {
@@ -5178,14 +5174,14 @@
     "template": "template12",
     "productcode": "NSHLT00087",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "206": {
@@ -5203,14 +5199,14 @@
     "template": "template12",
     "productcode": "NSHLT00088",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "207": {
@@ -5228,14 +5224,14 @@
     "template": "template12",
     "productcode": "NSHLT00089",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "208": {
@@ -5253,14 +5249,14 @@
     "template": "template12",
     "productcode": "NSHLT00090",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "209": {
@@ -5278,14 +5274,14 @@
     "template": "template12",
     "productcode": "NSHLT00091",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "210": {
@@ -5303,14 +5299,14 @@
     "template": "template12",
     "productcode": "NSHLT00092",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "211": {
@@ -5328,14 +5324,14 @@
     "template": "template12",
     "productcode": "NSHLT00093",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "212": {
@@ -5353,14 +5349,14 @@
     "template": "template12",
     "productcode": "NSHLT00094",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "213": {
@@ -5378,14 +5374,14 @@
     "template": "template12",
     "productcode": "NSHLT00095",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "214": {
@@ -5403,14 +5399,14 @@
     "template": "template12",
     "productcode": "NSHLT00096",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "215": {
@@ -5428,14 +5424,14 @@
     "template": "template12",
     "productcode": "NSHLT00097",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "216": {
@@ -5453,14 +5449,14 @@
     "template": "template12",
     "productcode": "NSHLT00098",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "217": {
@@ -5478,7 +5474,7 @@
     "template": "template8",
     "productcode": "NSHLT00099",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -5504,7 +5500,7 @@
     "template": "template8",
     "productcode": "NSHLT00100",
     "gallery": [
-         "/image/waterlabel.png",
+      "/image/waterlabel.png",
       "/image/waterlabel1.png",
       "/image/waterlabel2.png",
       "/image/waterlabel/4.png",
@@ -5530,14 +5526,14 @@
     "template": "template12",
     "productcode": "NSHLT00101",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "220": {
@@ -5555,14 +5551,14 @@
     "template": "template12",
     "productcode": "NSHLT00102",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "221": {
@@ -5580,14 +5576,14 @@
     "template": "template12",
     "productcode": "NSHLT00103",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "222": {
@@ -5605,14 +5601,14 @@
     "template": "template12",
     "productcode": "NSHLT00104",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "223": {
@@ -5630,14 +5626,14 @@
     "template": "template12",
     "productcode": "NSHLT00105",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "224": {
@@ -5655,14 +5651,14 @@
     "template": "template12",
     "productcode": "NSHLT00106",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "225": {
@@ -5680,14 +5676,14 @@
     "template": "template12",
     "productcode": "NSHLT00107",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "226": {
@@ -5705,14 +5701,14 @@
     "template": "template12",
     "productcode": "NSHLT00108",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "227": {
@@ -5730,14 +5726,14 @@
     "template": "template12",
     "productcode": "NSHLT00109",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "228": {
@@ -5755,14 +5751,14 @@
     "template": "template12",
     "productcode": "NSHLT00110",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "229": {
@@ -5780,14 +5776,14 @@
     "template": "template12",
     "productcode": "NSHLT00111",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "230": {
@@ -5805,14 +5801,14 @@
     "template": "template12",
     "productcode": "NSHLT00112",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "231": {
@@ -5830,14 +5826,14 @@
     "template": "template12",
     "productcode": "NSHLT00113",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "232": {
@@ -5855,14 +5851,14 @@
     "template": "template12",
     "productcode": "NSHLT00114",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "233": {
@@ -5880,14 +5876,14 @@
     "template": "template12",
     "productcode": "NSHLT00115",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "234": {
@@ -5905,14 +5901,14 @@
     "template": "template12",
     "productcode": "NSHLT00116",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "235": {
@@ -5930,14 +5926,14 @@
     "template": "template12",
     "productcode": "NSHLT00117",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "236": {
@@ -5955,14 +5951,14 @@
     "template": "template12",
     "productcode": "NSHLT00118",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "237": {
@@ -5980,14 +5976,14 @@
     "template": "template12",
     "productcode": "NSHLT00119",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "238": {
@@ -6005,14 +6001,14 @@
     "template": "template12",
     "productcode": "NSHLT00120",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "239": {
@@ -6030,14 +6026,14 @@
     "template": "template12",
     "productcode": "NSHLT00121",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "240": {
@@ -6055,14 +6051,14 @@
     "template": "template12",
     "productcode": "NSHLT00122",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "241": {
@@ -6080,14 +6076,14 @@
     "template": "template12",
     "productcode": "NSHLT00123",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "242": {
@@ -6105,14 +6101,14 @@
     "template": "template12",
     "productcode": "NSHLT00124",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "243": {
@@ -6130,14 +6126,14 @@
     "template": "template12",
     "productcode": "NSHLT00125",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   },
   "244": {
@@ -6155,14 +6151,14 @@
     "template": "template12",
     "productcode": "NSHLT00126",
     "gallery": [
-    "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
+      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp",
       "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTLT02.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT01.webp",
       "/image/UTF lang leftframe DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FHLT02.webp",
-       "/image/waterlabel/FELT.png"
+      "/image/waterlabel/FELT.png"
     ]
   }
 }

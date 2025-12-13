@@ -1,140 +1,95 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import ProductOffer from '../Productoffer/Productoffer';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ProductOffer from "../Productoffer/Productoffer";
 import { useCouponContext } from "../adminpanel/CouponContext";
-import axios from 'axios';
+import axios from "axios";
+import ProductDescription from "../../AppComponents/NameSlipComps/ProductDescription";
+
 const ProductDetails = () => {
-  const [product, setProduct] = useState(null);
   const navigate = useNavigate();
+
+  const [product, setProduct] = useState(null);
+  const [offers, setOffers] = useState(null);
+
   const { coupons, setCoupons } = useCouponContext();
-  const [offers, setoffers] = useState(null);
-  const fetchCoupons = async () => {
 
-    try {
-      const response = await axios.get("https://dreamik-intern.onrender.com/api/coupons");
-      setCoupons(Array.isArray(response.data) ? response.data : []);
-    } catch (error) {
-      console.error("Error fetching coupons:", error);
-      setCoupons([]);
-    }
-
-  };
   useEffect(() => {
-    const fetchData = async () => {
-      const url = '/cutoutnameslip_data.json';
+    const loadData = async () => {
       try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
+        // Fetch main product JSON
+        const productRes = await fetch("/cutoutnameslip_data.json");
+        const productJson = await productRes.json();
+
+        const key = localStorage.getItem("keyid");
+        if (key && productJson[key]) {
+          setProduct(productJson[key]);
+          document.title = productJson[key].name;
         }
-        const data = await response.json();
-        localStorage.setItem('data', JSON.stringify(data));
-        return data;
-      } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
+
+        // Fetch offers
+        const offersRes = await fetch("/offer.json");
+        const offersJson = await offersRes.json();
+        setOffers(offersJson?.cutoutnameslips);
+
+        // Fetch coupons
+        const couponRes = await axios.get(
+          "https://dreamik-intern.onrender.com/api/coupons"
+        );
+        setCoupons(Array.isArray(couponRes.data) ? couponRes.data : []);
+      } catch (err) {
+        console.error("Error loading details:", err);
       }
     };
 
-    const loadProductDetails = async () => {
-      const data = await fetchData();
-      const key = localStorage.getItem('keyid');
-      if (key && data[key]) {
-        setProduct(data[key]);
-        document.title = data[key].name;
-      }
-    };
-    const fetchOffers = async () => {
-      try {
-        const response = await fetch("/offer.json");
-        const data = await response.json();
-        setoffers(data.cutoutnameslips);
-
-      } catch (error) {
-        console.error("Error fetching offers:", error);
-      }
-    };
-    fetchOffers();
-    loadProductDetails();
-    fetchCoupons();
+    loadData();
   }, []);
 
   const handlePersonalizeAndAddToCart = (id, template, productcode) => {
     localStorage.removeItem("editedproduct");
-
-    // Correct navigation without `:`
-    if (`CT${template}`) {
-      navigate(`/${template}/${productcode}`);
-    }
-
-    else {
-      console.warn("Invalid template:", template);
-    }
-
+    navigate(`/${template}/${productcode}`);
   };
 
-  if (!product) {
-    return <div>Loading...</div>;
+  if (!product || !offers) {
+    return <div className="p-10 text-center text-lg">Loading...</div>;
   }
 
-
-
-
-  const start = new Date();
   const end = new Date(offers?.end_time || null);
-
-  const formatted = new Date(coupons[6]?.coupon_end) || null;
-
-  const diffInMs = end - start;
-  const diffInSeconds = diffInMs / 1000;
+  const now = new Date();
+  const diffInSeconds = (end - now) / 1000;
 
   return (
-    <section id="prodetails" className="section-p1">
-      <div className="single-pro-image">
-        <img src={product.source} alt={product.name} width="100%" id="MainImg" loading="lazy" />
-      </div>
-      <div className="single-pro-details" id="details">
-        <h6>Home / Product</h6>
-        <h4>{product.name}</h4>
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center" }}>
-          <h2>✨ Our Product Highlights ✨</h2>
-          <ul style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start", marginLeft: "20%" }}>
-            <li>
-              <strong>✅ Quick:</strong> Get your product delivered the
-              same day!<span className="astrics">*</span> 🚀
-
-            </li>
-            <li>
-              <strong>✅ Affordable:</strong> The most economical choice
-              in the market! 💰
-            </li>
-            <li>
-              <strong>✅ Safe:</strong> Printed with child-friendly
-              Inkjet colors. 👶🎨
-            </li>
-          </ul>
+    <section className="flex flex-col gap-[30px] px-4! py-8!">
+      <div className="grid grid-cols-12 gap-6 items-start">
+        {/* LEFT - Main image */}
+        <div className="col-span-12 lg:col-span-5 px-2!">
+          <div className="bg-white rounded overflow-hidden">
+            <div className="w-full max-h-[420px] bg-gray-50 flex items-center justify-center">
+              <img
+                src={product.source}
+                alt={product.name}
+                className="w-full h-auto object-contain max-h-[420px]"
+              />
+            </div>
+          </div>
         </div>
-        <ProductOffer
-          originalPrice={offers?.original_price || 340}
-          discountPercentage={offers?.offer_percentage || null}
-          offerEndTime={diffInSeconds}
-          productprice={offers?.original_price || 340}
-          offername={offers?.offername || null}
-          productname={"cutoutnameslips"}
-        />
-        {/* <h2>Rs. {product.price}</h2> */}
-        <strong> 10x4.4cm with 130gsm paper thickness gumming paper</strong>
-        <h4>Product Details</h4>
-        <span>{product.name}</span>
-        <br />
-        <span>{product.props.join(', ')}</span>
-        <br />
-        <button className="P-btn" id="targetbtn"
-          onClick={() => handlePersonalizeAndAddToCart(product.id, product.template, product.productcode)}
-        >
-          Personalize and Add To Cart
-        </button>
-      </div>
 
+        {/* RIGHT - Product details */}
+        <div className="col-span-12 lg:col-span-7">
+          <ProductDescription
+            product={product}
+            secondsLeft={diffInSeconds}
+            showHighlights={true}
+            showMatteAndGlossy={false}
+            onAddToCart={() =>
+              handlePersonalizeAndAddToCart(
+                product.id,
+                product.template,
+                product.productcode
+              )
+            }
+          />
+        </div>
+      </div>
     </section>
   );
 };
