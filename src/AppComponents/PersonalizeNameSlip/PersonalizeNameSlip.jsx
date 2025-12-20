@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useContext } from "react";
 import html2canvas from "html2canvas";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -14,9 +14,11 @@ import templateConfigs from "./templates.json";
 
 // LOAD PRODUCT DETAILS
 import productData from "../../../public/nameslip_data.json";
+import { CartContext } from "../../components/CartContext";
 
 const NameSlipPersonalize = () => {
   const { templateID, id } = useParams();
+  const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
   const persImgRef = useRef(null);
 
@@ -201,27 +203,109 @@ const NameSlipPersonalize = () => {
   // ADD TO CART
   // -----------------------------------------
   const handleAddToCart = async () => {
-    const canvas = await html2canvas(persImgRef.current);
-    const img = canvas.toDataURL();
+    if (quantity <= 0) {
+      return alert("Set quantity atleast 1 ");
+    }
 
-    const order = {
-      image: img,
-      name: product.name,
-      quantity,
-      size: labelSize,
-      labelType,
-      extraSheet,
-      total: price * quantity,
-      templateUsed: templateID,
-      productID: product.productcode,
-      source: product.source,
-    };
+    if (persImgRef.current) {
+      try {
+        const canvas = await html2canvas(persImgRef.current);
+        const imageData = canvas.toDataURL("image/png"); // Export as a Base64 image
 
-    let prev = JSON.parse(localStorage.getItem("OrderData")) || [];
-    prev.push(order);
-    localStorage.setItem("OrderData", JSON.stringify(prev));
+        const now = new Date();
+        const formattedDateTime = `${now.getFullYear()}-${String(
+          now.getMonth() + 1
+        ).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}T${String(
+          now.getHours()
+        ).padStart(2, "0")}:${String(now.getMinutes()).padStart(
+          2,
+          "0"
+        )}:${String(now.getSeconds()).padStart(2, "0")}`;
 
-    alert("Added to cart!");
+        // Ensure price and quantity are being passed correctly
+        const productDetails = {
+          image: imageData, // Base64 image data
+          quantity: quantity, // User-selected quantity
+          price: price * quantity, // Calculated price for the given quantity
+          Name: product.name, // Product name
+          labeltype: labelType, // Example for extra info like label type
+          size: `${labelSize}${extraSheet}`, // Size information (if needed)
+          labels: [],
+          productcode: product.productcode, // Ensure this is initialized
+          template: product.template,
+          personImage: selectedImage,
+          source: product.source,
+          datetime: formattedDateTime, // Added custom formatted date-time
+        };
+
+        const rgbToHex = (rgb) => {
+          const rgbValues = rgb.match(/\d+/g); // Extract numeric values from rgb string
+          if (!rgbValues) return "#000000"; // Fallback to black if invalid
+          return `#${rgbValues
+            .map((value) => parseInt(value, 10).toString(16).padStart(2, "0"))
+            .join("")}`.toUpperCase();
+        };
+        // Define all label classes
+        const labelClasses = [
+          "studentname-lab1",
+          "schoolname-lab1",
+          "subjectname-lab1",
+          "rollnu-lab1",
+          "sectionname-lab1",
+          "classname-lab1",
+        ];
+
+        // Map through each label class
+        labelClasses.forEach((labelClass) => {
+          const label = document.querySelector(`.${labelClass}`);
+          if (label) {
+            const styles = window.getComputedStyle(label);
+            const scaleMatch = styles.transform.match(/matrix\((\d+\.?\d*),/);
+            const scale = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+            const fontSize = parseFloat(styles.fontSize) * scale;
+            const fontColor = rgbToHex(styles.color);
+            const rect = textRef.current.getBoundingClientRect();
+            productDetails.labels.push({
+              className: labelClass,
+              text: [label.textContent],
+              fontSize: `${fontSize}px`,
+              scale,
+              fontColor,
+              fontFamily: styles.fontFamily,
+              fontStyle: styles.fontStyle,
+              ...(labelClass.startsWith("subject") && {
+                position: {
+                  x: rect.left + window.scrollX,
+                  y: rect.top + window.scrollY,
+                },
+                subjectCount: label.textContent.trim()
+                  ? `${(label.textContent.match(/,/g) || []).length + 1}`
+                  : "0",
+              }),
+            });
+          } else {
+            console.warn(`Label with class .${labelClass} not found.`);
+          }
+        });
+
+        const existingCart =
+          JSON.parse(localStorage.getItem("OrderData")) || [];
+
+        // Push the new product to the cart
+        existingCart.push(productDetails);
+
+        // Store the updated cart back into localStorage
+        localStorage.setItem("OrderData", JSON.stringify(existingCart));
+
+        // Update cart count
+        addToCart();
+
+        localStorage.removeItem("editedproduct");
+        alert("Product added to cart successfully!");
+      } catch (error) {
+        console.error("Error capturing the div:", error);
+      }
+    }
     navigate("/Order");
   };
 

@@ -69,7 +69,7 @@ export default function NameSlipPersonalizationSection({
       />
 
       {/* Inputs with individual edit icons and collapsible control panels */}
-      <div className="flex flex-col gap-3!">
+      <div className="flex flex-col gap-5!">
         <EditableInput
           fieldKey="name"
           label="Enter student name"
@@ -126,7 +126,7 @@ export default function NameSlipPersonalizationSection({
           </AccordionSummary>
 
           <AccordionDetails>
-            <div className="flex flex-col gap-3 mt-3!">
+            <div className="flex flex-col gap-5! mt-3!">
               <EditableInput
                 fieldKey="class"
                 label="Class"
@@ -157,20 +157,8 @@ export default function NameSlipPersonalizationSection({
               <EditableInput
                 fieldKey="subject"
                 label="Subjects (comma separated)"
-                value={
-                  Array.isArray(studentDetails.subject)
-                    ? studentDetails.subject.join(", ")
-                    : ""
-                }
-                onChange={(v) =>
-                  updateField(
-                    "subject",
-                    v
-                      .split(",")
-                      .map((x) => x.trim())
-                      .filter(Boolean)
-                  )
-                }
+                value={studentDetails?.subject}
+                onChange={(v) => updateField("subject", v)}
                 labelTransforms={labelTransforms}
                 setLabelTransforms={setLabelTransforms}
               />

@@ -49,6 +49,7 @@ const EditableInput = ({
         fieldKey={mappedKey}
         labelTransforms={labelTransforms}
         setLabelTransforms={setLabelTransforms}
+        onClose={() => setOpen(false)}
       />
     </div>
   );

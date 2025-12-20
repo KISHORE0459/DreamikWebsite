@@ -7,9 +7,11 @@ import {
   DialogContent,
   DialogActions,
   Button,
+  Select,
+  MenuItem,
 } from "@mui/material";
 
-import ColorPicker from "react-best-gradient-color-picker"; // ⭐ NEW BEST UI PICKER
+import ColorPicker from "react-best-gradient-color-picker";
 
 import {
   HiOutlineZoomIn,
@@ -21,6 +23,17 @@ import {
 } from "react-icons/hi";
 import { LuRotateCw, LuRotateCcw } from "react-icons/lu";
 import { IoIosClose } from "react-icons/io";
+
+const FONT_OPTIONS = [
+  "Arial",
+  "Times New Roman",
+  "Poppins",
+  "Roboto",
+  "Montserrat",
+  "Comic Sans MS",
+  "Georgia",
+  "Verdana",
+];
 
 const TextEditPanel = ({
   open,
@@ -42,9 +55,20 @@ const TextEditPanel = ({
     }));
   };
 
-  const changeFont = (delta) =>
-    update({ fontSize: Math.max(6, (transforms.fontSize || 16) + delta) });
+  /* -------------------- FONT SIZE (Quantity Style) -------------------- */
+  const fontSize = transforms.fontSize || 16;
 
+  const changeFontSize = (delta) =>
+    update({ fontSize: Math.max(6, fontSize + delta) });
+
+  const setFontSizeDirect = (value) => {
+    const num = Number(value);
+    if (!isNaN(num) && num >= 6 && num <= 200) {
+      update({ fontSize: num });
+    }
+  };
+
+  /* -------------------- MOVE / ROTATE -------------------- */
   const move = (dx, dy) =>
     update({
       translateX: (transforms.translateX || 0) + dx,
@@ -54,16 +78,6 @@ const TextEditPanel = ({
   const rotate = (d) => update({ rotate: (transforms.rotate || 0) + d });
 
   const controlButtons = [
-    {
-      icon: <HiOutlineZoomIn size={20} />,
-      title: "A+",
-      onClick: () => changeFont(+2),
-    },
-    {
-      icon: <HiOutlineZoomOut size={20} />,
-      title: "A-",
-      onClick: () => changeFont(-2),
-    },
     {
       icon: <HiOutlineArrowCircleLeft size={20} />,
       title: "Left",
@@ -98,12 +112,10 @@ const TextEditPanel = ({
 
   return (
     <div
-      className="mt-3 rounded-md bg-gray-50 flex flex-col gap-3 shadow-md"
-      style={{
-        border: "1px solid #12345A",
-        padding: 12,
-      }}
+      className="mt-3 rounded-md bg-gray-50 flex flex-col gap-4 shadow-md"
+      style={{ border: "1px solid #12345A", padding: 12 }}
     >
+      {/* HEADER */}
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={onClose}
@@ -112,25 +124,65 @@ const TextEditPanel = ({
           Text Editor
         </div>
 
-        <div className="flex items-center gap-2">
-          <div className="text-xs text-gray-600 mr-2">
-            {transforms.fontSize ? `${transforms.fontSize}px` : "—"}
-          </div>
+        <IconButton size="small">
+          <IoIosClose size={25} />
+        </IconButton>
+      </div>
 
-          <IconButton size="small">
-            <IoIosClose />
-          </IconButton>
+      {/* FONT SIZE (Quantity Style) */}
+      <div className="flex items-center gap-3">
+        <div className="font-medium text-[15px]!">Font Size</div>
+
+        <div className="flex items-center border rounded-md overflow-hidden bg-white">
+          <button
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
+            onClick={() => changeFontSize(-1)}
+          >
+            −
+          </button>
+
+          <input
+            type="number"
+            value={fontSize}
+            onChange={(e) => setFontSizeDirect(e.target.value)}
+            className="w-16 text-center outline-none"
+          />
+
+          <button
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
+            onClick={() => changeFontSize(1)}
+          >
+            +
+          </button>
         </div>
       </div>
 
-      {/* Controls */}
-      <div className="flex flex-wrap gap-2 items-center mb-3">
+      {/* FONT FAMILY */}
+      <div className="flex items-center gap-3">
+        <div className="font-medium text-[15px]! shrink-0">Font Type</div>
+
+        <Select
+          size="small"
+          fullWidth
+          value={transforms.fontFamily || "Arial"}
+          onChange={(e) => update({ fontFamily: e.target.value })}
+          className="text-left! max-w-[200px] md:max-w-[300px]"
+        >
+          {FONT_OPTIONS.map((font) => (
+            <MenuItem key={font} value={font} style={{ fontFamily: font }}>
+              {font}
+            </MenuItem>
+          ))}
+        </Select>
+      </div>
+
+      {/* MOVE / ROTATE */}
+      <div className="flex flex-wrap gap-2 items-center">
         {controlButtons.map((btn, i) => (
           <button
             key={i}
             type="button"
-            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center p-0! text-[#1A1A1A]! shadow-sm hover:shadow-md"
-            title={btn.title}
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
             onClick={btn.onClick}
           >
             {btn.icon}
@@ -138,9 +190,9 @@ const TextEditPanel = ({
         ))}
       </div>
 
-      {/* Color */}
+      {/* COLOR */}
       <div className="flex items-center gap-2">
-        <div className="text-[15px]! font-medium">Pick the Text Color :</div>
+        <div className="font-medium text-[15px]!">Text Color</div>
 
         <div
           role="button"
@@ -157,21 +209,21 @@ const TextEditPanel = ({
         </div>
       </div>
 
-      {/* Modal Picker */}
+      {/* COLOR PICKER MODAL */}
       <Dialog open={showPicker} onClose={() => setShowPicker(false)}>
         <DialogContent dividers>
           <ColorPicker
             value={transforms.color || "#000"}
-            onChange={(newColor) => update({ color: newColor })}
-            hideEyeDrop // cleaner UI
-            hideInputs // no HEX input bar (cleaner look)
+            onChange={(c) => update({ color: c })}
+            hideEyeDrop
+            hideInputs
           />
         </DialogContent>
 
         <DialogActions>
           <Button
             onClick={() => setShowPicker(false)}
-            className="text-[#da1414]! border! border-[#da1414]! rounded-md! bg-white! hover:bg-white!"
+            className="text-[#da1414]! border! border-[#da1414]! bg-white!"
           >
             Close
           </Button>

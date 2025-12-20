@@ -108,7 +108,7 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
   // navigation - preserved
   const handleProductClick = (id, productcode) => {
     localStorage.setItem("keyid", id);
-    navigate(`/Products/${productcode}`);
+    navigate(`/name-slip/${productcode}`);
   };
 
   // filter handlers (apply simple filters locally)
@@ -159,7 +159,7 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
         <OnePlusOneOffer offerproduct={"Nameslips"} />
 
         {/* Top bar */}
-        <div className="flex flex-row items-center justify-between h-[100px] w-full px-10! border-b border-b-[#1A335E]">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between min-h-[100px] w-full px-21 md:px-10! border-b border-b-[#1A335E] py-2! gap-5!">
           <div className="flex flex-col gap-1 items-start">
             <h4 className="text-[24px] text-[#1A1A1A] font-medium leading-5">
               Name Slips
@@ -168,14 +168,14 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
               Customize and have Fun
             </h4>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3 mb-6">
+          <div className="flex flex-row items-center justify-between gap-3 mb-6">
             <div className="w-full max-w-xl h-9! md:h-10! flex bg-white rounded-[10px] pl-4 pr-2 items-center shadow-md">
               <input
                 type="text"
                 value={searchText}
                 onChange={(e) => setSearchText(e.target.value)}
                 placeholder="Search products"
-                className="flex-1 h-full text-sm px-2! w-[300px] border! border-[#1A1A1A] rounded-lg"
+                className="flex-1 h-full text-sm px-2! w-[200px] md:w-[300px] border! border-[#1A1A1A] rounded-lg"
               />
             </div>
 
@@ -193,7 +193,7 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center justify-stretch! items-stretch!">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 place-items-center justify-center md:items-stretch">
           {paginated.map((product, idx) => {
             const globalIndex = (page - 1) * PRODUCTS_PER_PAGE + idx;
             return (

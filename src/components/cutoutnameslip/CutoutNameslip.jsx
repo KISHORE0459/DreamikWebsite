@@ -1,203 +1,249 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./cutoutNameslip.css";
+import { HelmetProvider } from "react-helmet-async";
 import OnePlusOneOffer from "./Oneplusone";
-const CutOutNameSlip = ({ searchText, setcoupon }) => {
+import { Button, Pagination } from "@mui/material";
+import FilterDrawer from "../../AppComponents/FilterDrawer/FilterDrawer";
+import NameSlipCard from "../../AppComponents/NameSlipCard/NameSlipCard";
+
+const PRODUCTS_PER_PAGE = 20;
+
+const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [galleryIndex, setGalleryIndex] = useState({});
   const navigate = useNavigate();
+  const imgRefs = useRef([]);
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [page, setPage] = useState(1);
+
+  // fetch products
   useEffect(() => {
-    const fetchJSONData = () => {
-      fetch("../cutoutnameslip_data.json")
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
-          }
-          return res.json();
-        })
-        .then((data) => {
-          const filteredProducts = Object.keys(data)
-            .filter((key) => data[key].status === 1)
-            .map((key) => ({
-              ...data[key],
-              id: key,
-            }));
-          setProducts(filteredProducts);
-        })
-        .catch((error) => console.error("Unable to fetch data:", error));
+    const fetchJSONData = async () => {
+      try {
+        const res = await fetch("../cutoutnameslip_data.json");
+        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+
+        const data = await res.json();
+        const arr = Object.keys(data)
+          .filter((key) => data[key].status === 1)
+          .map((key) => ({ ...data[key], id: key }));
+
+        setProducts(arr);
+        setFilteredProducts(arr);
+      } catch (err) {
+        console.error("Unable to fetch data:", err);
+      }
     };
 
     fetchJSONData();
     setcoupon("DISCOUNTCONSR50");
+  }, [setcoupon]);
 
+  // normalize search
+  const normalize = (str = "") => str.replace(/\s+/g, "").toLowerCase();
 
+  useEffect(() => {
+    if (searchText) {
+      const f = products.filter(
+        (p) =>
+          normalize(p.name).includes(normalize(searchText)) ||
+          (p.props &&
+            p.props.some((prop) =>
+              normalize(prop).includes(normalize(searchText))
+            ))
+      );
+      setFilteredProducts(f);
+      setPage(1);
+    } else {
+      setFilteredProducts(products);
+      setPage(1);
+    }
+  }, [searchText, products]);
 
-  }, []);
+  // lazy load observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.dataset?.src) {
+            entry.target.src = entry.target.dataset.src;
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-  // Normalize strings for search
-  const normalizeString = (str) => str?.replace(/\s+/g, "").toLowerCase() || "";
-  const [selectedImage, setSelectedImage] = useState(sessionStorage.getItem("personImage") || null);
-  const [studentDetails, setStudentDetails] = useState(JSON.parse(sessionStorage.getItem("studentDetails")) || null)
-  const fontdetails = JSON.parse(sessionStorage.getItem("detailsFont")) || null;
-  // Apply search filter
-  const filteredProducts = searchText
-    ? products.filter(
-      (product) =>
-        normalizeString(product.name).includes(normalizeString(searchText)) ||
-        (product.props &&
-          product.props.some((prop) =>
-            normalizeString(prop).includes(normalizeString(searchText))
-          ))
-    )
-    : products;
+    imgRefs.current.forEach((img) => img && observer.observe(img));
+    return () => observer.disconnect();
+  }, [filteredProducts, page]);
 
+  // hover gallery cycle
+  useEffect(() => {
+    if (
+      hoveredIndex !== null &&
+      filteredProducts[hoveredIndex]?.gallery?.length > 1
+    ) {
+      const interval = setInterval(() => {
+        setGalleryIndex((prev) => ({
+          ...prev,
+          [hoveredIndex]:
+            ((prev[hoveredIndex] || 0) + 1) %
+            filteredProducts[hoveredIndex].gallery.length,
+        }));
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [hoveredIndex, filteredProducts]);
+
+  // navigation
   const handleProductClick = (id, productcode) => {
     localStorage.setItem("keyid", id);
-    console.log(id, productcode);
-    navigate(`/ProductDetails/${productcode}`); // Navigate to ProductDetails view
+    navigate(`/cutOut-nameSlip/${productcode}`);
   };
+
+  // filter drawer options
+  const categories = Array.from(
+    new Set(products.map((p) => p.category).filter(Boolean))
+  );
+  const templates = Array.from(
+    new Set(products.map((p) => p.template).filter(Boolean))
+  );
+
+  const onApplyFilters = (vals) => {
+    const { category, template, minPrice, maxPrice } = vals;
+    let arr = [...products];
+
+    if (category) arr = arr.filter((p) => p.category === category);
+    if (template) arr = arr.filter((p) => p.template === template);
+    if (minPrice) arr = arr.filter((p) => Number(p.price) >= Number(minPrice));
+    if (maxPrice) arr = arr.filter((p) => Number(p.price) <= Number(maxPrice));
+
+    setFilteredProducts(arr);
+    setPage(1);
+    setDrawerOpen(false);
+  };
+
+  const onClearFilters = () => {
+    setFilteredProducts(products);
+    setPage(1);
+  };
+
+  // pagination
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE)
+  );
+
+  const paginated = filteredProducts.slice(
+    (page - 1) * PRODUCTS_PER_PAGE,
+    page * PRODUCTS_PER_PAGE
+  );
+
+  const imgRefSetter = (index, el) => {
+    imgRefs.current[index] = el;
+  };
+
   return (
-    <section id="product-1" className="section-p1">
-      {/* <img src="/buy1get.jpg" alt="" style={{ width: "300px", height: "300px" }} /> */}
+    <HelmetProvider>
+      <div className="px-4! md:px-8! flex flex-col gap-5!">
+        <OnePlusOneOffer offerproduct="CutoutNameslips" />
 
-      <h2 style={{ fontWeight: "600", width: "100%" }}>
-        <OnePlusOneOffer offerproduct={"CutoutNameslips"} />
-
-        Cut Out Name Slips <br />
-        <p>Creative and Fun</p>
-      </h2>
-      <button
-        className="autocoupon"
-        onClick={() => {
-          setcoupon("DISCOUNTCONSR50");
-        }}
-      >
-        " DISCOUNTCONSR50 "<br />
-        (apply this for get Rs.50 offer)
-      </button>
-      <div className="rmvbg">
-        <button
-          onClick={() => {
-            window.open("https://www.remove.bg/upload", "_blank");
-          }}
+        {/* HEADER SECTION */}
+        <div
+          className="flex flex-col md:flex-row items-start md:items-center justify-between 
+          min-h-[100px] w-full px-2 md:px-10 border-b border-b-[#1A335E] py-3 gap-5"
         >
-          Remove Background{" "}
-        </button>
-        <span>(removebg of your image for getting better result)</span>
-      </div>
-      <div className="pro-container">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product, index) => (
-            <div
-              className="pro"
-              key={product.id}
-              onClick={() =>
-                handleProductClick(product.id, product.productcode)
-              }
-            >
-              <img src={product.source} alt={product.name} loading="lazy" style={{ position: "relative" }} />
-              <div style={{
-                position: "absolute",
-                top: "10%",
-                width: "30%",
-                height: "100%",
-                left: "1%"
-              }}>
-                <img
-
-                  src={selectedImage || `/demokidsremovebg/demokidsimage${(index % 12) + 1}.webp`}
-                  alt="yours Image"
-                  className={`selectedImagecn ${["NSCRT00017", "NSCRT00018", "NSCRT00019", "NSCRT00020", "NSCRT00021"].includes(product.productcode)
-                    ? "selectedimagecn1" : ""}`}
-                />
-
-                <label
-                  htmlFor=""
-
-                  className={`student-name ${["NSCRT00017", "NSCRT00018", "NSCRT00019", "NSCRT00020", "NSCRT00021"].includes(product.productcode)
-                    ? "label11" : ""}`}
-                  style={{ color: fontdetails?.[0]?.color || "#000080" }}
-                >
-                  {studentDetails?.name || "Kid's Name"}
-                </label>
-
-                <label
-                  htmlFor=""
-                  className={`school-name ${["NSCRT00017", "NSCRT00018", "NSCRT00019", "NSCRT00020", "NSCRT00021"].includes(product.productcode)
-                    ? "label12" : ""}`} style={{ color: fontdetails?.[1]?.color || "#000080" }}
-                >
-                  {studentDetails?.schoolName || "School Name"}
-                </label>
-
-                <label
-                  htmlFor=""
-                  className={`student-class ${["NSCRT00017", "NSCRT00018", "NSCRT00019", "NSCRT00020", "NSCRT00021"].includes(product.productcode)
-                    ? "label13" : ""}`} style={{ color: fontdetails?.[5]?.color || "#000080" }}
-                >
-                  {studentDetails?.class || "Class"}
-                </label>
-
-                <label
-                  htmlFor=""
-                  className={`student-section ${["NSCRT00017", "NSCRT00018", "NSCRT00019", "NSCRT00020", "NSCRT00021"].includes(product.productcode)
-                    ? "label14" : ""}`} style={{ color: fontdetails?.[4]?.color || "#000080" }}
-                >
-                  {studentDetails?.section || "Sec"}
-                </label>
-
-              </div>
-
-
-              <div className="description">
-                <span>DreamiKAI Label</span>
-                <h5>{product.name}</h5>
-                <div className="star">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                </div>
-                <h4>Rs.{product.price}</h4>
-                {/* <ProductOffer
-          originalPrice={507}
-          discountPercentage={33}
-          offerEndTime={6473}
-        /> */}
-              </div>
-              <a href="#" className="cart">
-                <i className="fas fa-shopping-cart"></i>
-              </a>
-
-            </div>
-          ))
-        ) : (
-          <p></p>
-        )}
-
-      </div>
-      <div>
-        <hr style={{ height: "4px", backgroundColor: "black" }} />
-        <h4 style={{ marginTop: "10px" }}>Output of labels</h4>
-        <div className="outputlables">
-          <div className="scroller">
-            {Array.from({ length: 18 }, (_, index) => (
-              <img
-                key={index + 1}
-                src={`/Cutoutnameslipdemo/cutoutns${(index % 8) + 1}.webp`}
-                alt={`Image ${(index % 8) + 1}`}
-                width="250px"
-                height="250px"
-                className="cutoutsample"
-                loading="lazy"
-              />
-            ))}
+          <div className="flex flex-col gap-1 items-start">
+            <h4 className="text-[24px] font-medium text-[#1A1A1A] leading-5">
+              Cut Out Name Slips
+            </h4>
+            <h4 className="text-[14px] text-[#383838] leading-5">
+              Creative and Fun
+            </h4>
           </div>
 
+          {/* SEARCH + FILTER BUTTON */}
+          <div className="flex flex-row items-center gap-3 mb-6">
+            <input
+              type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              placeholder="Search products"
+              className="flex-1 w-[200px] md:w-[300px] h-10 text-sm px-2! border border-[#1A1A1A] rounded-lg"
+            />
+
+            <Button
+              variant="outlined"
+              onClick={() => setDrawerOpen(true)}
+              className="border-[#1A1A1A]! rounded-[20px]! text-[#1A1A1A]! hover:bg-white! h-10!"
+            >
+              Filters
+            </Button>
+          </div>
         </div>
 
-        <hr style={{ height: "4px", backgroundColor: "black" }} />
+        {/* PRODUCT GRID */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+          gap-6 place-items-center md:items-stretch"
+        >
+          {paginated.map((product, idx) => {
+            const global = (page - 1) * PRODUCTS_PER_PAGE + idx;
+            return (
+              <div
+                key={product.id}
+                onMouseEnter={() => {
+                  setHoveredIndex(global);
+                  setGalleryIndex((prev) => ({ ...prev, [global]: 0 }));
+                }}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <NameSlipCard
+                  product={product}
+                  globalIndex={global}
+                  isHovered={hoveredIndex === global}
+                  galleryIndex={galleryIndex[global]}
+                  imgRefSetter={imgRefSetter}
+                  selectedImage={null} // plain image only
+                  studentDetails={null}
+                  fontdetails={null}
+                  onClickCard={handleProductClick}
+                  onCtaClick={(id) => navigate(`/CutoutPersonalize/${id}`)}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        {/* PAGINATION */}
+        <div className="flex items-center justify-center mt-6">
+          <Pagination
+            count={totalPages}
+            page={page}
+            onChange={(e, value) => {
+              setPage(value);
+              window.scrollTo({ top: 200, behavior: "smooth" });
+            }}
+            color="primary"
+          />
+        </div>
+
+        {/* FILTER DRAWER */}
+        <FilterDrawer
+          open={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+          categories={categories}
+          templates={templates}
+          onApplyFilters={onApplyFilters}
+          onClear={onClearFilters}
+        />
       </div>
-    </section>
+    </HelmetProvider>
   );
 };
 

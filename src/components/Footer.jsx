@@ -125,7 +125,7 @@ function Footer() {
             <span
               key={idx}
               onClick={item.action}
-              className="text-[12px] md:text-[14px] text-white! cursor-pointer !py-1"
+              className="text-[12px] md:text-[14px] text-white! cursor-pointer py-1! hover:scale-110! transition-all duration-300"
             >
               {item.external ? (
                 <a href={item.external} className="text-white!">
@@ -148,7 +148,7 @@ function Footer() {
             <span
               key={idx}
               onClick={link.action}
-              className="text-[12px] md:text-[14px] text-white! cursor-pointer !py-1"
+              className="text-[12px] md:text-[14px] text-white! cursor-pointer py-1! hover:scale-110! transition-all duration-300"
             >
               {link.external ? (
                 <a href={link.external} target="_blank">

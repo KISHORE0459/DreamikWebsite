@@ -14,26 +14,12 @@ import Advertisement from "./components/Advertisement";
 
 import ProductDetails from "./components/cutoutnameslip/ProductDetails";
 
-import Products from "./components/nameslip/Products";
-import NStemplate2 from "./components/nameslip/NStemplate2";
-import NStemplate3 from "./components/nameslip/NStemplate3";
-import NStemplate4 from "./components/nameslip/NStemplate4";
-import NStemplate5 from "./components/nameslip/NStemplate5";
-import NStemplate6 from "./components/nameslip/NStemplate6";
-import NStemplate7 from "./components/nameslip/NStemplate7";
-import NStemplate1 from "./components/nameslip/NStemplate1";
-import NStemplate8 from "./components/nameslip/NStemplate8";
-import NStemplate9 from "./components/nameslip/NStemplate9";
-import NStemplate10 from "./components/nameslip/NStemplate10";
-import NStemplate11 from "./components/nameslip/NStemplate11";
-import NStemplate12 from "./components/nameslip/NStemplate12";
-
 import logo from "/logo.webp";
 import CustomNameSlips from "./components/customnameslip/CustomNameSlips";
+import CutOutNameSlip from "./components/cutoutnameslip/CutoutNameslip";
 
 import ScrollToTop from "./components/ScrollTop";
 
-import CNTemplate1 from "./components/cutoutnameslip/CNtemplate1";
 import demoVideo from "/videos/demo video dreamik.mp4";
 import customizevideo from "/videos/customizevideo.mp4";
 import ProductList from "./components/ProductList";
@@ -46,9 +32,6 @@ const CustamizableBagTage = lazy(() =>
   import("./components/bagtag/CustamizableBagTage")
 );
 const PendingOrders = lazy(() => import("./components/PendingOrders"));
-const CutoutNameslip = lazy(() =>
-  import("./components/cutoutnameslip/CutoutNameslip")
-);
 
 const Adminpanel = lazy(() => import("./components/adminpanel/Adminpanel"));
 const AdminCouponTable = lazy(() =>
@@ -63,9 +46,6 @@ const Location = lazy(() => import("./components/Location/location"));
 const BulkPrinting = lazy(() => import("./components/BulkPrinting"));
 const BulkOrder = lazy(() => import("./components/bulkorder/BulkOrder"));
 const PageLogger = lazy(() => import("./components/pagelogger"));
-const Birthdaycap = lazy(() =>
-  import("./components/birthdaycapfolder/Birthdaycap")
-);
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -76,6 +56,11 @@ import NSPersonalize from "./components/Laserprinter";
 import Fullcashondelivery from "./components/Fullcashondelivery";
 import NameSlip from "./components/nameslip/NameSlips";
 import NameSlipPersonalize from "./AppComponents/PersonalizeNameSlip/PersonalizeNameSlip";
+import { GlobalStyles } from "@mui/material";
+import NameSlipDetail from "./components/nameslip/NameSlipDetails";
+import CutoutNameSlipPersonalize from "./components/cutoutnameslip/CutOutNameSlipPersonalize";
+import OrderComp from "./AppComponents/Order/OrderComp";
+import BirthdayCap from "./components/Birthdaycap/Birthdaycap";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -199,7 +184,7 @@ function AppContent() {
         ) : (
           <>
             <Suspense fallback={<div></div>}>
-              <SplashModal visible={visible} setVisible={setVisible} />
+              {/* <SplashModal visible={visible} setVisible={setVisible} /> */}
               <PageLogger />
               <div className="flex flex-col gap-5">
                 <div>
@@ -213,6 +198,7 @@ function AppContent() {
                   <Advertisement />
                 </div>
                 <Routes>
+                  {/* home page */}
                   <Route
                     path="/"
                     element={
@@ -223,19 +209,7 @@ function AppContent() {
                       />
                     }
                   />
-                  <Route
-                    path="/CutoutNameslips"
-                    element={
-                      <CutoutNameslip
-                        searchText={searchText}
-                        setcoupon={setcoupon}
-                      />
-                    }
-                  />
-                  <Route
-                    path="/ProductDetails/:id"
-                    element={<ProductDetails />}
-                  />
+                  {/* name slip */}
                   <Route
                     path="/Nameslips"
                     element={
@@ -246,7 +220,34 @@ function AppContent() {
                       />
                     }
                   />
-                  <Route path="/Products/:productcode" element={<Products />} />
+                  <Route
+                    path="/name-slip/:productcode"
+                    element={<NameSlipDetail />}
+                  />
+                  <Route
+                    path="/name-slip/:templateID/:id"
+                    element={<NameSlipPersonalize />}
+                  />
+                  {/* cut out name slip */}
+                  <Route
+                    path="/CutoutNameslips"
+                    element={
+                      <CutOutNameSlip
+                        searchText={searchText}
+                        setSearchText={setSearchText}
+                        setcoupon={setcoupon}
+                      />
+                    }
+                  />
+                  <Route
+                    path="/cutOut-nameSlip/:id"
+                    element={<ProductDetails />}
+                  />
+                  <Route
+                    path="CNtemplate1/:id"
+                    element={<CutoutNameSlipPersonalize />}
+                  />
+                  {/* bag tag */}
                   <Route
                     path="/CustamizableBagTage"
                     element={<CustamizableBagTage />}
@@ -254,10 +255,10 @@ function AppContent() {
                   <Route
                     path="/Order"
                     element={
-                      <Order
-                        handleEditOrder={handleEditOrder}
+                      <OrderComp
                         orderData={orderData}
                         setOrderData={setOrderData}
+                        handleEditOrder={handleEditOrder}
                         coupon={coupon}
                       />
                     }
@@ -282,24 +283,6 @@ function AppContent() {
                   <Route path="/adminpanel" element={<Adminpanel />} />
                   <Route path="/termsandcondition" element={<Terms />} />
                   <Route
-                    path="/name-slip/:templateID/:id"
-                    element={<NameSlipPersonalize />}
-                  />
-                  <Route path="/NStemplate1/:id" element={<NStemplate1 />} />
-                  <Route path="/NStemplate2/:id" element={<NStemplate2 />} />
-                  <Route path="/NStemplate3/:id" element={<NStemplate3 />} />
-                  <Route path="/NStemplate4/:id" element={<NStemplate4 />} />
-                  <Route path="/NStemplate5/:id" element={<NStemplate5 />} />
-                  <Route path="/NStemplate6/:id" element={<NStemplate6 />} />
-                  <Route path="/NStemplate7/:id" element={<NStemplate7 />} />
-                  <Route path="NStemplate8/:id" element={<NStemplate8 />} />
-                  <Route path="NStemplate9/:id" element={<NStemplate9 />} />
-                  <Route path="NStemplate10/:id" element={<NStemplate10 />} />
-                  <Route path="NStemplate11/:id" element={<NStemplate11 />} />
-                  <Route path="NStemplate12/:id" element={<NStemplate12 />} />
-                  <Route path="CNtemplate1/:id" element={<CNTemplate1 />} />
-
-                  <Route
                     path="Bulkprintingsoftware"
                     element={<BulkPrinting />}
                   />
@@ -315,7 +298,8 @@ function AppContent() {
                     path="/AITextBehindImage(Free)"
                     element={<AiNameslipGen />}
                   />
-                  <Route path="/BirthdayCap" element={<Birthdaycap />} />
+                  {/* Birthday cap */}
+                  <Route path="/BirthdayCap" element={<BirthdayCap />} />
 
                   <Route
                     path="/AIKickoutBackground(Free)"
@@ -323,7 +307,7 @@ function AppContent() {
                   />
                 </Routes>
 
-                <SplashModal visible={isVisible} setVisible={setIsVisible} />
+                {/* <SplashModal visible={isVisible} setVisible={setIsVisible} /> */}
                 <div className="mt-10! flex flex-col gap-5!">
                   <DemoVideos
                     handleVideoClick={handleVideoClick}
@@ -346,17 +330,26 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <ToastContainer
-        position="top-center"
-        autoClose={10000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-      />
-      <ScrollToTop />
-      <AppContent />
+      <div className="max-w-[1600px]! mx-auto! p-0!">
+        <ToastContainer
+          position="top-center"
+          autoClose={10000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          pauseOnHover
+          draggable
+        />
+        <ScrollToTop />
+        <AppContent />
+        <GlobalStyles
+          styles={{
+            body: {
+              paddingRight: "0 !important",
+            },
+          }}
+        />
+      </div>
     </Router>
   );
 }

@@ -1,51 +1,124 @@
 "use client";
 
-import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 const NameSlipPreviewSection = ({
-  config, // template config (from JSON)
-  product, // background template image
-  selectedImage, // user uploaded image
-  labelTransforms, // { nameTrans, schoolTrans, subjectTrans, ... }
-  studentDetails, // { name, schoolName, subject, class, section }
+  config,
+  product,
+  selectedImage,
+  labelTransforms,
+  studentDetails,
   brightness,
   contrast,
   imageBorder,
   circleImage,
-  imageTransforms, // zoom, rotate, translate, mirror
-  persImgContRef, // ref for html2canvas
+  imageTransforms,
+  persImgContRef,
 }) => {
-  const renderLabel = (key, value) => {
-    if (!config?.labels?.[key]) return null;
+  console.log("student details", studentDetails);
+  console.log("label transform", labelTransforms);
+  console.log("config", config);
+  const selectedWatermark =
+    typeof window !== "undefined"
+      ? localStorage.getItem("selectedlabel")
+      : null;
 
-    const pos = config.labels[key];
+  const effectiveWatermark = (() => {
+    if (!config?.watermark?.enabled) return null;
+
+    if (!config?.watermarkOverrides || !selectedWatermark) {
+      return { ...config?.watermark, src: selectedWatermark };
+    }
+
+    const override = config?.watermarkOverrides[selectedWatermark];
+
+    if (override) {
+      return {
+        ...config?.watermark,
+        ...override,
+        src: selectedWatermark,
+      };
+    }
+
+    return { ...config.watermark, src: selectedWatermark };
+  })();
+
+  const renderLabel = (key, text) => {
+    const labelConfig = config?.labels[key];
+    if (!labelConfig) return null;
+
+    if (labelConfig?.hidden) return null;
+
     const trans = labelTransforms[key + "Trans"];
 
     return (
       <Typography
         key={key}
         variant="body1"
-        className="absolute font-bold shadow-text select-none"
+        className="absolute font-bold select-none"
         style={{
-          top: pos.top,
-          left: pos.left,
-          fontSize: `${trans.fontSize}px`,
-          color: trans.color,
-          fontFamily: trans.fontFamily || "Arial",
+          top: labelConfig?.top,
+          left: labelConfig?.left,
+          fontSize: `${trans?.fontSize}px`,
+          color: trans?.color,
+          opacity: labelConfig?.opacity ?? 1,
+          fontFamily: trans?.fontFamily || "Arial",
           transform: `
-            scale(${trans.scale}) 
-            rotate(${trans.rotate}deg)
-            translate(${trans.translateX}px, ${trans.translateY}px)
-            scaleX(${trans.mirror})
+            scale(${trans?.scale})
+            rotate(${trans?.rotate}deg)
+            translate(${trans?.translateX}px, ${trans?.translateY}px)
+            scaleX(${trans?.mirror})
           `,
-          transition: "transform 0.15s linear",
+          transition: "transform 0.12s linear",
           whiteSpace: "nowrap",
         }}
       >
-        {value}
+        {text}
       </Typography>
+    );
+  };
+
+  const renderUserImage = () => {
+    if (!config?.image?.enabled || !selectedImage) return null;
+
+    const imgCfg = config?.image;
+
+    return (
+      <img
+        src={selectedImage}
+        alt="uploaded"
+        className="absolute"
+        style={{
+          top: imgCfg?.top,
+          left: imgCfg?.left,
+          width: imgCfg?.width,
+          maxWidth: imgCfg?.maxWidth,
+          maxHeight: imgCfg?.maxHeight,
+
+          // shape rules
+          borderRadius: circleImage
+            ? "9999px"
+            : imgCfg?.shape === "circle"
+            ? "9999px"
+            : "4px",
+
+          border: imageBorder ? "2px solid black" : "none",
+
+          // filters
+          filter: `brightness(${brightness}%) contrast(${contrast}%)`,
+
+          // transforms
+          transform: `
+            scale(${imageTransforms?.scale})
+            rotate(${imageTransforms?.rotate}deg)
+            translate(${imageTransforms?.translateX}px, ${imageTransforms?.translateY}px)
+            scaleX(${imageTransforms?.mirror})
+          `,
+
+          transition: "transform 0.15s linear",
+        }}
+      />
     );
   };
 
@@ -61,56 +134,29 @@ const NameSlipPreviewSection = ({
         className="w-full h-auto object-cover"
       />
 
-      {/* User Image (if template allows) */}
-      {config.image?.enabled && selectedImage && (
-        <img
-          src={selectedImage}
-          alt="uploaded"
-          className="absolute"
-          style={{
-            top: config.image.top,
-            left: config.image.left,
-            width: config.image.width,
-            maxWidth: config.image.maxWidth,
-            maxHeight: config.image.maxHeight,
-            border: imageBorder ? "2px solid black" : "none",
-            borderRadius: circleImage
-              ? "9999px"
-              : config.image.shape === "circle"
-              ? "9999px"
-              : "4px",
-            filter: `brightness(${brightness}%) contrast(${contrast}%)`,
-            transform: `
-              scale(${imageTransforms.scale})
-              rotate(${imageTransforms.rotate}deg)
-              translate(${imageTransforms.translateX}px, ${imageTransforms.translateY}px)
-              scaleX(${imageTransforms.mirror})
-            `,
-            transition: "transform 0.15s linear",
-          }}
-        />
-      )}
+      {/* User Image */}
+      {renderUserImage()}
 
-      {/* Render Labels Dynamically */}
-      {renderLabel("name", studentDetails.name)}
-      {renderLabel("school", studentDetails.schoolName)}
-      {renderLabel("subject", studentDetails.subject?.join(", "))}
-      {renderLabel("roll", studentDetails.rollNumber)}
-      {renderLabel("section", studentDetails.section)}
-      {renderLabel("class", studentDetails.class)}
+      {/* Labels */}
+      {renderLabel("name", studentDetails?.name)}
+      {renderLabel("school", studentDetails?.schoolName)}
+      {renderLabel("subject", studentDetails?.subject)}
+      {renderLabel("roll", studentDetails?.rollNumber)}
+      {renderLabel("section", studentDetails?.section)}
+      {renderLabel("class", studentDetails?.class)}
 
       {/* Watermark */}
-      {config.watermark?.enabled && (
+      {effectiveWatermark && (
         <img
-          src={config.watermark.src}
-          className="absolute pointer-events-none select-none"
-          style={{
-            top: config.watermark.top,
-            left: config.watermark.left,
-            opacity: config.watermark.opacity,
-            width: config.watermark.width || "30%",
-          }}
+          src={effectiveWatermark?.src}
           alt="watermark"
+          className="absolute pointer-events-none select-none w-full h-full"
+          style={{
+            top: effectiveWatermark?.top,
+            left: effectiveWatermark?.left,
+            // opacity: effectiveWatermark.opacity ?? 1,
+            // width: effectiveWatermark.width || "30%",
+          }}
         />
       )}
     </Box>

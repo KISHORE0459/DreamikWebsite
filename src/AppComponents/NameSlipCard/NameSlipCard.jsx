@@ -26,7 +26,7 @@ const NameSlipCard = ({
       )}
 
       {/* image block (fills card width) */}
-      <div className="w-full h-[170px] bg-gray-100 relative">
+      <div className="w-full h-[170px] bg-gray-100 relative rounded-[10px]! overflow-hidden!">
         <img
           ref={(el) => imgRefSetter(globalIndex, el)}
           data-src={product.source}
