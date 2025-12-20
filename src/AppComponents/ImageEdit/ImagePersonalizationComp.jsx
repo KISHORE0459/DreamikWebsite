@@ -127,12 +127,9 @@ export default function ImagePersonalizationComp({
 
   return (
     <div className="flex flex-col gap-2.5">
-      <div className="flex gap-6 items-start">
+      <div className="flex flex-col md:flex-row gap-6 items-start">
         {/* Upload + preview box */}
-        <label
-          className="cursor-pointer"
-          onClick={() => document.getElementById("ns-upload-input")?.click()}
-        >
+        <label className="cursor-pointer">
           <input
             id="ns-upload-input"
             type="file"

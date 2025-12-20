@@ -128,7 +128,7 @@ function Navbar({
 
   return (
     <>
-      <nav className="w-full h-24 bg-[#12345A] px-4! py-3! rounded-t-xl shadow-md flex items-center justify-between">
+      <nav className="w-full h-24 bg-[#12345A] px-4! py-3! shadow-md flex items-center justify-between">
         <div
           className="flex items-center gap-3 cursor-pointer md:w-auto w-1/3"
           onClick={() => navigate("/")}

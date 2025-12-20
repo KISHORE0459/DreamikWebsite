@@ -46,9 +46,6 @@ const Location = lazy(() => import("./components/Location/location"));
 const BulkPrinting = lazy(() => import("./components/BulkPrinting"));
 const BulkOrder = lazy(() => import("./components/bulkorder/BulkOrder"));
 const PageLogger = lazy(() => import("./components/pagelogger"));
-const Birthdaycap = lazy(() =>
-  import("./components/birthdaycapfolder/Birthdaycap")
-);
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -63,6 +60,7 @@ import { GlobalStyles } from "@mui/material";
 import NameSlipDetail from "./components/nameslip/NameSlipDetails";
 import CutoutNameSlipPersonalize from "./components/cutoutnameslip/CutOutNameSlipPersonalize";
 import OrderComp from "./AppComponents/Order/OrderComp";
+import BirthdayCap from "./components/Birthdaycap/Birthdaycap";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -186,7 +184,7 @@ function AppContent() {
         ) : (
           <>
             <Suspense fallback={<div></div>}>
-              <SplashModal visible={visible} setVisible={setVisible} />
+              {/* <SplashModal visible={visible} setVisible={setVisible} /> */}
               <PageLogger />
               <div className="flex flex-col gap-5">
                 <div>
@@ -300,7 +298,8 @@ function AppContent() {
                     path="/AITextBehindImage(Free)"
                     element={<AiNameslipGen />}
                   />
-                  <Route path="/BirthdayCap" element={<Birthdaycap />} />
+                  {/* Birthday cap */}
+                  <Route path="/BirthdayCap" element={<BirthdayCap />} />
 
                   <Route
                     path="/AIKickoutBackground(Free)"
@@ -308,7 +307,7 @@ function AppContent() {
                   />
                 </Routes>
 
-                <SplashModal visible={isVisible} setVisible={setIsVisible} />
+                {/* <SplashModal visible={isVisible} setVisible={setIsVisible} /> */}
                 <div className="mt-10! flex flex-col gap-5!">
                   <DemoVideos
                     handleVideoClick={handleVideoClick}
@@ -331,7 +330,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <div className="max-w-[1600px]! mx-auto!">
+      <div className="max-w-[1600px]! mx-auto! p-0!">
         <ToastContainer
           position="top-center"
           autoClose={10000}
