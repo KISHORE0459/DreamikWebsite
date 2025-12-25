@@ -284,23 +284,3 @@ const CustomBagTag = () => {
 };
 
 export default CustomBagTag;
-
-const getTextStyle = (key, labelTransforms) => {
-  const t = labelTransforms[key];
-  if (!t) return {};
-
-  return {
-    fontSize: `${t.fontSize}px`,
-    color: t.color,
-    fontFamily: t.fontFamily,
-    opacity: t.opacity ?? 1,
-    whiteSpace: "nowrap",
-    transform: `
-      translate(${t.translateX}px, ${t.translateY}px)
-      scale(${t.scale})
-      rotate(${t.rotate}deg)
-      scaleX(${t.mirror})
-    `,
-    transition: "transform 0.12s linear",
-  };
-};
