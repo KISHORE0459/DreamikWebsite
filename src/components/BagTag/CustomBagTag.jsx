@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 import CheckoutSection from "../../AppComponents/AppCartComps/CheckoutSection";
 
 const CustomBagTag = () => {
+  // commit to change the path
   const canvasRef = useRef(null);
 
   const { addToCart } = useContext(CartContext);
