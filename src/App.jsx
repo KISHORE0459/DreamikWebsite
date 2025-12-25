@@ -54,13 +54,8 @@ import BulkPrinting from "./components/BulkPrinting/BulkPrinting";
 import Poster from "./components/Poster/Poster";
 import CustomSticker from "./components/Sticker/Sticker";
 import LaserPrinting from "./components/LaserPrinting/LaserPrinting";
-import {
-  QueryClient,
-  QueryClientProvider,
-  useQueryClient,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import CustomBagTag from "./components/bagtag/CustomBagTag";
-// commit for file name change
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
