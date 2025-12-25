@@ -48,7 +48,6 @@ import NameSlipDetail from "./components/nameslip/NameSlipDetails";
 import CutoutNameSlipPersonalize from "./components/cutoutnameslip/CutOutNameSlipPersonalize";
 import OrderComp from "./AppComponents/Order/OrderComp";
 import BirthdayCap from "./components/Birthdaycap/Birthdaycap";
-import CustomBagTag from "./components/bagtag/CustomBagTag";
 import BulkOrder from "./components/bulkorder/BulkOrder";
 import TextBehindImage from "./components/TextBehindImage/TextBehindImage";
 import BulkPrinting from "./components/BulkPrinting/BulkPrinting";
@@ -60,6 +59,7 @@ import {
   QueryClientProvider,
   useQueryClient,
 } from "@tanstack/react-query";
+import CustomBagTag from "./components/bagtag/CustomBagTag";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
