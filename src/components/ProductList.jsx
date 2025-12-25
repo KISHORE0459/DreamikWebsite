@@ -8,20 +8,33 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
+import { useQuery } from "@tanstack/react-query";
+import AppLoader from "../AppComponents/AppLoader/AppLoader";
 
 const ProductList = ({ searchText, resellerlogin, ResellerProducts }) => {
   const [products, setProducts] = useState([]);
   const [offers, setOffers] = useState(null);
   const navigate = useNavigate();
 
+  const {
+    data: productList,
+    isLoading: isProductLoading,
+    isFetching: isProductFetching,
+    isError,
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: async () => {
+      const res = await fetch("/products.json");
+      if (!res.ok) throw new Error("Failed to fetch products");
+      return res.json();
+    },
+  });
+
   useEffect(() => {
-    fetch("/products.json")
-      .then((res) => res.json())
-      .then((data) =>
-        setProducts(Array.isArray(data) ? data : Object.values(data))
-      )
-      .catch(() => setProducts([]));
-  }, []);
+    if (productList) {
+      setProducts(Object?.values(productList));
+    }
+  }, [productList, isProductLoading, isProductFetching]);
 
   useEffect(() => {
     fetch("/offer.json")
@@ -41,10 +54,15 @@ const ProductList = ({ searchText, resellerlogin, ResellerProducts }) => {
   );
 
   const handleClick = (p) => {
-    if (!p) return;
-    const url = p.name.replace(/\s+/g, "");
-    navigate(`/${url}`);
+    if (!p?.url) return;
+
+    const path = p.url.startsWith("/") ? p.url : `/${p.url}`;
+    navigate(path);
   };
+
+  if (isProductFetching || isProductLoading) {
+    return <AppLoader />;
+  }
 
   return (
     <div className="w-full px-4 md:px-8 mt-2.5! flex flex-col gap-5!">
@@ -94,22 +112,19 @@ const ProductList = ({ searchText, resellerlogin, ResellerProducts }) => {
           />
         ))}
       </div>
-
-      <div
-        className="flex flex-row flex-wrap justify-center md:items-stretch
-    lg:grid grid-cols-3 2xl:grid-cols-4 gap-5 px-5!
-    place-items-center"
-      >
-        {filteredProducts.map((product, index) => (
-          <ProductCard
-            product={product}
-            resellerLogin={resellerlogin}
-            ResellerProducts={ResellerProducts}
-            diffInSeconds={diffInSeconds}
-            handleClick={handleClick}
-            key={index}
-          />
-        ))}
+      <div className="flex flex-col gap-10!">
+        <div className="flex flex-row flex-wrap justify-center md:items-stretch lg:grid grid-cols-3 2xl:grid-cols-4 gap-5 px-5! place-items-center">
+          {filteredProducts.map((product, index) => (
+            <ProductCard
+              product={product}
+              resellerLogin={resellerlogin}
+              ResellerProducts={ResellerProducts}
+              diffInSeconds={diffInSeconds}
+              handleClick={handleClick}
+              key={index}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

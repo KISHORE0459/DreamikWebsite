@@ -82,11 +82,11 @@ const CutoutNameSlipPersonalize = () => {
 
     labels: {
       name: { top: "22%", left: "31%" },
-      school: { top: "62%", left: "47%" },
-      class: { top: "34%", left: "41%" },
-      section: { top: "34%", left: "74%" },
+      school: { top: "64%", left: "49%" },
+      class: { top: "36%", left: "42%" },
+      section: { top: "36%", left: "74%" },
       roll: { top: "55%", left: "30%" },
-      subject: { top: "47%", left: "50%" },
+      subject: { top: "50%", left: "50%" },
     },
   };
 

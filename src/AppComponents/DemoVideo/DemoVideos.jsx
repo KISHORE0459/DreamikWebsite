@@ -19,7 +19,7 @@ const DemoVideos = ({
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="bg-[#F18701]! mx-auto! py-5 h-10 w-full flex justify-center items-center rounded-lg">
+      <div className="bg-[#F18701]! mx-auto! py-5 h-10 w-full flex justify-center items-center">
         <h4 className="text-white! text-[14px]! font-medium">
           Demo For Placing Order
         </h4>
@@ -30,7 +30,7 @@ const DemoVideos = ({
           <div
             key={index}
             onClick={item.onClick}
-            className="relative w-[400px] cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all group"
+            className="relative w-[300px] md:w-[400px] cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all group"
           >
             <video
               className="w-full h-auto object-cover"

@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useMemo, useRef, useState } from "react";
 import { Box, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import html2canvas from "https://cdn.jsdelivr.net/npm/html2canvas@latest/dist/html2canvas.esm.js";
@@ -16,11 +16,38 @@ import {
   Typography,
 } from "@mui/material";
 import { FaExpandAlt } from "react-icons/fa";
+import useBreakpointValue from "../../AppHooks/useBreakPointValues";
 
 const CustomNameSlips = () => {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const previewRef = useRef(null);
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const customNameSlipConfig = {
+    labels: {
+      name: { top: "14%", left: "47%" },
+      class: { top: "28%", left: "45%" },
+      section: { top: "28%", left: "73%" },
+      rollNumber: { top: "43%", left: "48%" },
+      subject: { top: "58%", left: "48%" },
+      schoolName: { top: "72%", left: "47%" },
+    },
+  };
+
+  const defaultLabelTransform = useMemo(() => {
+    return {
+      fontSize: isMobile ? 8 : 30,
+      scale: 1,
+      rotate: 0,
+      translateX: 0,
+      translateY: 0,
+      mirror: 1,
+      color: "#1A1A1A",
+      fontFamily: "Arial",
+    };
+  }, [isMobile]);
 
   /* ---------------- STATE ---------------- */
   const [selectedImage, setSelectedImage] = useState(null);
@@ -52,75 +79,14 @@ const CustomNameSlips = () => {
     class: "",
   });
 
-  const defaultTransforms = {
-    name: {
-      fontSize: 38,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 18,
-      left: 42,
-      mirror: 1,
-    },
-    class: {
-      fontSize: 34,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 28,
-      left: 40,
-      mirror: 1,
-    },
-    section: {
-      fontSize: 34,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 28,
-      left: 62,
-      mirror: 1,
-    },
-    rollNumber: {
-      fontSize: 34,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 38,
-      left: 45,
-      mirror: 1,
-    },
-    subject: {
-      fontSize: 34,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 48,
-      left: 45,
-      mirror: 1,
-    },
-    schoolName: {
-      fontSize: 34,
-      fontFamily: "Arial",
-      color: "#000",
-      scale: 1,
-      rotate: 0,
-      top: 58,
-      left: 45,
-      mirror: 1,
-    },
-  };
-
-  const [nameTrans, setNameTrans] = useState(defaultTransforms?.name);
-  const [schoolTrans, setSchoolTrans] = useState(defaultTransforms?.schoolName);
-  const [subjectTrans, setSubjectTrans] = useState(defaultTransforms?.subject);
-  const [rollTrans, setRollTrans] = useState(defaultTransforms?.rollNumber);
-  const [sectionTrans, setSectionTrans] = useState(defaultTransforms?.section);
-  const [classTrans, setClassTrans] = useState(defaultTransforms?.class);
+  const [labelTransforms, setLabelTransforms] = useState({
+    nameTrans: { ...defaultLabelTransform },
+    schoolTrans: { ...defaultLabelTransform },
+    subjectTrans: { ...defaultLabelTransform },
+    rollTrans: { ...defaultLabelTransform },
+    sectionTrans: { ...defaultLabelTransform },
+    classTrans: { ...defaultLabelTransform },
+  });
 
   const [imageTransforms, setImageTransforms] = useState({
     width: 170, // base image width
@@ -132,23 +98,36 @@ const CustomNameSlips = () => {
     mirror: 1,
   });
 
+  console.log("fontsize", labelTransforms);
+
   /* ---------------- HELPERS ---------------- */
   const calcFontSize = (len) => Math.max(36 - len * 0.5, 10);
 
   const handleInputChange = (key, value) => {
     setStudentDetails((p) => ({ ...p, [key]: value }));
+
     const size = calcFontSize(value.length);
 
     const map = {
-      name: setNameTrans,
-      schoolName: setSchoolTrans,
-      subject: setSubjectTrans,
-      rollNumber: setRollTrans,
-      section: setSectionTrans,
-      class: setClassTrans,
+      name: "nameTrans",
+      schoolName: "schoolTrans",
+      subject: "subjectTrans",
+      rollNumber: "rollTrans",
+      section: "sectionTrans",
+      class: "classTrans",
     };
 
-    map[key]?.((p) => ({ ...p, fontSize: size }));
+    const transKey = map[key];
+
+    if (transKey) {
+      setLabelTransforms((prev) => ({
+        ...prev,
+        [transKey]: {
+          ...prev[transKey],
+          fontSize: size,
+        },
+      }));
+    }
   };
 
   /* ---------------- IMAGE UPLOAD ---------------- */
@@ -215,34 +194,25 @@ const CustomNameSlips = () => {
 
   /* ---------------- UI ---------------- */
   return (
-    <div className="w-full flex flex-col md:flex-row gap-8 p-6! bg-[#f9f7fd]">
-      {/* LEFT – PREVIEW */}
-      <div className="w-full md:w-[55%] flex justify-center">
-        <div className="bg-white rounded-xl shadow-md p-4">
-          <CustomNameSlipPreview
-            previewRef={previewRef}
-            backgroundImage={backgroundImage}
-            selectedImage={selectedImage}
-            imageBorder={imageBorder}
-            circleImage={circleImage}
-            brightness={brightness}
-            contrast={contrast}
-            transformations={imageTransforms}
-            studentDetails={studentDetails}
-            nameTrans={nameTrans}
-            schooltrans={schoolTrans}
-            subjecttrans={subjectTrans}
-            rollnotrans={rollTrans}
-            sectiontrans={sectionTrans}
-            classtrans={classTrans}
-            fontColor="#000"
-            fontFamily="Arial"
-          />
-        </div>
+    <main className="w-full! grid grid-cols-1 lg:grid-cols-2 gap-6 p-4!">
+      <div className="p-2! shadow-md!">
+        <CustomNameSlipPreview
+          previewRef={previewRef}
+          backgroundImage={backgroundImage}
+          selectedImage={selectedImage}
+          imageBorder={imageBorder}
+          circleImage={circleImage}
+          brightness={brightness}
+          contrast={contrast}
+          transformations={imageTransforms}
+          studentDetails={studentDetails}
+          labelTransforms={labelTransforms}
+          config={customNameSlipConfig}
+        />
       </div>
 
       {/* RIGHT – EDIT + CHECKOUT */}
-      <div className="w-full md:w-[45%] flex flex-col gap-6">
+      <div className="w-full! md:w-[45%] flex flex-col gap-6">
         {/* IMAGE CONTROLS */}
         <ImagePersonalizationComp
           selectedImage={selectedImage}
@@ -256,7 +226,7 @@ const CustomNameSlips = () => {
         />
 
         {/* BACKGROUND IMAGE */}
-        <Box className="bg-white rounded-xl p-4 shadow-sm">
+        <Box className="bg-white rounded-xl p-4! shadow-sm">
           <label className="text-sm font-medium mb-2 block">
             Background Image
           </label>
@@ -271,16 +241,15 @@ const CustomNameSlips = () => {
 
         {/* TEXT INPUTS */}
         {/* TEXT INPUTS */}
-        <Box className="bg-white rounded-xl p-4 shadow-sm flex flex-col gap-4">
+        <Box className="bg-white rounded-xl p-4! shadow-sm flex flex-col gap-4">
           {/* STUDENT NAME */}
           <EditableInput
             fieldKey="name"
             label="Student Name"
             value={studentDetails.name}
             onChange={(v) => handleInputChange("name", v)}
-            labelTransforms={nameTrans}
-            setLabelTransforms={setNameTrans}
-            showPosition
+            labelTransforms={labelTransforms}
+            setLabelTransforms={setLabelTransforms}
           />
 
           {/* SCHOOL NAME */}
@@ -289,9 +258,8 @@ const CustomNameSlips = () => {
             label="School Name"
             value={studentDetails.schoolName}
             onChange={(v) => handleInputChange("schoolName", v)}
-            labelTransforms={schoolTrans}
-            setLabelTransforms={setSchoolTrans}
-            showPosition
+            labelTransforms={labelTransforms}
+            setLabelTransforms={setLabelTransforms}
           />
 
           {/* OTHER DETAILS ACCORDION */}
@@ -340,36 +308,32 @@ const CustomNameSlips = () => {
                   label="Class"
                   value={studentDetails.class}
                   onChange={(v) => handleInputChange("class", v)}
-                  labelTransforms={classTrans}
-                  setLabelTransforms={setClassTrans}
-                  showPosition
+                  labelTransforms={labelTransforms}
+                  setLabelTransforms={setLabelTransforms}
                 />
                 <EditableInput
                   fieldKey="section"
                   label="Section"
                   value={studentDetails.section}
                   onChange={(v) => handleInputChange("section", v)}
-                  labelTransforms={sectionTrans}
-                  setLabelTransforms={setSectionTrans}
-                  showPosition
+                  labelTransforms={labelTransforms}
+                  setLabelTransforms={setLabelTransforms}
                 />
                 <EditableInput
                   fieldKey="rollNumber"
                   label="Roll Number"
                   value={studentDetails.rollNumber}
                   onChange={(v) => handleInputChange("rollNumber", v)}
-                  labelTransforms={rollTrans}
-                  setLabelTransforms={setRollTrans}
-                  showPosition
+                  labelTransforms={labelTransforms}
+                  setLabelTransforms={setLabelTransforms}
                 />
                 <EditableInput
                   fieldKey="subject"
                   label="Subject"
                   value={studentDetails.subject}
                   onChange={(v) => handleInputChange("subject", v)}
-                  labelTransforms={subjectTrans}
-                  setLabelTransforms={setSubjectTrans}
-                  showPosition
+                  labelTransforms={labelTransforms}
+                  setLabelTransforms={setLabelTransforms}
                 />
               </div>
             </AccordionDetails>
@@ -393,7 +357,7 @@ const CustomNameSlips = () => {
           navigate={navigate}
         />
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-const AINameSlipGen = () => {
+const TextBehindImage = () => {
   const [iframeLoading, setIframeLoading] = useState(true);
 
   const handleIframeLoad = useCallback(() => {
@@ -26,4 +26,4 @@ const AINameSlipGen = () => {
   );
 };
 
-export default AINameSlipGen;
+export default TextBehindImage;

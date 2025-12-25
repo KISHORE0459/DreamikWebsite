@@ -8,22 +8,9 @@ const CustomNameSlipPreview = ({
   contrast,
   transformations,
   studentDetails,
-  nameTrans,
-  schooltrans,
-  subjecttrans,
-  rollnotrans,
-  sectiontrans,
-  classtrans,
+  labelTransforms,
+  config,
 }) => {
-  const fields = [
-    { key: "name", trans: nameTrans },
-    { key: "class", trans: classtrans },
-    { key: "section", trans: sectiontrans },
-    { key: "rollNumber", trans: rollnotrans },
-    { key: "subject", trans: subjecttrans },
-    { key: "schoolName", trans: schooltrans },
-  ];
-
   return (
     <div ref={previewRef} className="relative w-full overflow-hidden">
       {/* BACKGROUND */}
@@ -58,29 +45,41 @@ const CustomNameSlipPreview = ({
         />
       )}
 
-      {/* TEXT FIELDS */}
-      {fields.map(({ key, trans }) => {
+      {/* TEXT FIELDS — SAME MODEL AS CUTOUT */}
+      {Object.entries(config.labels).map(([key, base]) => {
         const text = studentDetails[key];
         if (!text) return null;
+
+        const transKey =
+          key === "schoolName"
+            ? "schoolTrans"
+            : key === "rollNumber"
+            ? "rollTrans"
+            : `${key}Trans`;
+
+        const trans = labelTransforms[transKey];
+        if (!trans) return null;
 
         return (
           <span
             key={key}
+            className="absolute select-none"
             style={{
-              position: "absolute",
-              top: `${trans.top}%`,
-              left: `${trans.left}%`,
+              top: base.top, // 🔒 TEMPLATE
+              left: base.left, // 🔒 TEMPLATE
               fontSize: `${trans.fontSize}px`,
-              fontFamily: trans.fontFamily || "Arial",
-              color: trans.color || "#000",
+              fontFamily: trans.fontFamily,
+              color: trans.color,
               whiteSpace: "nowrap",
               pointerEvents: "none",
               zIndex: 20,
               transform: `
+                translate(${trans.translateX}px, ${trans.translateY}px)  /* ✅ ARROWS */
                 rotate(${trans.rotate}deg)
                 scale(${trans.scale})
                 scaleX(${trans.mirror})
               `,
+              transition: "transform 0.12s linear",
             }}
           >
             {text}

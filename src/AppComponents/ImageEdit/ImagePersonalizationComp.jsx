@@ -170,7 +170,7 @@ export default function ImagePersonalizationComp({
                   <button
                     key={i}
                     type="button"
-                    className="w-10 h-10 rounded-lg bg-white! border! border-gray-300! flex justify-center items-center text-[#1A1A1A]! p-0! shadow-md! hover:shadow-lg!"
+                    className="w-10 h-10 rounded-lg bg-white! border! border-gray-300! flex justify-center items-center text-[#1A1A1A]! p-0! shadow-md! hover:shadow-lg! hover:cursor-pointer!"
                     title={btn.title}
                     onClick={btn.onClick}
                   >
@@ -183,7 +183,7 @@ export default function ImagePersonalizationComp({
               <div className="flex items-center gap-4">
                 <button
                   type="button"
-                  className="w-10 h-10 rounded-lg bg-white! border! border-red-600! text-red-600! hover:bg-red-600! hover:text-white! flex justify-center items-center p-0!"
+                  className="w-10 h-10 rounded-lg bg-white! border! border-red-600! text-red-600! hover:bg-red-600! hover:text-white! flex justify-center items-center p-0! hover:cursor-pointer!"
                   title="Delete"
                   onClick={() => {
                     setSelectedImage(null);

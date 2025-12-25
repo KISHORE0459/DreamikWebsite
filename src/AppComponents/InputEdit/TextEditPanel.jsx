@@ -133,9 +133,9 @@ const TextEditPanel = ({
       <div className="flex items-center gap-3">
         <div className="font-medium text-[15px]!">Font Size</div>
 
-        <div className="flex items-center border rounded-md overflow-hidden bg-white">
+        <div className="flex items-center border rounded-md overflow-hidden bg-white p-1!">
           <button
-            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0! hover:cursor-pointer!"
             onClick={() => changeFontSize(-1)}
           >
             −
@@ -149,7 +149,7 @@ const TextEditPanel = ({
           />
 
           <button
-            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0! hover:cursor-pointer!"
             onClick={() => changeFontSize(1)}
           >
             +
@@ -182,7 +182,7 @@ const TextEditPanel = ({
           <button
             key={i}
             type="button"
-            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0!"
+            className="w-10 h-10 rounded-lg! bg-white! border! border-gray-300! flex justify-center items-center shadow-sm hover:shadow-md text-black! p-0! hover:cursor-pointer!"
             onClick={btn.onClick}
           >
             {btn.icon}

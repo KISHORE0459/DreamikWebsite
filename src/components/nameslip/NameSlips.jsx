@@ -2,9 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import OnePlusOneOffer from "../cutoutnameslip/Oneplusone";
-import { Button, Pagination } from "@mui/material";
-import FilterDrawer from "../../AppComponents/FilterDrawer/FilterDrawer";
+import { Pagination } from "@mui/material";
 import NameSlipCard from "../../AppComponents/NameSlipCard/NameSlipCard";
+import { useQuery } from "@tanstack/react-query";
+import AppLoader from "../../AppComponents/AppLoader/AppLoader";
 
 const PRODUCTS_PER_PAGE = 20;
 
@@ -23,30 +24,32 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
   );
   const fontdetails = JSON.parse(sessionStorage.getItem("detailsFont")) || null;
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [page, setPage] = useState(1);
 
   // fetch products (preserved)
-  useEffect(() => {
-    const fetchJSONData = async () => {
-      try {
-        const response = await fetch("../nameslip_data.json");
-        if (!response.ok)
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        const data = await response.json();
-        const filteredProducts = Object.keys(data)
-          .filter((key) => data[key].status === 1)
-          .map((key) => ({ ...data[key], id: key }));
-        setProducts(filteredProducts);
-        setFilteredProducts(filteredProducts);
-      } catch (error) {
-        console.error("Unable to fetch data:", error);
-      }
-    };
+  const {
+    data: nameSlipList,
+    isLoading: isNameSlipListLoading,
+    isFetching: isNameSlipListFetching,
+  } = useQuery({
+    queryKey: ["NameSlipList"],
+    queryFn: async () => {
+      const res = await fetch("../nameslip_data.json");
+      if (!res.ok) throw new Error("Failed to fetch products");
+      return res.json();
+    },
+  });
 
-    fetchJSONData();
+  useEffect(() => {
+    if (nameSlipList) {
+      const filteredProducts = Object.keys(nameSlipList)
+        .filter((key) => nameSlipList[key].status === 1)
+        .map((key) => ({ ...nameSlipList[key], id: key }));
+      setProducts(filteredProducts);
+      setFilteredProducts(filteredProducts);
+    }
     setcoupon && setcoupon("DISCOUNTNSR20");
-  }, [setcoupon]);
+  }, [nameSlipList, isNameSlipListLoading, isNameSlipListFetching, setcoupon]);
 
   const normalizeString = (str = "") => str.replace(/\s+/g, "").toLowerCase();
   useEffect(() => {
@@ -119,25 +122,6 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
     new Set(products.map((p) => p.template).filter(Boolean))
   );
 
-  const onApplyFilters = (vals) => {
-    const { category, template, minPrice, maxPrice } = vals;
-    let filtered = products.slice();
-    if (category) filtered = filtered.filter((p) => p.category === category);
-    if (template) filtered = filtered.filter((p) => p.template === template);
-    if (minPrice)
-      filtered = filtered.filter((p) => Number(p.price) >= Number(minPrice));
-    if (maxPrice)
-      filtered = filtered.filter((p) => Number(p.price) <= Number(maxPrice));
-    setFilteredProducts(filtered);
-    setPage(1);
-    setDrawerOpen(false);
-  };
-
-  const onClearFilters = () => {
-    setFilteredProducts(products);
-    setPage(1);
-  };
-
   // pagination
   const totalPages = Math.max(
     1,
@@ -152,6 +136,10 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
   const imgRefSetter = (index, el) => {
     imgRefs.current[index] = el;
   };
+
+  if (isNameSlipListFetching || isNameSlipListLoading) {
+    return <AppLoader />;
+  }
 
   return (
     <HelmetProvider>
@@ -177,17 +165,6 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
                 placeholder="Search products"
                 className="flex-1 h-full text-sm px-2! w-[200px] md:w-[300px] border! border-[#1A1A1A] rounded-lg"
               />
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outlined"
-                color="primary"
-                onClick={() => setDrawerOpen(true)}
-                className="border! border-[#1A1A1A]! rounded-[20px]! text-[#1A1A1A]! hover:bg-white! h-10!"
-              >
-                Filters
-              </Button>
             </div>
           </div>
         </div>
@@ -234,16 +211,6 @@ const NameSlip = ({ searchText, setSearchText, setcoupon }) => {
             color="primary"
           />
         </div>
-
-        {/* Drawer */}
-        <FilterDrawer
-          open={drawerOpen}
-          onClose={() => setDrawerOpen(false)}
-          categories={categories}
-          templates={templates}
-          onApplyFilters={onApplyFilters}
-          onClear={onClearFilters}
-        />
       </div>
     </HelmetProvider>
   );
