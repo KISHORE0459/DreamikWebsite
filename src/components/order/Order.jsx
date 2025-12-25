@@ -1169,14 +1169,8 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                     className="prod-edit"
                     onClick={() => {
                       handleEditOrder(prod);
-                      if (prod?.productcode?.startsWith("NSHRT")) {
-                        navigate(`/NS${prod.template}/${prod.productcode}`);
-                      }
-                      if (prod?.template?.startsWith("CN")) {
-                        navigate(`/${prod.template}/${prod.productcode}`);
-                      }
-                      if (prod?.Name === "Birthdaycap") {
-                        navigate("/Birthdaycap");
+                      if (!!prod?.url) {
+                        navigate(prod?.url);
                       }
                       removeProduct(prod);
                     }}

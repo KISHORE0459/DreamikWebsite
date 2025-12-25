@@ -12,6 +12,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { PiShoppingCart } from "react-icons/pi";
+import { IoClose } from "react-icons/io5";
 
 function Navbar({
   searchText,
@@ -97,12 +98,12 @@ function Navbar({
     { label: "Name Slips", onClick: () => handleProductClick("/name-slip") },
     {
       label: "Cutout Nameslips",
-      onClick: () => handleProductClick("/CutoutNameslips"),
+      onClick: () => handleProductClick("/cutout-name-slip"),
     },
-    { label: "Bulk Order", onClick: () => handleProductClick("/Bulkorder") },
+    { label: "Bulk Order", onClick: () => handleProductClick("/bulk-order") },
     {
       label: "Custom Nameslips",
-      onClick: () => handleProductClick("/CustomNameSlips"),
+      onClick: () => handleProductClick("/custom-name-slip"),
     },
   ];
 
@@ -193,21 +194,44 @@ function Navbar({
       />
 
       <Drawer anchor="right" open={menuOpen} onClose={() => setMenuOpen(false)}>
-        <List sx={{ width: 260, mt: 2 }}>
-          {menuItems.map((item, index) => (
-            <ListItem disablePadding key={index}>
-              <ListItemButton
-                onClick={() => {
-                  item.onClick();
-                  setMenuOpen(false);
-                }}
-                className="hover:bg-[#12345A]! hover:text-white! hover:font-medium! transition-all duration-300 ease-in"
-              >
-                <ListItemText primary={item.label} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        <div className="flex flex-col gap-2!">
+          <div className="flex flex-row items-center! justify-between! p-2!">
+            <div
+              className="flex items-center gap-3 cursor-pointer md:w-auto w-1/3"
+              onClick={() => navigate("/")}
+            >
+              <img
+                src={logo}
+                alt="logo"
+                className="w-[60px] h-[60px] rounded-full border-2 border-white"
+              />
+              <h2 className="text-[#12345A]! text-[30px] leading-[27px] font-bold">
+                Dreamik
+              </h2>
+            </div>
+            <div
+              className="hover:bg-gray-200! hover:cursor-pointer p-1! rounded-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              <IoClose size={20} color="#1A1A1A" />
+            </div>
+          </div>
+          <List sx={{ width: 260, mt: 2 }}>
+            {menuItems.map((item, index) => (
+              <ListItem disablePadding key={index}>
+                <ListItemButton
+                  onClick={() => {
+                    item.onClick();
+                    setMenuOpen(false);
+                  }}
+                  className="hover:bg-[#12345A]! hover:text-white! hover:font-medium! transition-all duration-300 ease-in"
+                >
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </div>
       </Drawer>
     </>
   );

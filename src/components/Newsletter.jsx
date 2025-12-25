@@ -13,7 +13,7 @@ export default function Newsletter() {
   if (isMobile) return null;
 
   return (
-    <div className="w-full rounded-2xl py-10! px-6! flex flex-col items-center justify-center gap-6 bg-gradient-to-r from-[#21436b] via-[#3d4054] to-[#693b31] text-center shadow-xl">
+    <div className="w-full py-10! px-6! flex flex-col items-center justify-center gap-6 bg-gradient-to-r from-[#21436b] via-[#3d4054] to-[#693b31] text-center shadow-xl">
       <h3 className="text-white! text-[22px]! font-semibold! leading-5">
         Sign Up For Newsletters
       </h3>

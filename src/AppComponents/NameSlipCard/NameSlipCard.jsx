@@ -15,7 +15,7 @@ const NameSlipCard = ({
 }) => {
   return (
     <div
-      className="relative bg-white rounded-[10px]! shadow-md hover:shadow-xl cursor-pointer transition border! border-[#ADADAD]! w-[310px]!"
+      className="h-full relative bg-white rounded-[10px]! shadow-md hover:shadow-xl cursor-pointer transition border! border-gray-300! w-[310px]!"
       onClick={() => onClickCard(product.id, product.productcode)}
     >
       {/* Offer badge */}
@@ -127,7 +127,7 @@ const NameSlipCard = ({
         )}
 
         <button
-          className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center hover:font-semibold! hover:scale-[101%] transition-all duration-200"
+          className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center hover:scale-[101%] transition-all duration-200 hover:cursor-pointer"
           onClick={() => onClickCard(product.id, product.productcode)}
         >
           Personalize and Add to Cart

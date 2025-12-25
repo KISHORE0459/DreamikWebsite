@@ -81,7 +81,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#002855]! rounded-lg text-white py-12! px-6! flex! flex-col! gap-10!">
+    <footer className="w-full bg-[#002855]! text-white py-12! px-6! flex! flex-col! gap-10!">
       {/* GRID */}
       <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center items-start">
         {/* 1️⃣ LOGO + CONTACT */}

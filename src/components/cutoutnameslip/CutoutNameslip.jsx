@@ -2,9 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import OnePlusOneOffer from "./Oneplusone";
-import { Button, Pagination } from "@mui/material";
-import FilterDrawer from "../../AppComponents/FilterDrawer/FilterDrawer";
+import { Pagination } from "@mui/material";
 import NameSlipCard from "../../AppComponents/NameSlipCard/NameSlipCard";
+import { useQuery } from "@tanstack/react-query";
+import AppLoader from "../../AppComponents/AppLoader/AppLoader";
 
 const PRODUCTS_PER_PAGE = 20;
 
@@ -16,31 +17,33 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
   const navigate = useNavigate();
   const imgRefs = useRef([]);
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [page, setPage] = useState(1);
 
   // fetch products
+
+  const {
+    data: nameSlipList,
+    isLoading: isNameSlipListLoading,
+    isFetching: isNameSlipListFetching,
+  } = useQuery({
+    queryKey: ["CutOutNameSlip"],
+    queryFn: async () => {
+      const res = await fetch("../cutoutnameslip_data.json");
+      if (!res.ok) throw new Error("Failed to fetch products");
+      return res.json();
+    },
+  });
+
   useEffect(() => {
-    const fetchJSONData = async () => {
-      try {
-        const res = await fetch("../cutoutnameslip_data.json");
-        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-
-        const data = await res.json();
-        const arr = Object.keys(data)
-          .filter((key) => data[key].status === 1)
-          .map((key) => ({ ...data[key], id: key }));
-
-        setProducts(arr);
-        setFilteredProducts(arr);
-      } catch (err) {
-        console.error("Unable to fetch data:", err);
-      }
-    };
-
-    fetchJSONData();
-    setcoupon("DISCOUNTCONSR50");
-  }, [setcoupon]);
+    if (nameSlipList) {
+      const filteredProducts = Object.keys(nameSlipList)
+        .filter((key) => nameSlipList[key].status === 1)
+        .map((key) => ({ ...nameSlipList[key], id: key }));
+      setProducts(filteredProducts);
+      setFilteredProducts(filteredProducts);
+    }
+    setcoupon && setcoupon("DISCOUNTCONSR50");
+  }, [nameSlipList, isNameSlipListLoading, isNameSlipListFetching, setcoupon]);
 
   // normalize search
   const normalize = (str = "") => str.replace(/\s+/g, "").toLowerCase();
@@ -103,7 +106,7 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
   // navigation
   const handleProductClick = (id, productcode) => {
     localStorage.setItem("keyid", id);
-    navigate(`/cutOut-nameSlip/${productcode}`);
+    navigate(`/cutout-name-slip/${productcode}`);
   };
 
   // filter drawer options
@@ -113,25 +116,6 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
   const templates = Array.from(
     new Set(products.map((p) => p.template).filter(Boolean))
   );
-
-  const onApplyFilters = (vals) => {
-    const { category, template, minPrice, maxPrice } = vals;
-    let arr = [...products];
-
-    if (category) arr = arr.filter((p) => p.category === category);
-    if (template) arr = arr.filter((p) => p.template === template);
-    if (minPrice) arr = arr.filter((p) => Number(p.price) >= Number(minPrice));
-    if (maxPrice) arr = arr.filter((p) => Number(p.price) <= Number(maxPrice));
-
-    setFilteredProducts(arr);
-    setPage(1);
-    setDrawerOpen(false);
-  };
-
-  const onClearFilters = () => {
-    setFilteredProducts(products);
-    setPage(1);
-  };
 
   // pagination
   const totalPages = Math.max(
@@ -148,12 +132,15 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
     imgRefs.current[index] = el;
   };
 
+  if (isNameSlipListFetching || isNameSlipListLoading) {
+    return <AppLoader />;
+  }
+
   return (
     <HelmetProvider>
       <div className="px-4! md:px-8! flex flex-col gap-5!">
         <OnePlusOneOffer offerproduct="CutoutNameslips" />
 
-        {/* HEADER SECTION */}
         <div
           className="flex flex-col md:flex-row items-start md:items-center justify-between 
           min-h-[100px] w-full px-2 md:px-10 border-b border-b-[#1A335E] py-3 gap-5"
@@ -176,14 +163,6 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
               placeholder="Search products"
               className="flex-1 w-[200px] md:w-[300px] h-10 text-sm px-2! border border-[#1A1A1A] rounded-lg"
             />
-
-            <Button
-              variant="outlined"
-              onClick={() => setDrawerOpen(true)}
-              className="border-[#1A1A1A]! rounded-[20px]! text-[#1A1A1A]! hover:bg-white! h-10!"
-            >
-              Filters
-            </Button>
           </div>
         </div>
 
@@ -220,7 +199,6 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
           })}
         </div>
 
-        {/* PAGINATION */}
         <div className="flex items-center justify-center mt-6">
           <Pagination
             count={totalPages}
@@ -232,16 +210,6 @@ const CutOutNameSlip = ({ searchText, setSearchText, setcoupon }) => {
             color="primary"
           />
         </div>
-
-        {/* FILTER DRAWER */}
-        <FilterDrawer
-          open={drawerOpen}
-          onClose={() => setDrawerOpen(false)}
-          categories={categories}
-          templates={templates}
-          onApplyFilters={onApplyFilters}
-          onClear={onClearFilters}
-        />
       </div>
     </HelmetProvider>
   );

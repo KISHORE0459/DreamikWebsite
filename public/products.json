@@ -8,12 +8,12 @@
     "price": 100.0,
     "pieces": "(36 Nos)",
     "status": 1,
-    "targetpage": "NameSlip/Name_Slip.html",
     "logo": "/AddLogo/NameSlipLogo.svg",
     "props": ["name slips", "label", "slips", "nameslip", "57a167"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 5
+    "rating": 5,
+    "url": "/name-slip"
   },
   "Cutout Nameslip": {
     "name": "Cutout Nameslips",
@@ -24,12 +24,12 @@
     "price": 340.0,
     "pieces": "(30 Nos)",
     "status": 1,
-    "targetpage": "CutOutNameSlip/CutOutNameSlip.html",
     "logo": "/AddLogo/CutoutNameSlipLogo.svg",
     "props": ["name slips", "label", "logo", "custamize", "5e10bf"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 4
+    "rating": 4,
+    "url": "/cutout-name-slip"
   },
   "Birthday Cap": {
     "name": "Birthday Cap",
@@ -44,9 +44,9 @@
     "props": ["Birthday", "cap", "celebration"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 4
+    "rating": 4,
+    "url": "/birthday-cap"
   },
-
   "Custom NameSlip": {
     "name": "Custom Nameslips",
     "logoName": "Custom Nameslips",
@@ -55,12 +55,12 @@
     "productcode": "57a16b",
     "price": 250.0,
     "status": 1,
-    "targetpage": "CustomNameslip/CustomNameslip.html",
     "logo": "/AddLogo/NameSlipLogo.svg",
     "props": ["name slips", "label", "slips", "nameslip", "57a167"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 5
+    "rating": 5,
+    "url": "/custom-name-slip"
   },
   "BulkOrder": {
     "name": "Bulkorder",
@@ -70,12 +70,12 @@
     "productcode": "699d1b",
     "price": 300.0,
     "status": 1,
-    "targetpage": "/bulkorder",
     "logo": "/AddLogo/BulkOrderLogo.svg",
     "props": ["customizable posters", "poster", "posters", "699d2b"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 4
+    "rating": 4,
+    "url": "/bulk-order"
   },
   "Bag_Tag": {
     "name": "Customizable Bag Tags",
@@ -85,14 +85,13 @@
     "productcode": "699a2d",
     "price": 250.0,
     "status": 1,
-    "targetpage": "BagTag/bagtag.html",
     "logo": "/AddLogo/BagTagLogo.svg",
     "props": ["bag tag", "tag", "bag", "slip", "699a2d"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/custom-bag-tag"
   },
-
   "Background remover": {
     "name": "AI Kick out Background (Free)",
     "logoName": "AI BG Remove",
@@ -101,12 +100,12 @@
     "productcode": "5e10bf",
     "price": 0.0,
     "status": 1,
-    "targetpage": "ai-generated/Name_Slip.html",
     "logo": "/AddLogo/BgRemoveLogo.svg",
     "props": ["name slips", "label", "logo", "custamize", "5e10bf"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 3
+    "rating": 3,
+    "url": "/ai-bg-remover"
   },
   "AI-Generated": {
     "name": "AI Text Behind Image(Free)",
@@ -116,14 +115,13 @@
     "productcode": "5e10bf",
     "price": 0.0,
     "status": 1,
-    "targetpage": "ai-generated/Name_Slip.html",
     "logo": "/AddLogo/NameSlipLogo.svg",
     "props": ["name slips", "label", "logo", "custamize", "5e10bf"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 4
+    "rating": 4,
+    "url": "/text-behind-image"
   },
-
   "Bulk printing software": {
     "name": "Bulk printing software",
     "logoName": "Bulk printing software",
@@ -132,12 +130,12 @@
     "productcode": "DKA4js6x2",
     "price": 0.0,
     "status": 1,
-    "targetpage": "dreamik glossy.html",
     "logo": "/AddLogo/NameSlipLogo.svg",
     "props": ["bulk", "printing", "printer", "reseller", "DKA4GS6x2"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 3
+    "rating": 3,
+    "url": "/bulk-printing-software"
   },
   "Posters": {
     "name": "Customizable Posters",
@@ -147,12 +145,12 @@
     "productcode": "699d2b",
     "price": 300.0,
     "status": 1,
-    "targetpage": "Poster/Poster.html",
     "logo": "/AddLogo/PosterLogo.svg",
     "props": ["customizable posters", "poster", "posters", "699d2b"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/custom-poster"
   },
   "Fridge Magnets": {
     "name": "Customizable Fridge Magnets",
@@ -162,12 +160,12 @@
     "productcode": "699d2b",
     "price": 300.0,
     "status": 1,
-    "targetpage": "/MURVEN-DreamikAI-dreamik.com-web-prodv2/FridgeMagnet/magnet.html",
     "logo": "/AddLogo/FridgeLogo.svg",
     "props": ["customizable magnets", "fridge magnets", "magnets", "699d2b"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/cutout-name-slip"
   },
   "Sticker": {
     "name": "Customizable Stickers",
@@ -177,12 +175,12 @@
     "productcode": "5e10bf",
     "price": 100.0,
     "status": 1,
-    "targetpage": "Sticker/Sticker.html",
     "logo": "/AddLogo/StickerLogo.svg",
     "props": ["sticker", "logo", "custamize", "5e10bf"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/custom-sticker"
   },
   "Pencil Engraving": {
     "name": "Customizable Pencils Name Engraving",
@@ -192,12 +190,12 @@
     "productcode": "5e10bf",
     "price": 100.0,
     "status": 1,
-    "targetpage": "PencilNameGenerator-main/pencil.html",
     "logo": "/AddLogo/PencilLogo.svg",
     "props": ["name slips", "label", "logo", "custamize", "5e10bf"],
     "outOfStock": true,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/cutout-name-slip"
   },
   "Notebooks": {
     "name": "Notebooks",
@@ -207,12 +205,12 @@
     "productcode": "699d2b",
     "price": 300.0,
     "status": 1,
-    "targetpage": "Notebook/index.html",
     "logo": "/AddLogo/NoteBookLogo.svg",
     "props": ["customizable posters", "poster", "posters", "699d2b"],
     "outOfStock": false,
     "Reseller": false,
-    "rating": 5
+    "rating": 5,
+    "url": "/cutout-name-slip"
   },
   "Inkjet/Laser printer": {
     "name": "Dreamik Glossy Inkjet/Laser Sticker Paper printer (6x2)",
@@ -222,11 +220,11 @@
     "productcode": "DKA4GS6x2",
     "price": 500.0,
     "status": 1,
-    "targetpage": "dreamik glossy.html",
     "logo": "/AddLogo/NameSlipLogo.svg",
     "props": ["injket", "laser", "printer", "reseller", "DKA4GS6x2"],
     "outOfStock": false,
     "Reseller": true,
-    "rating": 4
+    "rating": 4,
+    "url": "/dreamik-glossy-sticker"
   }
 }

@@ -51,7 +51,7 @@ export default function OrderProductList({
               <div>
                 <button
                   onClick={() => removeProduct(prod)}
-                  className="w-10 h-10 p-0! flex justify-center items-center border! border-red-500! bg-white! hover:bg-red-500!  text-red-500! hover:text-white!"
+                  className="w-10 h-10 p-0! flex justify-center items-center border! border-red-500! bg-white! hover:bg-red-500!  text-red-500! hover:text-white! hover:cursor-pointer!"
                 >
                   <IoTrashBin size={20} />
                 </button>

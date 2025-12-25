@@ -15,7 +15,7 @@ const ProductCard = ({
   return (
     <div
       onClick={() => isAllowed && !product?.outOfStock && handleClick(product)}
-      className={`relative bg-white rounded-[10px]! shadow-md hover:shadow-xl cursor-pointer transition border! border-[#ADADAD]! w-[310px]!
+      className={`relative bg-white rounded-[10px]! shadow-md hover:shadow-xl cursor-pointer transition border! border-gray-300! w-[310px]!
               ${
                 isAllowed && !product?.outOfStock
                   ? "opacity-100"
@@ -88,7 +88,7 @@ const ProductCard = ({
           </span>
         )}
 
-        <button className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center hover:font-semibold! hover:scale-[101%] transition-all duration-200">
+        <button className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center transition-all duration-200 hover:cursor-pointer!">
           Personalize and Add to Cart
         </button>
       </div>
