@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Box, TextField, Button, CircularProgress } from "@mui/material";
 import "../ResellerLogin.css";
+import { apiEndPoint } from "../appConfig";
 
 function ResellerLogin({
   isOpen,
@@ -29,14 +30,11 @@ function ResellerLogin({
     setMessage("🔄 Logging in... Please wait!");
 
     try {
-      const response = await fetch(
-        "https://dreamik-intern.onrender.com/api/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username: usernameInput, password }),
-        }
-      );
+      const response = await fetch(`${apiEndPoint}/api/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: usernameInput, password }),
+      });
 
       const data = await response.json();
 

@@ -88,7 +88,7 @@ const ProductCard = ({
           </span>
         )}
 
-        <button className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center transition-all duration-200 hover:cursor-pointer!">
+        <button className="bg-[#1A335E]! h-10 w-[280px] rounded-lg text-[13px]! text-white! font-medium! flex justify-center items-center transition-all duration-200 hover:cursor-pointer! hover:scale-[101%]">
           Personalize and Add to Cart
         </button>
       </div>

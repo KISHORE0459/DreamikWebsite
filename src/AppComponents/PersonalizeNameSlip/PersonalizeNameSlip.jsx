@@ -15,6 +15,7 @@ import templateConfigs from "./templates.json";
 // LOAD PRODUCT DETAILS
 import productData from "../../../public/nameslip_data.json";
 import { CartContext } from "../../components/CartContext";
+import toast from "react-hot-toast";
 
 const NameSlipPersonalize = () => {
   const { templateID, id } = useParams();
@@ -204,7 +205,7 @@ const NameSlipPersonalize = () => {
   // -----------------------------------------
   const handleAddToCart = async () => {
     if (quantity <= 0) {
-      return alert("Set quantity atleast 1 ");
+      return toast.error("Set quantity atleast 1 ");
     }
 
     if (persImgRef.current) {
@@ -301,9 +302,10 @@ const NameSlipPersonalize = () => {
         addToCart();
 
         localStorage.removeItem("editedproduct");
-        alert("Product added to cart successfully!");
+        toast.success("Product added to cart successfully!");
       } catch (error) {
         console.error("Error capturing the div:", error);
+        toast.error("Error in adding product");
       }
     }
     navigate("/Order");

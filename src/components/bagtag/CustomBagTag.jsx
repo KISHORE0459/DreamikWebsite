@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { CartContext } from "../CartContext";
 import { useNavigate } from "react-router-dom";
 import CheckoutSection from "../../AppComponents/AppCartComps/CheckoutSection";
+import toast from "react-hot-toast";
 
 const CustomBagTag = () => {
   // commit to change the path
@@ -85,7 +86,7 @@ const CustomBagTag = () => {
 
   const handleAddToCart = async () => {
     if (quantity <= 0) {
-      alert("Set quantity at least 1");
+      toast.error("Set quantity at least 1");
       return;
     }
 
@@ -150,11 +151,11 @@ const CustomBagTag = () => {
       // 6️⃣ Update cart UI
       addToCart();
 
-      alert("Bag tag added to cart successfully!");
+      toast.success("Bag tag added to cart successfully!");
       navigate("/Order");
     } catch (err) {
       console.error("Add to cart failed:", err);
-      alert("Something went wrong while adding to cart");
+      toast.error("Something went wrong while adding to cart");
     }
   };
 

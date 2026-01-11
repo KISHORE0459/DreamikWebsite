@@ -1,19 +1,23 @@
 import { useEffect, useState } from "react";
 import { removeBackground } from "@imgly/background-removal";
 import "./removebg.css";
-const Removebg = ({ selectedImage, setSelectedImage, initialimage, isremovebg, setremovebg }) => {
-
+import toast from "react-hot-toast";
+const Removebg = ({
+  selectedImage,
+  setSelectedImage,
+  initialimage,
+  isremovebg,
+  setremovebg,
+}) => {
   const [isloading, setLoading] = useState(false);
 
   const removebackground = async () => {
-
-
     if (!selectedImage || selectedImage === "") {
-      alert("Please select an image first!");
+      toast.error("Please select an image first!");
       return;
     }
     if (sessionStorage.getItem("removebg")) {
-      setremovebg(true)
+      setremovebg(true);
       return setSelectedImage(sessionStorage.getItem("removebg"));
     }
     try {
@@ -29,7 +33,6 @@ const Removebg = ({ selectedImage, setSelectedImage, initialimage, isremovebg, s
       // Convert blob into a File object
       const file = new File([blob], "image.png", { type: blob.type });
 
-
       // 🛑 Check if `removeBackground` is a function
       if (typeof removeBackground !== "function") {
         throw new Error(
@@ -37,9 +40,7 @@ const Removebg = ({ selectedImage, setSelectedImage, initialimage, isremovebg, s
         );
       }
 
-      
       const result = await removeBackground(file);
-
 
       if (!result || !(result instanceof Blob)) {
         throw new Error("❌ Imgly returned an invalid result.");
@@ -49,8 +50,8 @@ const Removebg = ({ selectedImage, setSelectedImage, initialimage, isremovebg, s
       const url = URL.createObjectURL(result);
       setLoading(false);
       setSelectedImage(url);
-      sessionStorage.setItem("personImage", url)
-      sessionStorage.setItem("removebg", result)
+      sessionStorage.setItem("personImage", url);
+      sessionStorage.setItem("removebg", result);
       setremovebg(true);
     } catch (error) {
       console.error("❌ Error processing image with Imgly:", error);
@@ -128,7 +129,6 @@ const Removebg = ({ selectedImage, setSelectedImage, initialimage, isremovebg, s
         </div>
       } */}
     </div>
-
   );
 };
 

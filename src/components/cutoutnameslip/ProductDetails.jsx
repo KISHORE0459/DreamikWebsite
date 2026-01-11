@@ -4,6 +4,7 @@ import ProductOffer from "../Productoffer/Productoffer";
 import { useCouponContext } from "../adminpanel/CouponContext";
 import axios from "axios";
 import ProductDescription from "../../AppComponents/NameSlipComps/ProductDescription";
+import { apiEndPoint } from "../../appConfig";
 
 const ProductDetails = () => {
   const navigate = useNavigate();
@@ -32,9 +33,7 @@ const ProductDetails = () => {
         setOffers(offersJson?.cutoutnameslips);
 
         // Fetch coupons
-        const couponRes = await axios.get(
-          "https://dreamik-intern.onrender.com/api/coupons"
-        );
+        const couponRes = await axios.get(`${apiEndPoint}/api/coupons`);
         setCoupons(Array.isArray(couponRes.data) ? couponRes.data : []);
       } catch (err) {
         console.error("Error loading details:", err);

@@ -66,6 +66,7 @@ export default function NameSlipPersonalizationSection({
         circleImage={circleImage}
         setCircleImage={setCircleImage}
         setImageTransforms={setImageTransforms}
+        enableImageCropping={true}
       />
 
       {/* Inputs with individual edit icons and collapsible control panels */}

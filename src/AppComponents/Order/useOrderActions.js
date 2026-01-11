@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import toast from "react-hot-toast";
 
 export const useOrderActions = ({
   // state
@@ -14,20 +15,26 @@ export const useOrderActions = ({
   setselectedvalue,
   setDeliveryMode,
   setPaymentMode,
+  delPrice,
   setDelPrice,
+  cod,
   setCod,
   setCouponCode,
   setCouponUsed,
   setvisible,
   setvisiblerp,
+  discount1,
   setdiscount1,
   setProdPrice,
   setOrderData,
+  influencer,
   setInfluencer,
   setpincode,
   // external
   removeFromCart,
   navigate,
+  totalPrice,
+  isReseller,
 }) => {
   /* ---------------- DELIVERY ---------------- */
   const handleDeliveryChange = useCallback(
@@ -62,20 +69,20 @@ export const useOrderActions = ({
   );
 
   /* ---------------- COUPON VALIDATION ---------------- */
-  const validateCouponCode = (code) =>
+  const validateCouponCode = (code = "") =>
     /^(#RO|#RP|#RP\$|#INF|DISCOUNT)/.test(code);
 
   /* ---------------- APPLY COUPON ---------------- */
   const applyCoupon = useCallback(
-    (code) => {
+    (code = "") => {
       if (!validateCouponCode(code)) {
-        alert("Invalid coupon");
+        toast.error("Invalid coupon");
         return;
       }
 
       let discount = 0;
 
-      const updated = orderData.map((prod) => {
+      const updated = (orderData || []).map((prod) => {
         let d = 0;
 
         if (code.startsWith("#RO")) {
@@ -105,12 +112,11 @@ export const useOrderActions = ({
 
       setdiscount1(discount);
       setOrderData(updated);
-      setProdPrice(prodPrice - discount);
+      setProdPrice((prev) => prev - discount);
       setCouponUsed(true);
     },
     [
       orderData,
-      prodPrice,
       setOrderData,
       setProdPrice,
       setCouponUsed,
@@ -124,7 +130,7 @@ export const useOrderActions = ({
   /* ---------------- SUBMIT COUPON ---------------- */
   const handleSubmitCoupon = useCallback(() => {
     if (!couponCode) {
-      alert("Enter coupon code");
+      toast.error("Enter coupon code");
       return;
     }
 
@@ -177,21 +183,27 @@ export const useOrderActions = ({
 
   /* ---------------- PINCODE ---------------- */
   const fetchLocation = useCallback(
-    (pin) => {
+    async (pin) => {
       setpincode(pin);
-      if (pin?.length !== 6) return;
 
-      fetch(`https://api.postalpincode.in/pincode/${pin}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data[0]?.Status === "Success") {
-            const po = data[0].PostOffice[0];
-            document.getElementById("district").value = po.District;
-            document.getElementById("state").value = po.State;
-          } else {
-            alert("Invalid Pincode");
-          }
-        });
+      if (pin?.length !== 6) return null;
+
+      try {
+        const res = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
+        const data = await res.json();
+
+        if (data?.[0]?.Status === "Success") {
+          const po = data[0]?.PostOffice?.[0];
+          if (!po) return null;
+          return po;
+        } else {
+          toast.error("Invalid Pincode");
+          return null;
+        }
+      } catch (error) {
+        console.error(error);
+        return null;
+      }
     },
     [setpincode]
   );
@@ -199,7 +211,7 @@ export const useOrderActions = ({
   /* ---------------- REMOVE PRODUCT ---------------- */
   const removeProduct = useCallback(
     (prod) => {
-      const updated = orderData.filter((p) => p !== prod);
+      const updated = (orderData || []).filter((p) => p !== prod);
       localStorage.setItem("OrderData", JSON.stringify(updated));
       setOrderData(updated);
       removeFromCart();
@@ -208,21 +220,86 @@ export const useOrderActions = ({
   );
 
   /* ---------------- PROCEED ---------------- */
-  const handleProceedToPayment = useCallback(() => {
-    if (!orderData.length) {
-      alert("Add at least one product");
+  const handleProceedToPayment = async (formValues) => {
+    if (!orderData?.length) {
+      toast.error("Add at least one product");
       return;
     }
 
-    localStorage.setItem(
-      "PaymentDetails",
-      JSON.stringify({ deliveryMode, paymentMode })
-    );
+    const deliveryDetails = {
+      deliveryMode,
+      paymentMode,
+      prodPrice,
+      delPrice,
+      cod,
+      totalPrice,
+    };
+
+    const productDetails = (orderData || []).map((product) => {
+      const labels = Array.isArray(product.labels) ? product.labels : [];
+      const selectedlabel = localStorage.getItem("selectedlabel") || "";
+      const dynamicKey =
+        selectedlabel === "/image/waterlabel/4.png" ? "contactNo" : "rollno";
+
+      const code = product.productcode || "";
+
+      return {
+        ProdName: product?.Name || "",
+        productcode: code,
+        product: code.startsWith("NS")
+          ? "nameslip"
+          : code.startsWith("NSCRT")
+          ? "cutoutNameslip"
+          : "",
+        price: product.price || 0,
+        size: product.size || "",
+        quantity: product.quantity || 0,
+        type: product.labeltype || "",
+
+        name: labels[0]?.text || "",
+        school: labels[1]?.text || "",
+        subject: labels[2]?.text || "",
+        [dynamicKey]: labels[3]?.text || "",
+        section: labels[4]?.text || "",
+        class: labels[5]?.text || "",
+      };
+    });
+
+    const formData = {
+      version: "Dreamik.com_v1.1",
+      name: formValues.name?.trim() || "",
+      email: formValues.email || "",
+      phone: formValues.phone?.trim() || "",
+      whatsappno: formValues.whatsappno || "",
+      address1: formValues.address1 || "",
+      address2: formValues.address2 || "",
+      pincode: formValues.pincode || "",
+      district: formValues.district || "",
+      state: formValues.state || "",
+      landmark: formValues.landmark || "",
+      customertype: isReseller ? "reseller" : "customer",
+      discount: discount1 || 0,
+      shippingcost: delPrice,
+      resellerid: localStorage.getItem("Rescoup") || "NIL",
+      coupon: couponCode || "",
+      totalprice: totalPrice,
+      deliverymode: deliveryMode,
+      paymentmode: paymentMode,
+      productDetails,
+      additionalDetails: {
+        orderTime: new Date().toString(),
+        browserDetails: navigator.userAgent,
+      },
+    };
+
+    localStorage.setItem("PriceData", JSON.stringify(deliveryDetails));
+    localStorage.setItem("PaymentDetails", JSON.stringify(deliveryDetails));
+    localStorage.setItem("FormContainer", JSON.stringify(formData));
 
     navigate(
       paymentMode === "cashon-payment" ? "/orderconfirmation" : "/payment"
     );
-  }, [orderData, deliveryMode, paymentMode, navigate]);
+  };
 
   return {
     handleDeliveryChange,

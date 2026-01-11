@@ -127,29 +127,33 @@ const OrderComp = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     initalprodprice,
     prodPrice,
     orderData,
-
     setselectedvalue,
     setDeliveryMode,
     setPaymentMode,
+    delPrice,
     setDelPrice,
+    cod,
     setCod,
     setCouponCode,
     setCouponUsed,
     setvisible,
     setvisiblerp,
+    discount1,
     setdiscount1,
     setProdPrice,
     setOrderData,
+    influencer,
     setInfluencer,
     setpincode,
-
     removeFromCart,
     navigate,
+    totalPrice,
+    isReseller,
   });
 
   /* -------------------- JSX -------------------- */
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[30px]! px-4! py-6!">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-[30px]! px-4! py-6!">
       {isLoading && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/50 text-white">
           <p className="text-lg font-semibold">Saving Order, Please wait...</p>

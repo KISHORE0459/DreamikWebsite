@@ -9,6 +9,7 @@ import StickerDefault from "../../../public/image/logo.png";
 import ImagePersonalizationComp from "../../AppComponents/ImageEdit/ImagePersonalizationComp";
 import CheckoutSection from "../../AppComponents/AppCartComps/CheckoutSection";
 import { CartContext } from "../CartContext";
+import toast from "react-hot-toast";
 
 const CustomSticker = () => {
   const canvasRef = useRef(null);
@@ -76,7 +77,7 @@ const CustomSticker = () => {
       navigate("/Order");
     } catch (err) {
       console.error("Sticker export failed:", err);
-      alert("Failed to generate sticker preview");
+      toast.error("Failed to generate sticker preview");
     }
   };
 

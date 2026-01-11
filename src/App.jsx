@@ -24,23 +24,15 @@ import Payment from "./components/payment/Payment";
 import OrderConfirmation from "./components/orderconfirmation/OrderConfirmation";
 const PendingOrders = lazy(() => import("./components/PendingOrders"));
 
-const Adminpanel = lazy(() => import("./components/adminpanel/Adminpanel"));
-const AdminCouponTable = lazy(() =>
-  import("./components/adminpanel/AdminCouponTable")
-);
-const Terms = lazy(() => import("./Terms"));
 const BackgroundRemover = lazy(() =>
   import("./components/backgroundremover/BackgroundRemover")
 );
-const Location = lazy(() => import("./components/Location/location"));
 const PageLogger = lazy(() => import("./components/pagelogger"));
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import DemoVideos from "./AppComponents/DemoVideo/DemoVideos";
 import SplashModal from "./components/SplashModal";
 import Myorder from "./components/Myorder";
-import Fullcashondelivery from "./components/Fullcashondelivery";
+import FullCashOnDelivery from "./components/Fullcashondelivery";
 import NameSlip from "./components/nameslip/NameSlips";
 import NameSlipPersonalize from "./AppComponents/PersonalizeNameSlip/PersonalizeNameSlip";
 import { GlobalStyles } from "@mui/material";
@@ -54,8 +46,18 @@ import BulkPrinting from "./components/BulkPrinting/BulkPrinting";
 import Poster from "./components/Poster/Poster";
 import CustomSticker from "./components/Sticker/Sticker";
 import LaserPrinting from "./components/LaserPrinting/LaserPrinting";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 import CustomBagTag from "./components/bagtag/CustomBagTag";
+import AdminPanel from "./components/adminpanel/Adminpanel";
+import LocationComp from "./components/Location/location";
+import TermsSection from "./TermsAndConditions";
+import { apiEndPoint } from "./appConfig";
+import AppLoader from "./AppComponents/AppLoader/AppLoader";
+import AppToastProvider from "./AppComponents/AppToast/AppToastProvider";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -71,6 +73,18 @@ function AppContent() {
 
   const location = useLocation(); // This now works since it's inside Router
   const [visible, setVisible] = useState(false);
+
+  const { data: healthData, isLoading: isHealthLoading } = useQuery({
+    queryKey: ["health"],
+    queryFn: async () => {
+      const res = await fetch(`${apiEndPoint}/health`);
+      if (!res.ok) throw new Error("Health check failed");
+      return res.json();
+    },
+    retry: true,
+    refetchInterval: 30000,
+    refetchIntervalInBackground: true,
+  });
 
   useEffect(() => {
     if (!sessionStorage.getItem("functionExecuted")) {
@@ -163,7 +177,7 @@ function AppContent() {
         <Suspense fallback={<div></div>}>
           {/* <SplashModal visible={visible} setVisible={setVisible} /> */}
           <PageLogger />
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 bg-white!">
             <div>
               <Navbar
                 searchText={searchText}
@@ -174,111 +188,121 @@ function AppContent() {
               />
               <Advertisement />
             </div>
-            <Routes>
-              {/* home page */}
-              <Route
-                path="/"
-                element={
-                  <ProductList
-                    searchText={searchText}
-                    resellerlogin={ResellerLogin}
-                    ResellerProducts={ResellerProducts}
-                  />
-                }
-              />
-              {/* name slip */}
-              <Route
-                path="/name-slip"
-                element={
-                  <NameSlip
-                    searchText={searchText}
-                    setSearchText={setSearchText}
-                    setcoupon={setcoupon}
-                  />
-                }
-              />
-              <Route
-                path="/name-slip/:productcode"
-                element={<NameSlipDetail />}
-              />
-              <Route
-                path="/name-slip/:templateID/:id"
-                element={<NameSlipPersonalize />}
-              />
-              {/* cut out name slip */}
-              <Route
-                path="/cutout-name-slip"
-                element={
-                  <CutOutNameSlip
-                    searchText={searchText}
-                    setSearchText={setSearchText}
-                    setcoupon={setcoupon}
-                  />
-                }
-              />
-              <Route
-                path="/cutout-name-slip/:id"
-                element={<ProductDetails />}
-              />
-              <Route
-                path="/CNtemplate1/:id"
-                element={<CutoutNameSlipPersonalize />}
-              />
-              {/* Birthday cap */}
-              <Route path="/birthday-cap" element={<BirthdayCap />} />
-              {/* custom name slips */}
-              <Route path="/custom-name-slip" element={<CustomNameSlips />} />
-              {/* bulk order */}
-              <Route path="/bulk-order" element={<BulkOrder />} />
-              {/* bag tag */}
-              <Route path="/custom-bag-tag" element={<CustomBagTag />} />
-              {/* background remover */}
-              <Route path="/ai-bg-remover" element={<BackgroundRemover />} />
-              {/* text behind image */}
-              <Route path="/text-behind-image" element={<TextBehindImage />} />
-              {/* bulk printing software */}
-              <Route
-                path="/bulk-printing-software"
-                element={<BulkPrinting />}
-              />
-              {/* poster */}
-              <Route path="/custom-poster" element={<Poster />} />
-              {/* sticker */}
-              <Route path="/custom-sticker" element={<CustomSticker />} />
-              {/* dreamik glossy sticker */}
-              <Route
-                path="/dreamik-glossy-sticker"
-                element={<LaserPrinting />}
-              />
-              <Route
-                path="/Order"
-                element={
-                  <OrderComp
-                    orderData={orderData}
-                    setOrderData={setOrderData}
-                    handleEditOrder={handleEditOrder}
-                    coupon={coupon}
-                  />
-                }
-              />
-              <Route path="/payment" element={<Payment />} />
-              <Route
-                path="/orderconfirmation"
-                element={<OrderConfirmation />}
-              />
-              <Route path="/pendingorders" element={<PendingOrders />} />
-              <Route
-                path="/fullcashondelivery"
-                element={<Fullcashondelivery />}
-              />
-              <Route path="/myorder" element={<Myorder />} />
-              <Route path="/location" element={<Location />} />
-              <Route path="/adminpanel" element={<Adminpanel />} />
-              <Route path="/termsandcondition" element={<Terms />} />
-
-              <Route path="/admincoupontable" element={<AdminCouponTable />} />
-            </Routes>
-
+            {isHealthLoading ? (
+              <AppLoader />
+            ) : (
+              <Routes>
+                {/* home page */}
+                <Route
+                  path="/"
+                  element={
+                    <ProductList
+                      searchText={searchText}
+                      resellerlogin={ResellerLogin}
+                      ResellerProducts={ResellerProducts}
+                    />
+                  }
+                />
+                {/* name slip */}
+                <Route
+                  path="/name-slip"
+                  element={
+                    <NameSlip
+                      searchText={searchText}
+                      setSearchText={setSearchText}
+                      setcoupon={setcoupon}
+                    />
+                  }
+                />
+                <Route
+                  path="/name-slip/:productcode"
+                  element={<NameSlipDetail />}
+                />
+                <Route
+                  path="/name-slip/:templateID/:id"
+                  element={<NameSlipPersonalize />}
+                />
+                {/* cut out name slip */}
+                <Route
+                  path="/cutout-name-slip"
+                  element={
+                    <CutOutNameSlip
+                      searchText={searchText}
+                      setSearchText={setSearchText}
+                      setcoupon={setcoupon}
+                    />
+                  }
+                />
+                <Route
+                  path="/cutout-name-slip/:id"
+                  element={<ProductDetails />}
+                />
+                <Route
+                  path="/CNtemplate1/:id"
+                  element={<CutoutNameSlipPersonalize />}
+                />
+                {/* Birthday cap */}
+                <Route path="/birthday-cap" element={<BirthdayCap />} />
+                {/* custom name slips */}
+                <Route path="/custom-name-slip" element={<CustomNameSlips />} />
+                {/* bulk order */}
+                <Route path="/bulk-order" element={<BulkOrder />} />
+                {/* bag tag */}
+                <Route path="/custom-bag-tag" element={<CustomBagTag />} />
+                {/* background remover */}
+                <Route path="/ai-bg-remover" element={<BackgroundRemover />} />
+                {/* text behind image */}
+                <Route
+                  path="/text-behind-image"
+                  element={<TextBehindImage />}
+                />
+                {/* bulk printing software */}
+                <Route
+                  path="/bulk-printing-software"
+                  element={<BulkPrinting />}
+                />
+                {/* poster */}
+                <Route path="/custom-poster" element={<Poster />} />
+                {/* sticker */}
+                <Route path="/custom-sticker" element={<CustomSticker />} />
+                {/* dreamik glossy sticker */}
+                <Route
+                  path="/dreamik-glossy-sticker"
+                  element={<LaserPrinting />}
+                />
+                {/* Cart Section */}
+                <Route
+                  path="/Order"
+                  element={
+                    <OrderComp
+                      orderData={orderData}
+                      setOrderData={setOrderData}
+                      handleEditOrder={handleEditOrder}
+                      coupon={coupon}
+                    />
+                  }
+                />
+                {/* admin panel */}
+                <Route path="/admin-panel" element={<AdminPanel />} />
+                {/* payment page */}
+                <Route path="/payment" element={<Payment />} />
+                {/* full cash on delivery */}
+                <Route
+                  path="/full-cash-on-delivery"
+                  element={<FullCashOnDelivery />}
+                />
+                {/* location comp */}
+                <Route path="/location" element={<LocationComp />} />
+                {/* terms and condition */}
+                <Route path="/terms-and-condition" element={<TermsSection />} />
+                <Route
+                  path="/orderconfirmation"
+                  element={<OrderConfirmation />}
+                />
+                <Route path="/pendingorders" element={<PendingOrders />} />
+                <Route path="/myorder" element={<Myorder />} />
+              </Routes>
+            )}
             {/* <SplashModal visible={isVisible} setVisible={setIsVisible} /> */}
             <div className="mt-10! flex flex-col gap-5!">
               <DemoVideos
@@ -312,15 +336,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <div className="max-w-[1600px]! mx-auto! p-0! bg-white!">
-          <ToastContainer
-            position="top-center"
-            autoClose={10000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            pauseOnHover
-            draggable
-          />
+          <AppToastProvider />
           <ScrollToTop />
           <AppContent />
           <GlobalStyles

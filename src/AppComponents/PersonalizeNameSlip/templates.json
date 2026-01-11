@@ -1,1385 +1,262 @@
 {
   "template1": {
     "name": "Template 1 – Blue Tag",
-
     "background": "/images/templates/template1-bg.png",
-
     "image": {
       "enabled": true,
-      "top": "35%",
-      "left": "67%",
-      "width": "30%",
-      "maxWidth": "36%",
-      "maxHeight": "33%",
+      "top": "15%",
+      "left": "1%",
+      "width": "25%",
+      "height": "50%",
+      "maxWidth": "40%",
+      "maxHeight": "60%",
       "shape": "square",
       "transformOrigin": "center",
       "translate": true,
       "scale": true,
       "rotate": true
     },
-
     "labels": {
       "name": {
-        "top": "20%",
-        "left": "5%",
-        "defaultSize": 35,
+        "top": "7%",
+        "left": "32%",
+        "defaultSize": 30,
         "color": "#292d9e",
         "transform": true
       },
       "school": {
-        "top": "77%",
-        "left": "5%",
-        "defaultSize": 35,
+        "top": "50%",
+        "left": "46%",
+        "defaultSize": 30,
         "color": "#292d9e",
         "transform": true
       },
       "subject": {
-        "top": "60%",
-        "left": "20%",
-        "defaultSize": 35,
+        "top": "37%",
+        "left": "49%",
+        "defaultSize": 30,
         "color": "#292d9e",
         "transform": true
       },
       "roll": {
-        "top": "60%",
-        "left": "25%",
+        "top": "23%",
+        "left": "90%",
         "defaultSize": 30,
+        "color": "#292d9e",
         "hidden": true
       },
-      "section": {
-        "top": "42%",
-        "left": "45%",
-        "defaultSize": 35,
+      "class": {
+        "top": "23%",
+        "left": "42%",
+        "defaultSize": 30,
         "color": "#292d9e",
         "transform": true
       },
-      "class": {
-        "top": "42%",
-        "left": "18%",
-        "defaultSize": 35,
+      "section": {
+        "top": "23%",
+        "left": "73%",
+        "defaultSize": 30,
         "color": "#292d9e",
         "transform": true
       }
     },
-
     "watermark": {
       "enabled": false
     }
   },
   "template2": {
-    "name": "Template 2 – Red Classic (extracted)",
-    "background": "/images/templates/template2-bg.png",
-
+    "name": "Template 1 – Blue Tag",
+    "background": "/images/templates/template1-bg.png",
     "image": {
       "enabled": true,
-      "anchorTop": "43%",
-      "anchorLeft": "5%",
-      "anchorWidth": "35%",
-      "maxWidth": "20%",
-      "maxHeight": "45%",
-      "left": "5%",
-      "top": "30%",
-      "shape": "square",
-      "notes": "anchorLeft is very small (5%) so effective left is negative; this matches your CSS which centers image near left edge."
+      "top": "9%",
+      "left": "1%",
+      "width": "30%",
+      "height": "50%",
+      "maxWidth": "50%",
+      "maxHeight": "60%",
+      "shape": "circle",
+      "transformOrigin": "center",
+      "translate": true,
+      "scale": true,
+      "rotate": true
     },
-
     "labels": {
       "name": {
-        "top": "13%",
-        "left": "47%",
-        "defaultSize": 34,
-        "color": "#292d9e"
+        "top": "7%",
+        "left": "32%",
+        "defaultSize": 30,
+        "color": "#292d9e",
+        "transform": true
       },
       "school": {
-        "top": "74%",
-        "left": "50%",
-        "defaultSize": 34,
-        "color": "#292d9e"
+        "top": "50%",
+        "left": "46%",
+        "defaultSize": 30,
+        "color": "#292d9e",
+        "transform": true
       },
       "subject": {
-        "top": "64%",
-        "left": "60%",
-        "defaultSize": 34,
+        "top": "37%",
+        "left": "49%",
+        "defaultSize": 30,
         "color": "#292d9e",
-        "opacity": 0
+        "transform": true
       },
       "roll": {
-        "top": "54%",
-        "left": "60%",
-        "defaultSize": 34,
-        "color": "#292d9e"
-      },
-      "section": {
-        "top": "44%",
-        "left": "80%",
-        "defaultSize": 34,
-        "color": "#292d9e"
+        "top": "23%",
+        "left": "90%",
+        "defaultSize": 30,
+        "color": "#292d9e",
+        "hidden": true
       },
       "class": {
-        "top": "44%",
-        "left": "50%",
-        "defaultSize": 34,
-        "color": "#292d9e"
+        "top": "23%",
+        "left": "42%",
+        "defaultSize": 30,
+        "color": "#292d9e",
+        "transform": true
+      },
+      "section": {
+        "top": "23%",
+        "left": "73%",
+        "defaultSize": 30,
+        "color": "#292d9e",
+        "transform": true
       }
     },
-
     "watermark": {
       "enabled": false
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "studentnameTop": "36%",
-        "schoolTop": "76%",
-        "schoolLeft": "50%",
-        "subjectTop": "66%",
-        "subjectLeft": "58%"
-      },
-      "maxWidth768": {
-        "fontSize": 28
-      },
-      "maxWidth480": {
-        "personImage": {
-          "left": "5%",
-          "top": "35%",
-          "width": "24%",
-          "maxHeight": "37%"
-        },
-        "studentnameTop": "26%",
-        "studentnameLeft": "47%"
-      }
     }
   },
   "template3": {
-    "name": "Minimal Black Label (Corrected)",
-
-    "background": "/images/templates/template3-bg.png",
-
+    "name": "Template 1 – Blue Tag",
+    "background": "/images/templates/template1-bg.png",
     "image": {
       "enabled": true,
-      "anchorTop": "36%",
-      "anchorLeft": "2%",
-      "anchorWidth": "20%",
-      "maxHeight": "32%",
-      "left": "-8%",
-      "top": "20%",
-      "width": "20%",
+      "top": "15%",
+      "left": "1%",
+      "width": "25%",
+      "height": "50%",
+      "maxWidth": "40%",
+      "maxHeight": "60%",
       "shape": "square",
-      "notes": "Using top-left coordinates (corrected from center due to translate(-50%, -50%))."
+      "transformOrigin": "center",
+      "translate": true,
+      "scale": true,
+      "rotate": true
     },
-
     "labels": {
       "name": {
-        "top": "31%",
-        "left": "56%",
-        "defaultSize": 34,
-        "opacity": 1
+        "top": "7%",
+        "left": "32%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
       },
       "school": {
-        "top": "60%",
-        "left": "49%",
-        "defaultSize": 34
+        "top": "48.5%",
+        "left": "46%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
       },
       "subject": {
-        "top": "49%",
-        "left": "56%",
-        "defaultSize": 34,
-        "opacity": 0
-      },
-      "section": {
-        "top": "39%",
-        "left": "65%",
-        "defaultSize": 34
-      },
-      "class": {
-        "top": "39%",
-        "left": "52%",
-        "defaultSize": 34
+        "top": "35%",
+        "left": "50%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
       },
       "roll": {
-        "top": "10000%",
-        "left": "25%",
-        "defaultSize": 30,
-        "hidden": true
-      }
-    },
-
-    "watermark": {
-      "enabled": true,
-      "src": "/images/watermarks/mono.png",
-      "top": "26%",
-      "left": "1%",
-      "opacity": 0.9
-    },
-
-    "responsive": {
-      "maxWidth768": {
-        "image": {
-          "anchorTop": "43%",
-          "anchorLeft": "5%",
-          "width": "20%",
-          "maxHeight": "32%",
-          "left": "-12.5%",
-          "top": "26%"
-        }
+        "top": "22%",
+        "left": "89%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
       },
-      "maxWidth480": {
-        "image": {
-          "anchorTop": "31%",
-          "anchorLeft": "5%",
-          "width": "18%",
-          "maxHeight": "35%",
-          "left": "-13%",
-          "top": "13.5%"
-        },
-        "labels": {
-          "name": { "top": "30%", "left": "55%", "defaultSize": 18 },
-          "school": { "top": "52%", "left": "50%", "defaultSize": 16 },
-          "subject": { "top": "48%", "left": "56%", "defaultSize": 18 },
-          "class": { "top": "37%", "left": "52%", "defaultSize": 18 },
-          "section": { "top": "37%", "left": "53%", "defaultSize": 18 },
-          "roll": { "hidden": true }
-        },
-        "watermark": {
-          "top": "24%",
-          "left": "8%",
-          "opacity": 0.9
-        }
+      "class": {
+        "top": "22%",
+        "left": "42%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
+      },
+      "section": {
+        "top": "22%",
+        "left": "66%",
+        "defaultSize": 25,
+        "color": "#292d9e",
+        "transform": true
       }
+    },
+    "watermark": {
+      "enabled": false
     }
   },
   "template4": {
-    "name": "Floral Stars Label",
-
-    "background": "/images/templates/template4-bg.png",
-
+    "name": "Template 1 – Blue Tag",
+    "background": "/images/templates/template1-bg.png",
     "image": {
       "enabled": true,
-
-      "anchorTop": "34%",
-      "anchorLeft": "3%",
-      "anchorWidth": "23%",
-      "maxWidth": "31%",
-      "maxHeight": "37%",
-
-      "top": "15.5%",
-      "left": "-8.5%",
-      "width": "23%",
-
-      "shape": "square",
-      "allowCircle": true,
-      "allowBorder": true
-    },
-
-    "labels": {
-      "class": { "top": "28%", "left": "40%", "defaultSize": 30 },
-      "section": { "top": "38%", "left": "80%", "defaultSize": 30 },
-      "subject": {
-        "top": "47%",
-        "left": "60%",
-        "defaultSize": 30,
-        "opacity": 0
-      },
-      "school": { "top": "60%", "left": "48%", "defaultSize": 30 },
-      "roll": {
-        "top": "10000%",
-        "left": "60%",
-        "defaultSize": 30,
-        "hidden": true
-      },
-      "name": {
-        "top": "10000%",
-        "left": "25%",
-        "defaultSize": 30,
-        "hidden": true
-      }
-    },
-
-    "watermark": {
-      "enabled": false
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "labels": {
-          "class": { "top": "40%", "left": "47%", "fontSize": 39 },
-          "section": { "top": "40%", "left": "78%", "fontSize": 39 },
-          "subject": { "top": "52%", "left": "58%", "fontSize": 39 },
-          "school": { "top": "59%", "left": "50%", "fontSize": 39 },
-          "name": { "top": "30%", "left": "40%", "fontSize": 39 }
-        }
-      },
-
-      "maxWidth768": {
-        "labels": {
-          "class": { "top": "39%", "left": "50%", "fontSize": 31 },
-          "section": { "top": "39%", "left": "78%", "fontSize": 31 },
-          "subject": { "top": "49%", "left": "58%", "fontSize": 31 },
-          "school": { "top": "59%", "left": "50%", "fontSize": 31 },
-          "name": { "top": "31%", "left": "40%", "fontSize": 31 }
-        }
-      },
-
-      "maxWidth480": {
-        "image": {
-          "anchorTop": "31%",
-          "anchorLeft": "6%",
-          "width": "22%",
-          "maxHeight": "34%",
-
-          "top": "14%",
-          "left": "-11%"
-        },
-        "labels": {
-          "class": { "top": "33%", "left": "45%", "fontSize": 20 },
-          "section": { "top": "33%", "left": "80%", "fontSize": 20 },
-          "subject": { "top": "39%", "left": "60%", "fontSize": 20 },
-          "school": { "top": "52%", "left": "48%", "fontSize": 16 },
-          "name": { "top": "26%", "left": "40%", "fontSize": 20 }
-        }
-      }
-    }
-  },
-  "template5": {
-    "name": "Floral Stars Label Circular",
-
-    "background": "/images/templates/template5-bg.png",
-
-    "image": {
-      "enabled": true,
-
-      "anchorTop": "32%",
-      "anchorLeft": "1.4%",
-      "anchorWidth": "28%",
-      "maxHeight": "36%",
-
-      "top": "14%",
-      "left": "-12.6%",
-      "width": "28%",
-
-      "shape": "circle",
-      "allowBorder": true
-    },
-
-    "labels": {
-      "name": { "top": "29%", "left": "41%", "defaultSize": 33 },
-      "school": { "top": "60%", "left": "42%", "defaultSize": 33 },
-      "subject": {
-        "top": "48%",
-        "left": "56%",
-        "defaultSize": 33,
-        "opacity": 0
-      },
-      "section": { "top": "40%", "left": "70%", "defaultSize": 33 },
-      "class": { "top": "40%", "left": "44%", "defaultSize": 33 },
-      "roll": {
-        "top": "10000%",
-        "left": "0%",
-        "defaultSize": 30,
-        "hidden": true
-      }
-    },
-
-    "watermark": {
-      "enabled": false
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "labels": {
-          "name": { "top": "30%", "fontSize": 39 },
-          "school": { "top": "59%", "left": "50%", "fontSize": 39 },
-          "subject": { "top": "52%", "left": "58%", "fontSize": 39 },
-          "section": { "top": "40%", "left": "78%", "fontSize": 39 },
-          "class": { "top": "40%", "left": "47%", "fontSize": 39 }
-        }
-      },
-
-      "maxWidth768": {
-        "labels": {
-          "name": { "top": "31%", "fontSize": 31 },
-          "school": { "top": "59%", "left": "50%", "fontSize": 31 },
-          "subject": { "top": "49%", "left": "58%", "fontSize": 31 },
-          "section": { "top": "39%", "left": "78%", "fontSize": 31 },
-          "class": { "top": "39%", "left": "50%", "fontSize": 31 }
-        }
-      },
-
-      "maxWidth480": {
-        "image": {
-          "anchorTop": "27%",
-          "anchorLeft": "5%",
-          "width": "26%",
-          "maxHeight": "33%",
-
-          "top": "10.5%",
-          "left": "-8%"
-        },
-        "labels": {
-          "name": { "top": "25%", "fontSize": 20 },
-          "school": { "top": "52%", "left": "44%", "fontSize": 16 },
-          "subject": { "top": "37.5%", "left": "60%", "fontSize": 20 },
-          "section": { "top": "34%", "left": "60%", "fontSize": 20 },
-          "class": { "top": "34%", "left": "45%", "fontSize": 20 }
-        }
-      }
-    }
-  },
-  "template6": {
-    "name": "Floral Stars Label",
-
-    "background": "/images/templates/template6-bg.png",
-
-    "image": {
-      "enabled": true,
-      "shape": "square",
-
-      "top": "31%",
-      "left": "6%",
-      "width": "29%",
-      "maxHeight": "38%"
-    },
-
-    "labels": {
-      "name": {
-        "top": "26%",
-        "left": "31%",
-        "defaultSize": 37
-      },
-
-      "school": {
-        "top": "59%",
-        "left": "48%",
-        "defaultSize": 37
-      },
-
-      "subject": {
-        "top": "48%",
-        "left": "56%",
-        "defaultSize": 37,
-        "visible": false
-      },
-
-      "roll": {
-        "top": "26%",
-        "left": "90%",
-        "defaultSize": 27
-      },
-
-      "section": {
-        "top": "36%",
-        "left": "74%",
-        "defaultSize": 37
-      },
-
-      "class": {
-        "top": "36%",
-        "left": "44%",
-        "defaultSize": 37
-      }
-    },
-
-    "watermark": {
-      "enabled": false
-    },
-
-    "responsive": {
-      "1120": {
-        "name": { "top": "30%", "left": "31%", "size": 39 },
-        "school": { "top": "59%", "left": "50%", "size": 39 },
-        "subject": { "top": "52%", "left": "58%", "size": 39 },
-        "roll": { "top": "56%", "left": "60%", "size": 39 },
-        "section": { "top": "40%", "left": "78%", "size": 39 },
-        "class": { "top": "40%", "left": "47%", "size": 39 },
-        "image": {
-          "top": "31%",
-          "left": "6%",
-          "width": "29%",
-          "maxHeight": "38%"
-        }
-      },
-
-      "768": {
-        "name": { "top": "31%", "left": "31%", "size": 31 },
-        "school": { "top": "59%", "left": "50%", "size": 31 },
-        "subject": { "top": "49%", "left": "58%", "size": 31 },
-        "roll": { "top": "56%", "left": "60%", "size": 31 },
-        "section": { "top": "39%", "left": "78%", "size": 31 },
-        "class": { "top": "39%", "left": "50%", "size": 31 },
-        "image": {
-          "top": "43%",
-          "left": "10%",
-          "width": "28%",
-          "maxHeight": "32%"
-        }
-      },
-
-      "480": {
-        "name": { "top": "21%", "left": "31%", "size": 20 },
-        "school": { "top": "47%", "left": "49%", "size": 16 },
-        "subject": { "top": "38%", "left": "60%", "size": 20 },
-        "roll": { "top": "21%", "left": "88%", "size": 20 },
-        "section": { "top": "29%", "left": "60%", "size": 20 },
-        "class": { "top": "29%", "left": "45%", "size": 20 },
-        "image": {
-          "top": "29%",
-          "left": "4%",
-          "width": "23%",
-          "maxHeight": "37%"
-        }
-      }
-    }
-  },
-  "template7": {
-    "name": "Floral Garden Label",
-
-    "background": "/images/templates/template7-bg.png",
-
-    "image": {
-      "enabled": true,
-      "shape": "square",
-
-      "top": "25%",
-      "left": "64%",
-      "width": "20%",
-      "maxHeight": "36%"
-    },
-
-    "labels": {
-      "name": {
-        "top": "33%",
-        "left": "22%",
-        "defaultSize": 35
-      },
-
-      "school": {
-        "top": "74.5%",
-        "left": "21%",
-        "defaultSize": 35
-      },
-
-      "subject": {
-        "top": "63%",
-        "left": "25%",
-        "defaultSize": 35,
-        "visible": false
-      },
-
-      "roll": {
-        "top": "54%",
-        "left": "25%",
-        "defaultSize": 35
-      },
-
-      "section": {
-        "top": "43%",
-        "left": "49%",
-        "defaultSize": 35
-      },
-
-      "class": {
-        "top": "43%",
-        "left": "22%",
-        "defaultSize": 35
-      }
-    },
-
-    "watermark": {
-      "enabled": false
-    },
-
-    "responsive": {
-      "1120": {
-        "labels": {
-          "name": { "top": "36%", "left": "22%", "size": 28 },
-          "school": { "top": "76%", "left": "50%", "size": 28 },
-          "subject": { "top": "66%", "left": "58%", "size": 28 },
-          "roll": { "top": "56%", "left": "60%", "size": 28 },
-          "section": { "top": "46%", "left": "78%", "size": 28 },
-          "class": { "top": "46%", "left": "50%", "size": 28 }
-        }
-      },
-
-      "768": {
-        "labels": {
-          "name": { "top": "36%", "left": "22%", "size": 28 },
-          "school": { "top": "76%", "left": "50%", "size": 28 },
-          "subject": { "top": "66%", "left": "58%", "size": 28 },
-          "roll": { "top": "56%", "left": "60%", "size": 28 },
-          "section": { "top": "46%", "left": "78%", "size": 28 },
-          "class": { "top": "46%", "left": "50%", "size": 28 }
-        },
-        "image": {
-          "top": "43%",
-          "left": "5%",
-          "width": "20%",
-          "maxHeight": "32%"
-        }
-      },
-
-      "480": {
-        "labels": {
-          "name": { "top": "28%", "left": "26%", "size": 15 },
-          "school": { "top": "60%", "left": "22%", "size": 15 },
-          "subject": { "top": "53%", "left": "25%", "size": 15 },
-          "roll": { "top": "45%", "left": "25%", "size": 15 },
-          "section": { "top": "37%", "left": "50%", "size": 15 },
-          "class": { "top": "37%", "left": "25%", "size": 15 }
-        },
-        "image": {
-          "top": "39%",
-          "left": "73%",
-          "width": "20%",
-          "maxHeight": "32%"
-        }
-      }
-    }
-  },
-  "template8": {
-    "name": "Template 8 – Modern Sky Label",
-
-    "background": "/images/templates/template8-bg.png",
-
-    "image": {
-      "enabled": true,
-
-      "anchorTop": "35%",
-      "anchorLeft": "1%",
-      "anchorWidth": "28%",
-      "maxWidth": "28%",
-      "maxHeight": "34%",
-
-      "top": "35%",
+      "top": "9%",
       "left": "1%",
-      "width": "28%",
-
-      "shape": "square",
-      "allowCircle": true,
-      "allowBorder": true,
-
+      "width": "30%",
+      "height": "50%",
+      "maxWidth": "50%",
+      "maxHeight": "60%",
+      "shape": "circle",
       "transformOrigin": "center",
       "translate": true,
       "scale": true,
       "rotate": true
     },
-
     "labels": {
       "name": {
-        "top": "30%",
-        "left": "58%",
-        "defaultSize": 30,
+        "top": "7%",
+        "left": "32%",
+        "defaultSize": 25,
         "color": "#292d9e",
         "transform": true
       },
-
       "school": {
-        "top": "59%",
-        "left": "51%",
-        "defaultSize": 30,
+        "top": "48.5%",
+        "left": "46%",
+        "defaultSize": 25,
         "color": "#292d9e",
         "transform": true
       },
-
       "subject": {
-        "top": "49%",
-        "left": "56%",
-        "defaultSize": 30,
+        "top": "35%",
+        "left": "50%",
+        "defaultSize": 25,
         "color": "#292d9e",
-        "opacity": 0,
         "transform": true
       },
-
       "roll": {
-        "top": "10000%",
-        "left": "25%",
-        "defaultSize": 30,
-        "hidden": true
-      },
-
-      "section": {
-        "top": "39%",
-        "left": "65%",
-        "defaultSize": 30,
+        "top": "22%",
+        "left": "89%",
+        "defaultSize": 25,
         "color": "#292d9e",
         "transform": true
       },
-
       "class": {
-        "top": "39%",
-        "left": "52%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      }
-    },
-
-    "watermark": {
-      "enabled": true,
-      "src": "/image/waterlabel/default.png",
-      "top": "26%",
-      "left": "2%",
-      "opacity": 0.9
-    },
-
-    "watermarkOverrides": {
-      "/image/waterlabel2.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "58%" },
-          "school": { "top": "59%", "left": "52%" },
-          "subject": { "top": "51%", "left": "56%" },
-          "section": { "top": "41%", "left": "65%" },
-          "class": { "top": "41%", "left": "52%" },
-          "roll": { "hidden": true }
-        }
-      },
-
-      "/image/waterlabel1.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "58%" },
-          "school": { "top": "59%", "left": "52%" },
-          "subject": { "top": "51%", "left": "56%" },
-          "section": { "top": "41%", "left": "65%" },
-          "class": { "top": "41%", "left": "52%" },
-          "roll": { "hidden": true }
-        }
-      },
-
-      "/image/waterlabel/4.png": {
-        "labels": {
-          "name": { "top": "27%", "left": "48%" },
-          "school": { "top": "52%", "left": "44%" },
-          "subject": { "top": "42%", "left": "58%" },
-          "section": { "top": "36%", "left": "65%" },
-          "class": { "top": "36%", "left": "44%" },
-          "roll": { "top": "60%", "left": "53%", "defaultSize": 30 }
-        }
-      },
-
-      "/image/waterlabel/FERT.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "48%" },
-          "school": { "top": "61%", "left": "49%" },
-          "subject": { "top": "42%", "left": "58%" },
-          "section": { "top": "40%", "left": "80%" },
-          "class": { "top": "40%", "left": "54%" },
-          "roll": { "hidden": true }
-        }
-      },
-
-      "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTRT01.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "48%" },
-          "school": { "top": "61%", "left": "49%" },
-          "subject": { "top": "42%", "left": "58%" },
-          "section": { "top": "40%", "left": "80%" },
-          "class": { "top": "40%", "left": "54%" },
-          "roll": { "hidden": true }
-        }
-      },
-
-      "/image/UTF frames lang DreamikAIComics-Type2-Label-Rectangle-Image-v1-HD(1920 x 1080 px)/FTRT02.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "54%" },
-          "school": { "top": "57%", "left": "49%" },
-          "subject": { "top": "42%", "left": "53%" },
-          "section": { "top": "40%", "left": "70%" },
-          "class": { "top": "40%", "left": "54%" },
-          "roll": { "hidden": true }
-        }
-      }
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "labels": {
-          "name": { "fontSize": 28 },
-          "school": { "top": "61%", "left": "52%" },
-          "subject": { "top": "51%", "left": "56%" },
-          "section": { "top": "41%", "left": "65%" },
-          "class": { "top": "41%", "left": "52%" }
-        }
-      },
-
-      "maxWidth768": {
-        "labels": {
-          "name": { "fontSize": 28 },
-          "school": { "fontSize": 28 },
-          "subject": { "fontSize": 28 },
-          "section": { "fontSize": 28 },
-          "class": { "fontSize": 28 }
-        },
-        "image": {
-          "top": "43%",
-          "left": "5%",
-          "width": "20%",
-          "maxHeight": "32%"
-        }
-      },
-
-      "maxWidth480": {
-        "image": {
-          "anchorTop": "31%",
-          "anchorLeft": "4%",
-          "width": "26%",
-          "maxHeight": "32%",
-          "top": "31%",
-          "left": "4%"
-        },
-
-        "labels": {
-          "name": { "top": "33%", "left": "56%", "defaultSize": 15 },
-          "school": { "top": "55%", "left": "52%", "defaultSize": 15 },
-          "subject": { "top": "48%", "left": "56%", "defaultSize": 15 },
-          "section": { "top": "40%", "left": "55%", "defaultSize": 15 },
-          "class": { "top": "40%", "left": "52%", "defaultSize": 15 }
-        }
-      }
-    }
-  },
-  "template9": {
-    "name": "Template 9 – Modern Blue Tag",
-
-    "background": "/images/templates/template9-bg.png",
-
-    "image": {
-      "enabled": true,
-      "top": "33%",
-      "left": "4%",
-      "width": "23%",
-      "maxWidth": "33%",
-      "maxHeight": "35%",
-      "shape": "square",
-      "allowCircle": true,
-      "allowBorder": true,
-      "transformOrigin": "center",
-      "translate": true,
-      "scale": true,
-      "rotate": true
-    },
-
-    "labels": {
-      "name": {
-        "top": "31%",
-        "left": "58%",
-        "defaultSize": 30,
+        "top": "22%",
+        "left": "42%",
+        "defaultSize": 25,
         "color": "#292d9e",
         "transform": true
       },
-
-      "school": {
-        "top": "59%",
-        "left": "51%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "subject": {
-        "top": "49%",
-        "left": "56%",
-        "defaultSize": 30,
-        "opacity": 0,
-        "color": "#292d9e",
-        "transform": true
-      },
-
       "section": {
-        "top": "39%",
-        "left": "65%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "class": {
-        "top": "39%",
-        "left": "52%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "roll": {
-        "hidden": true
-      }
-    },
-
-    "watermark": {
-      "enabled": true,
-      "src": "/image/waterlabel.png",
-      "top": "26%",
-      "left": "2%",
-      "opacity": 0.9
-    },
-
-    "watermarkOverrides": {
-      "/image/waterlabel2.png": {
-        "labels": {
-          "name": { "top": "31%", "left": "58%" },
-          "school": { "top": "59%", "left": "52%" },
-          "subject": { "top": "51%", "left": "56%" },
-          "section": { "top": "41%", "left": "65%" },
-          "class": { "top": "41%", "left": "52%" }
-        }
-      },
-
-      "/image/waterlabel1.png": {
-        "labels": {
-          "name": { "top": "31%", "left": "58%" },
-          "school": { "top": "59%", "left": "52%" },
-          "subject": { "top": "51%", "left": "56%" },
-          "section": { "top": "41%", "left": "65%" },
-          "class": { "top": "41%", "left": "52%" }
-        }
-      },
-
-      "/image/waterlabel/4.png": {
-        "labels": {
-          "name": { "top": "27%", "left": "48%" },
-          "school": { "top": "52%", "left": "44%" },
-          "subject": { "top": "42%", "left": "58%" },
-          "section": { "top": "36%", "left": "65%" },
-          "class": { "top": "36%", "left": "44%" },
-          "roll": {
-            "hidden": false,
-            "top": "60%",
-            "left": "53%",
-            "defaultSize": 30
-          }
-        }
-      },
-
-      "/image/waterlabel/FERT.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "48%" },
-          "school": { "top": "61%", "left": "49%" },
-          "subject": { "top": "42%", "left": "58%" },
-          "section": { "top": "40%", "left": "80%" },
-          "class": { "top": "40%", "left": "54%" }
-        }
-      }
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "labels": {
-          "name": { "fontSize": 28 },
-          "school": { "fontSize": 28 },
-          "subject": { "fontSize": 28 },
-          "section": { "fontSize": 28 },
-          "class": { "fontSize": 28 }
-        }
-      },
-
-      "maxWidth768": {
-        "labels": {
-          "name": { "fontSize": 28 },
-          "school": { "fontSize": 28 },
-          "subject": { "fontSize": 28 },
-          "section": { "fontSize": 28 },
-          "class": { "fontSize": 28 }
-        }
-      },
-
-      "maxWidth480": {
-        "image": {
-          "top": "30%",
-          "left": "5%",
-          "width": "23%",
-          "maxHeight": "32%"
-        },
-
-        "labels": {
-          "name": { "top": "31%", "left": "56%", "defaultSize": 15 },
-          "school": { "top": "55%", "left": "52%", "defaultSize": 15 },
-          "subject": { "top": "48%", "left": "56%", "defaultSize": 15 },
-          "section": { "top": "40%", "left": "55%", "defaultSize": 15 },
-          "class": { "top": "40%", "left": "52%", "defaultSize": 15 }
-        }
-      }
-    }
-  },
-  "template10": {
-    "name": "Template 10 – Modern Curve Tag",
-
-    "background": "/images/templates/template10-bg.png",
-
-    "image": {
-      "enabled": true,
-      "top": "29.2%",
-      "left": "3%",
-      "width": "24%",
-      "maxWidth": "34%",
-      "maxHeight": "42%",
-      "shape": "rounded",
-      "borderRadius": "17%",
-      "allowCircle": true,
-      "allowBorder": true,
-      "transformOrigin": "center",
-      "scale": true,
-      "rotate": true,
-      "translate": true,
-      "mirror": true
-    },
-
-    "labels": {
-      "name": {
-        "top": "28%",
-        "left": "30%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "class": {
-        "top": "38%",
-        "left": "43%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "section": {
-        "top": "38%",
-        "left": "72%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "transform": true
-      },
-
-      "subject": {
-        "top": "49%",
-        "left": "52%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "opacity": 0,
-        "transform": true
-      },
-
-      "roll": {
-        "top": "44%",
-        "left": "85%",
-        "defaultSize": 30,
-        "color": "#292d9e",
-        "hidden": false,
-        "transform": true
-      },
-
-      "school": {
-        "top": "61%",
-        "left": "49%",
-        "defaultSize": 30,
+        "top": "22%",
+        "left": "66%",
+        "defaultSize": 25,
         "color": "#292d9e",
         "transform": true
       }
     },
-
     "watermark": {
       "enabled": false
-    },
-
-    "responsive": {
-      "maxWidth1120": {
-        "labels": {
-          "name": { "fontSize": 39, "top": "30%" },
-          "school": { "fontSize": 39, "top": "59%", "left": "50%" },
-          "subject": { "fontSize": 39, "top": "52%", "left": "58%" },
-          "roll": { "fontSize": 39, "top": "56%", "left": "60%" },
-          "section": { "fontSize": 39, "top": "40%", "left": "78%" },
-          "class": { "fontSize": 39, "top": "40%", "left": "47%" }
-        }
-      },
-
-      "maxWidth768": {
-        "labels": {
-          "name": { "fontSize": 31, "top": "31%" },
-          "school": { "fontSize": 31, "top": "59%", "left": "50%" },
-          "subject": { "fontSize": 31, "top": "49%", "left": "58%" },
-          "roll": { "fontSize": 31, "top": "56%", "left": "60%" },
-          "section": { "fontSize": 31, "top": "39%", "left": "78%" },
-          "class": { "fontSize": 31, "top": "39%", "left": "50%" }
-        },
-
-        "image": {
-          "top": "43%",
-          "left": "10%",
-          "width": "20%",
-          "maxWidth": "28%",
-          "maxHeight": "32%"
-        }
-      },
-
-      "maxWidth480": {
-        "labels": {
-          "name": { "fontSize": 15, "top": "28%" },
-          "school": { "fontSize": 15, "top": "52%", "left": "50%" },
-          "subject": { "fontSize": 15, "top": "45%", "left": "60%" },
-          "roll": { "fontSize": 15, "top": "50%", "left": "60%" },
-          "section": { "fontSize": 15, "top": "35%", "left": "60%" },
-          "class": { "fontSize": 15, "top": "35%", "left": "45%" }
-        },
-
-        "image": {
-          "top": "35%",
-          "left": "6%",
-          "width": "20%",
-          "maxWidth": "28%",
-          "maxHeight": "32%"
-        }
-      }
-    }
-  },
-  "template11": {
-    "name": "Template 11 – Right Corner Circle Image Tag",
-
-    "background": "/images/templates/template11-bg.png",
-
-    "image": {
-      "enabled": true,
-      "top": "36%",
-      "left": "80%",
-      "width": "20%",
-      "maxWidth": "28%",
-      "maxHeight": "32%",
-      "translate": true,
-      "scale": true,
-      "rotate": true,
-      "mirror": true,
-      "shape": "circle",
-      "allowBorder": true
-    },
-
-    "labels": {
-      "name": {
-        "top": "29%",
-        "left": "20%",
-        "defaultSize": 35,
-        "transform": true
-      },
-      "school": {
-        "top": "60%",
-        "left": "20%",
-        "defaultSize": 30,
-        "transform": true
-      },
-      "subject": {
-        "top": "49%",
-        "left": "25%",
-        "defaultSize": 30,
-        "opacity": 0,
-        "transform": true
-      },
-      "roll": {
-        "top": "10%",
-        "left": "48%",
-        "defaultSize": 30,
-        "transform": true
-      },
-      "section": {
-        "top": "39%",
-        "left": "46%",
-        "defaultSize": 30,
-        "transform": true
-      },
-      "class": {
-        "top": "39%",
-        "left": "20%",
-        "defaultSize": 30,
-        "transform": true
-      }
-    },
-
-    "watermark": {
-      "enabled": true,
-      "src": "/image/waterlabel/default.png",
-      "top": "26%",
-      "left": "0%",
-      "opacity": 0.9
-    },
-
-    "watermarkOverrides": {
-      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.webp": {
-        "labels": {
-          "name": { "left": "20%" },
-          "school": { "top": "53%" },
-          "class": { "top": "36%", "left": "20%" },
-          "section": { "top": "36%", "left": "41%" },
-          "roll": { "top": "60%", "left": "10%" }
-        }
-      },
-
-      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT01.webp": {
-        "labels": {
-          "name": { "top": "28%", "left": "25%" },
-          "school": { "top": "59%", "left": "20%" },
-          "class": { "top": "38.5%", "left": "18%" },
-          "section": { "top": "38.5%", "left": "44%" },
-          "roll": { "top": "10%", "left": "84%" }
-        }
-      },
-
-      "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT04.webp": {
-        "labels": {
-          "name": { "top": "29%", "left": "27%" },
-          "school": { "top": "59%", "left": "22%" },
-          "class": { "top": "39%", "left": "19%" },
-          "section": { "top": "39%", "left": "45%" },
-          "roll": { "top": "10%", "left": "48%" }
-        }
-      },
-
-      "/image/UTF lang leftframe DreamikAIComics-Type2/FELT.png": {
-        "labels": {
-          "name": { "top": "30%", "left": "22%" },
-          "school": { "top": "59%", "left": "24%" },
-          "class": { "top": "38.5%", "left": "25%" },
-          "section": { "top": "38.5%", "left": "51%" },
-          "roll": { "top": "39%", "left": "10%" }
-        }
-      }
-    },
-
-    "responsive": {
-      "maxWidth768": {
-        "labels": {
-          "name": { "top": "27%", "left": "26%", "defaultSize": 25 },
-          "school": { "top": "55%", "left": "22%", "defaultSize": 25 },
-          "subject": { "top": "53%", "left": "25%", "defaultSize": 25 },
-          "roll": { "top": "10%", "left": "25%", "defaultSize": 25 },
-          "section": { "top": "37%", "left": "36%", "defaultSize": 25 },
-          "class": { "top": "37%", "left": "25%", "defaultSize": 25 }
-        },
-        "image": {
-          "top": "33.2%",
-          "left": "69.9%",
-          "width": "27%",
-          "maxHeight": "34%"
-        }
-      },
-
-      "maxWidth480": {
-        "labels": {
-          "name": { "defaultSize": 15 },
-          "school": { "defaultSize": 15 },
-          "subject": { "defaultSize": 15 },
-          "roll": { "defaultSize": 15 },
-          "section": { "defaultSize": 15 },
-          "class": { "defaultSize": 15 }
-        },
-        "image": {
-          "top": "28%",
-          "left": "68.3%",
-          "width": "27%",
-          "maxHeight": "34%"
-        }
-      }
-    }
-  },
-  "template12": {
-    "name": "Template 12",
-
-    "background": "/images/templates/template12-bg.png",
-
-    "image": {
-      "enabled": true,
-      "top": "29%",
-      "left": "72.5%",
-      "width": "25%",
-      "maxWidth": "36%",
-      "maxHeight": "41%",
-      "shape": "square",
-      "transformOrigin": "center"
-    },
-
-    "labels": {
-      "name": { "top": "28%", "left": "28%", "defaultSize": 30 },
-      "school": { "top": "60%", "left": "22%", "defaultSize": 30 },
-      "subject": {
-        "top": "49%",
-        "left": "26%",
-        "defaultSize": 30,
-        "opacity": 0
-      },
-      "roll": {
-        "top": "100000%",
-        "left": "25%",
-        "defaultSize": 30,
-        "hidden": true
-      },
-      "section": { "top": "39%", "left": "45%", "defaultSize": 30 },
-      "class": { "top": "39%", "left": "20%", "defaultSize": 30 }
-    },
-
-    "watermark": {
-      "enabled": true,
-      "src": "/image/waterlabel/default.png",
-      "top": "26%",
-      "left": "0%",
-      "width": "100%",
-      "opacity": 0.9
-    },
-
-    "watermarkOverrides": {
-      "special": {
-        "files": [
-          "/image/waterlabel/4.png",
-          "/image/Rightpic Nameslips-Blank-Templates-v4-DreamikAI-Type2-Label-Rectangle-HD(1920 x 1080 px)/FERT02.png"
-        ],
-        "top": "26%",
-        "left": "4%",
-        "width": "85%",
-        "height": "55%",
-        "opacity": 0.9
-      }
-    },
-
-    "styleOverrides": {
-      "style1": {
-        "name": { "top": "29%", "left": "20%" },
-        "roll": { "top": "70%", "left": "30%" },
-        "class": { "top": "34%", "left": "20%" },
-        "section": { "top": "34%", "left": "35%" },
-        "school": { "top": "50%", "left": "20%" }
-      },
-      "style2": {
-        "name": { "top": "28%", "left": "2%" },
-        "class": { "top": "38.5%", "left": "18%" },
-        "section": { "top": "38.5%", "left": "44%" }
-      },
-      "style3": {
-        "name": { "top": "29%", "left": "27%" },
-        "class": { "top": "39%", "left": "19%" },
-        "section": { "top": "39%", "left": "45%" }
-      },
-      "style4": {
-        "name": { "top": "30%", "left": "20%" },
-        "class": { "top": "41%", "left": "25%" },
-        "section": { "top": "41%", "left": "52%" }
-      },
-      "style5": {
-        "name": { "top": "30%", "left": "28%" },
-        "class": { "top": "39%", "left": "26.5%" },
-        "section": { "top": "39%", "left": "50%" }
-      }
-    },
-
-    "responsive": {
-      "maxWidth480": {
-        "image": {
-          "top": "26%",
-          "left": "71%",
-          "width": "24%",
-          "height": "36%"
-        },
-        "labels": {
-          "name": { "top": "24%", "left": "24%", "defaultSize": 20 },
-          "school": { "top": "51%", "left": "22%", "defaultSize": 18 },
-          "subject": { "top": "53%", "left": "25%", "defaultSize": 18 },
-          "class": { "top": "34%", "left": "19%", "defaultSize": 18 },
-          "section": { "top": "34%", "left": "36%", "defaultSize": 18 },
-          "roll": { "hidden": true }
-        }
-      }
     }
   }
 }

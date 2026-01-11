@@ -13,6 +13,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { PiShoppingCart } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
+import { apiEndPoint } from "../appConfig";
 
 function Navbar({
   searchText,
@@ -110,14 +111,11 @@ function Navbar({
   const searchfunction = async () => {
     if (searchText.trim() !== "") {
       try {
-        const response = await fetch(
-          "https://dreamik-intern.onrender.com/search",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ searchTerm: searchText }),
-          }
-        );
+        const response = await fetch(`${apiEndPoint}/search`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ searchTerm: searchText }),
+        });
 
         const result = await response.json();
         // console.log(result.message);
@@ -144,13 +142,13 @@ function Navbar({
           </h2>
         </div>
 
-        <div className="w-full max-w-xl h-9! md:h-12! flex bg-white rounded-[10px] pl-4 pr-2 items-center shadow-md">
+        <div className="w-full max-w-[400px]! 2xl:max-w-xl! h-9! md:h-12! flex bg-white rounded-[10px] items-center shadow-md!">
           <input
             type="text"
             value={searchText}
             onChange={handleSearchChange}
             placeholder="Search products"
-            className="flex-1 h-full text-sm px-2! outline-none border-none"
+            className="flex-1 h-full text-sm px-2! w-[150px]! md:w-auto! outline-none border-none"
           />
 
           {/* Search Button */}

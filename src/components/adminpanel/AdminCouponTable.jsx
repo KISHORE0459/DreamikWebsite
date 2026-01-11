@@ -1,224 +1,348 @@
-import {React,useEffect} from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { useCouponContext } from "./CouponContext";
+import { apiEndPoint } from "../../appConfig";
 
 const AdminCouponTable = () => {
-    const {
-        coupons,
-        setCoupons,
-        setEditingId,
-        editingId,
-        editedCoupon,
-        setEditedCoupon,
-        loading,
-        setLoading,
-        addingNew,
-        setAddingNew,
-        newCoupon,
-        setNewCoupon,
-    } = useCouponContext();
+  const {
+    coupons,
+    setCoupons,
+    setEditingId,
+    editingId,
+    editedCoupon,
+    setEditedCoupon,
+    loading,
+    setLoading,
+    addingNew,
+    setAddingNew,
+    newCoupon,
+    setNewCoupon,
+  } = useCouponContext();
 
-    useEffect(() => {
-        fetchCoupons();
-    }, []);
+  useEffect(() => {
+    fetchCoupons();
+  }, []);
 
-    const fetchCoupons = async () => {
-        setLoading(true);
-        try {
-            const response = await axios.get("https://dreamik-intern.onrender.com/api/coupons");
-            setCoupons(Array.isArray(response.data) ? response.data : []);
-        } catch (error) {
-            console.error("Error fetching coupons:", error);
-            setCoupons([]);
-        }
-        setLoading(false);
-    };
-    console.log(coupons);
+  const fetchCoupons = async () => {
+    setLoading(true);
+    try {
+      const res = await axios.get(`${apiEndPoint}/api/coupons`);
+      setCoupons(Array.isArray(res.data) ? res.data : []);
+    } catch (err) {
+      console.error(err);
+      setCoupons([]);
+    }
+    setLoading(false);
+  };
 
-    const handleEdit = (coupon) => {
-        setEditingId(coupon.id);
-        setEditedCoupon({ ...coupon });
-    };
+  const handleEdit = (coupon) => {
+    setEditingId(coupon.id);
+    setEditedCoupon({ ...coupon });
+  };
 
-    const handleCancelEdit = () => {
-        setEditingId(null);
-        setEditedCoupon({});
-    };
+  const handleCancelEdit = () => {
+    setEditingId(null);
+    setEditedCoupon({});
+  };
 
-    const handleChange = (e, field, isNew = false) => {
-        if (isNew) {
-            setNewCoupon({ ...newCoupon, [field]: e.target.value });
-        } else {
-            setEditedCoupon({ ...editedCoupon, [field]: e.target.value });
-        }
-    };
+  const handleChange = (e, field, isNew = false) => {
+    const value = e.target.value;
+    if (isNew) {
+      setNewCoupon({ ...newCoupon, [field]: value });
+    } else {
+      setEditedCoupon({ ...editedCoupon, [field]: value });
+    }
+  };
 
-    const handleSave = async () => {
-        try {
-            await axios.put(`https://dreamik-intern.onrender.com/api/coupons/${editingId}`, editedCoupon);
-            setEditingId(null);
-            fetchCoupons();
-        } catch (error) {
-            console.error("Error updating coupon:", error);
-        }
-    };
+  const handleSave = async () => {
+    try {
+      await axios.put(`${apiEndPoint}/api/coupons/${editingId}`, editedCoupon);
+      setEditingId(null);
+      fetchCoupons();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    const handleAddNew = () => setAddingNew(true);
+  const handleAddNew = () => setAddingNew(true);
 
-    const handleCancelAdd = () => {
-        setAddingNew(false);
-        setNewCoupon({
-            coupon_name: "",
-            coupon_code: "",
-            coupon_value: "",
-            coupon_discount_mode: "0",
-            coupon_start: "",
-            coupon_end: "",
-            coupon_count: "",
-            coupon_usage_count: "",
-            coupon_status: "Active",
-            coupon_applicable_products: "",
-        });
-    };
+  const handleCancelAdd = () => {
+    setAddingNew(false);
+    setNewCoupon({
+      coupon_name: "",
+      coupon_code: "",
+      coupon_value: "",
+      coupon_discount_mode: "0",
+      coupon_start: "",
+      coupon_end: "",
+      coupon_count: "",
+      coupon_usage_count: "",
+      coupon_status: "Active",
+      coupon_applicable_products: "",
+    });
+  };
 
-    const handleSaveNew = async () => {
-        try {
-            await axios.post("https://dreamik-intern.onrender.com/api/newcoupons", newCoupon);
-            setAddingNew(false);
-            fetchCoupons();
-        } catch (error) {
-            console.error("Error adding new coupon:", error);
-        }
-    };
+  const handleSaveNew = async () => {
+    try {
+      await axios.post(`${apiEndPoint}/api/newcoupons`, newCoupon);
+      setAddingNew(false);
+      fetchCoupons();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    const formatDate = (dateString) => {
-        if (!dateString) return "";
-        const date = new Date(dateString);
-        return date.toLocaleDateString("en-GB");
-    };
+  const formatDate = (date) =>
+    date ? new Date(date).toLocaleDateString("en-GB") : "";
 
-    return (
-        <main className="main-container">
-            <h2 className="heading">Manage Coupons</h2>
-            <div className="table-container">
-                {loading ? (
-                    <div className="loading-spinner">
-                        <p>Loading Coupons...</p>
+  return (
+    <div className="min-h-screen p-6!">
+      <h2 className="text-2xl font-bold text-center mb-6">Manage Coupons</h2>
+
+      <div className="overflow-x-auto bg-white rounded-lg shadow">
+        {loading ? (
+          <div className="p-6 text-center text-gray-500">
+            Loading Coupons...
+          </div>
+        ) : (
+          <table className="min-w-full border border-gray-200">
+            <thead className="bg-purple-700 text-white text-sm uppercase">
+              <tr>
+                {[
+                  "Name",
+                  "Code",
+                  "Value",
+                  "Mode",
+                  "Start",
+                  "End",
+                  "Count",
+                  "Usage",
+                  "Status",
+                  "Products",
+                  "Actions",
+                ].map((h) => (
+                  <th key={h} className="px-4! py-3! border">
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+
+            <tbody className="text-sm">
+              {coupons.length > 0 ? (
+                coupons.map((coupon) => (
+                  <tr key={coupon.id} className="hover:bg-gray-50 transition">
+                    <td className="border px-3! py-2!">
+                      {editingId === coupon.id ? (
+                        <input
+                          className="w-full border rounded px-2! py-1!"
+                          value={editedCoupon.coupon_name}
+                          onChange={(e) => handleChange(e, "coupon_name")}
+                        />
+                      ) : (
+                        coupon.coupon_name
+                      )}
+                    </td>
+
+                    <td className="border px-3! py-2! font-mono">
+                      {coupon.coupon_code}
+                    </td>
+
+                    <td className="border px-3! py-2!">
+                      {editingId === coupon.id ? (
+                        <input
+                          type="number"
+                          className="w-full border rounded px-2! py-1!"
+                          value={editedCoupon.coupon_value}
+                          onChange={(e) => handleChange(e, "coupon_value")}
+                        />
+                      ) : (
+                        `₹${coupon.coupon_value}`
+                      )}
+                    </td>
+
+                    <td className="border px-3! py-2!">
+                      {editingId === coupon.id ? (
+                        <select
+                          className="w-full border rounded px-2! py-1!"
+                          value={editedCoupon.coupon_discount_mode}
+                          onChange={(e) =>
+                            handleChange(e, "coupon_discount_mode")
+                          }
+                        >
+                          <option value="true">Percent</option>
+                          <option value="false">Rupees</option>
+                        </select>
+                      ) : coupon.coupon_discount_mode ? (
+                        "%"
+                      ) : (
+                        "₹"
+                      )}
+                    </td>
+
+                    <td className="border px-3! py-2!">
+                      {formatDate(coupon.coupon_start)}
+                    </td>
+                    <td className="border px-3! py-2!">
+                      {formatDate(coupon.coupon_end)}
+                    </td>
+                    <td className="border px-3! py-2!">
+                      {coupon.coupon_count}
+                    </td>
+                    <td className="border px-3! py-2!">
+                      {coupon.coupon_usage_count}
+                    </td>
+                    <td className="border px-3! py-2!">
+                      {coupon.coupon_status}
+                    </td>
+
+                    <td className="border px-3! py-2! max-w-[140px] truncate">
+                      {editingId === coupon.id ? (
+                        <input
+                          className="w-full border rounded px-2! py-1!"
+                          value={editedCoupon.coupon_applicable_products}
+                          onChange={(e) =>
+                            handleChange(e, "coupon_applicable_products")
+                          }
+                        />
+                      ) : (
+                        coupon.coupon_applicable_products
+                      )}
+                    </td>
+
+                    <td className="border px-3! py-2!">
+                      {editingId === coupon.id ? (
+                        <div className="flex gap-2">
+                          <button
+                            onClick={handleSave}
+                            className="bg-green-600 text-white px-3! py-1! rounded"
+                          >
+                            Save
+                          </button>
+                          <button
+                            onClick={handleCancelEdit}
+                            className="bg-red-600 text-white px-3! py-1! rounded"
+                          >
+                            ✕
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => handleEdit(coupon)}
+                          className="bg-purple-600 text-white px-3! py-1! rounded"
+                        >
+                          Edit
+                        </button>
+                      )}
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan={11} className="text-center py-6! text-gray-500">
+                    No coupons available
+                  </td>
+                </tr>
+              )}
+
+              {/* ADD NEW ROW */}
+              {addingNew && (
+                <tr className="bg-gray-50">
+                  {["coupon_name", "coupon_code", "coupon_value"].map((f) => (
+                    <td key={f} className="border px-3! py-2!">
+                      <input
+                        className="w-full border rounded px-2! py-1!"
+                        value={newCoupon[f]}
+                        onChange={(e) => handleChange(e, f, true)}
+                      />
+                    </td>
+                  ))}
+
+                  <td className="border px-3! py-2!">
+                    <select
+                      className="w-full border rounded px-2! py-1!"
+                      value={newCoupon.coupon_discount_mode}
+                      onChange={(e) =>
+                        handleChange(e, "coupon_discount_mode", true)
+                      }
+                    >
+                      <option value="1">Percent</option>
+                      <option value="0">Rupees</option>
+                    </select>
+                  </td>
+
+                  {[
+                    "coupon_start",
+                    "coupon_end",
+                    "coupon_count",
+                    "coupon_usage_count",
+                  ].map((f) => (
+                    <td key={f} className="border px-3! py-2!">
+                      <input
+                        type={f.includes("date") ? "date" : "number"}
+                        className="w-full border rounded px-2! py-1!"
+                        value={newCoupon[f]}
+                        onChange={(e) => handleChange(e, f, true)}
+                      />
+                    </td>
+                  ))}
+
+                  <td className="border px-3! py-2!">
+                    <select
+                      className="w-full border rounded px-2! py-1!"
+                      value={newCoupon.coupon_status}
+                      onChange={(e) => handleChange(e, "coupon_status", true)}
+                    >
+                      <option>Active</option>
+                      <option>Expired</option>
+                    </select>
+                  </td>
+
+                  <td className="border px-3! py-2!">
+                    <input
+                      className="w-full border rounded px-2! py-1!"
+                      value={newCoupon.coupon_applicable_products}
+                      onChange={(e) =>
+                        handleChange(e, "coupon_applicable_products", true)
+                      }
+                    />
+                  </td>
+
+                  <td className="border px-3! py-2!">
+                    <div className="flex gap-2">
+                      <button
+                        onClick={handleSaveNew}
+                        className="bg-green-600! text-white px-3! py-1! rounded hover:cursor-pointer!"
+                      >
+                        Save
+                      </button>
+                      <button
+                        onClick={handleCancelAdd}
+                        className="bg-red-600! text-white px-3! py-1! rounded hover:cursor-pointer!"
+                      >
+                        ✕
+                      </button>
                     </div>
-                ) : (
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Code</th>
-                                <th>Value</th>
-                                <th>Mode</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Count</th>
-                                <th>Usage Count</th>
-                                <th>Status</th>
-                                <th>Applicable Products</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {coupons.length > 0 ? (
-                                coupons.map((coupon) => (
-                                    <tr key={coupon.id}>
-                                        <td>
-                                            {editingId === coupon.id ? (
-                                                <input type="text" className="input" value={editedCoupon.coupon_name} onChange={(e) => handleChange(e, "coupon_name")} />
-                                            ) : (
-                                                coupon.coupon_name
-                                            )}
-                                        </td>
-                                        <td className="font-mono">{coupon.coupon_code}</td>
-                                        <td>
-                                            {editingId === coupon.id ? (
-                                                <input type="number" className="input" value={editedCoupon.coupon_value} onChange={(e) => handleChange(e, "coupon_value")} />
-                                            ) : (
-                                                `₹${coupon.coupon_value}`
-                                            )}
-                                        </td>
-                                        <td>
-                                            {editingId === coupon.id ? (
-                                                <select className="select" value={editedCoupon.coupon_discount_mode} onChange={(e) => handleChange(e, "coupon_discount_mode")}>
-                                                    <option value="true">Percent</option>
-                                                    <option value="false">Rupees</option>
-                                                </select>
-                                            ) : (
-                                                coupon.coupon_discount_mode ? "%" : "₹"
-                                            )}
-                                        </td>
-                                        <td>{formatDate(coupon.coupon_start)}</td>
-                                        <td>{formatDate(coupon.coupon_end)}</td>
-                                        <td>{coupon.coupon_count}</td>
-                                        <td>{coupon.coupon_usage_count}</td>
-                                        <td>{coupon.coupon_status}</td>
-                                        <td className="applicable-products">
-                                            {editingId === coupon.id ? (
-                                                <input type="text" className="input" value={editedCoupon.coupon_applicable_products} onChange={(e) => handleChange(e, "coupon_applicable_products")} />
-                                            ) : (
-                                                coupon.coupon_applicable_products
-                                            )}
-                                        </td>
-                                        <td>
-                                            {editingId === coupon.id ? (
-                                                <>
-                                                    <button className="btn btn-save" onClick={handleSave}>Save</button>
-                                                    <button className="btn btn-cancel" onClick={handleCancelEdit}>✕</button>
-                                                </>
-                                            ) : (
-                                                <button className="btn btn-edit" onClick={() => handleEdit(coupon)}>Edit</button>
-                                            )}
-                                        </td>
-                                    </tr>
-                                ))
-                            ) : (
-                                <tr>
-                                    <td colSpan="11" className="text-center py-8 text-gray-500">No coupons available</td>
-                                </tr>
-                            )}
-                            {addingNew && (
-                                <tr>
-                                    <td><input type="text" className="input" value={newCoupon.coupon_name} onChange={(e) => handleChange(e, "coupon_name", true)} /></td>
-                                    <td><input type="text" className="input" value={newCoupon.coupon_code} onChange={(e) => handleChange(e, "coupon_code", true)} /></td>
-                                    <td><input type="number" className="input" value={newCoupon.coupon_value} onChange={(e) => handleChange(e, "coupon_value", true)} /></td>
-                                    <td>
-                                        <select className="select" value={newCoupon.coupon_discount_mode} onChange={(e) => handleChange(e, "coupon_discount_mode", true)}>
-                                            <option value="1">Percent</option>
-                                            <option value="0">Rupees</option>
-                                        </select>
-                                    </td>
-                                    <td><input type="date" className="input" value={newCoupon.coupon_start} onChange={(e) => handleChange(e, "coupon_start", true)} /></td>
-                                    <td><input type="date" className="input" value={newCoupon.coupon_end} onChange={(e) => handleChange(e, "coupon_end", true)} /></td>
-                                    <td><input type="number" className="input" value={newCoupon.coupon_count} onChange={(e) => handleChange(e, "coupon_count", true)} /></td>
-                                    <td><input type="number" className="input" value={newCoupon.coupon_usage_count} onChange={(e) => handleChange(e, "coupon_usage_count", true)} /></td> {/* ✅ New field */}
-                                    <td>
-                                        <select className="select" value={newCoupon.coupon_status} onChange={(e) => handleChange(e, "coupon_status", true)}>
-                                            <option value="Active">Active</option>
-                                            <option value="Expired">Inactive</option>
-                                        </select>
-                                    </td>
-                                    <td><input type="text" className="input" value={newCoupon.coupon_applicable_products} onChange={(e) => handleChange(e, "coupon_applicable_products", true)} /></td>
-                                    <td>
-                                        <button className="btn btn-save" onClick={handleSaveNew}>Save</button>
-                                        <button className="btn btn-cancel" onClick={handleCancelAdd}>✕</button>
-                                    </td>
-                                </tr>
-                            )}
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        )}
+      </div>
 
-                        </tbody>
-
-                    </table>
-                )}
-            </div>
-            <br />
-            {!addingNew && <button className="btn btn-add" onClick={handleAddNew}>Add Coupon</button>}
-
-        </main>
-    );
+      {!addingNew && (
+        <div className="mt-6! text-center">
+          <button
+            onClick={handleAddNew}
+            className="bg-blue-600 text-white px-6! py-2! rounded shadow hover:cursor-pointer!"
+          >
+            Add Coupon
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default AdminCouponTable;

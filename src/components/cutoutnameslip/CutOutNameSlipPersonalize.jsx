@@ -10,6 +10,7 @@ import NameSlipPreviewSection from "../../AppComponents/PersonalizeNameSlip/Name
 import NameSlipPersonalizationSection from "../../AppComponents/PersonalizeNameSlip/NameSlipPersonalizationSection";
 import NameSlipCheckoutSection from "../../AppComponents/PersonalizeNameSlip/NameSlipCheckOutSection";
 import { processWithImgly } from "./removebgTF";
+import toast from "react-hot-toast";
 
 const CutoutNameSlipPersonalize = () => {
   const { id } = useParams();
@@ -179,7 +180,7 @@ const CutoutNameSlipPersonalize = () => {
     prev.push(item);
     localStorage.setItem("OrderData", JSON.stringify(prev));
 
-    alert("Added to cart!");
+    toast.success("Added to cart!");
     navigate("/Order");
   };
 

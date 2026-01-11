@@ -1,48 +1,76 @@
-// OrderDetailsSection.jsx
 import {
   Box,
-  Card,
   Typography,
   RadioGroup,
   TextField,
   Button,
   Switch,
 } from "@mui/material";
+import { useForm } from "react-hook-form";
 import CardRadioOption from "../AppForm/CardRadio";
 import OrderPriceSummary from "./OrderPriceSummary";
 
 export default function OrderDetailsSection({
+  // delivery
   deliveryMode,
   handleDeliveryChange,
+
+  // payment
   paymentMode,
   handlePaymentChange,
+
+  // coupons
   couponCode,
   handleCouponChange,
   handleSubmitCoupon,
-  isReseller,
-  isVisible,
+
+  // instant toggle
   visiblerp,
   selectedvalue,
   handleSelectOption,
 
-  fc, // form defaults
+  // form
+  fc,
   fetchLocation,
   handleProceedToPayment,
+
+  // price
   prodPrice,
   delPrice,
   cod,
   totalPrice,
 }) {
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: fc.name || "",
+      email: fc.email || "",
+      phone: fc.phone || "",
+      whatsappno: fc.whatsappno || "",
+      pincode: fc.pincode || "",
+      district: fc.district || "",
+      state: fc.state || "",
+      address1: fc.address1 || "",
+      address2: fc.address2 || "",
+      landmark: fc.landmark || "",
+    },
+  });
+
   return (
     <Box className="space-y-6">
-      <div className="p-4! flex flex-col items-start! gap-5!">
-        <h3 className="font-semibold text-[20px]! leading-3! text-[#1A1A1A]!">
-          Delivery Mode
-        </h3>
+      {/* ================= DELIVERY MODE ================= */}
+      <div className="p-4! flex flex-col items-start! gap-3!">
+        <Typography fontWeight={600}>Delivery Mode</Typography>
+
         <RadioGroup
           value={deliveryMode}
           onChange={handleDeliveryChange}
-          className="flex flex-row! gap-2.5! items-center flex-wrap!"
+          row
+          className="gap-2!"
         >
           <CardRadioOption
             value="normal-delivery"
@@ -61,14 +89,16 @@ export default function OrderDetailsSection({
           />
         </RadioGroup>
       </div>
-      <div className="p-4! flex flex-col items-start! gap-5!">
-        <h3 className="font-semibold text-[20px]! leading-3! text-[#1A1A1A]!">
-          Payment Mode
-        </h3>
+
+      {/* ================= PAYMENT MODE ================= */}
+      <div className="p-4! flex flex-col items-start! gap-3!">
+        <Typography fontWeight={600}>Payment Mode</Typography>
+
         <RadioGroup
           value={paymentMode}
           onChange={(e) => handlePaymentChange(e.target.value)}
-          className="flex flex-row! gap-2.5! items-center flex-wrap!"
+          row
+          className="gap-2"
         >
           <CardRadioOption
             value="online-payment"
@@ -88,31 +118,29 @@ export default function OrderDetailsSection({
         </RadioGroup>
       </div>
 
-      {/* COUPONS */}
-      <div className="p-4! flex flex-col items-start! gap-5!">
-        <h3 className="font-semibold text-[20px]! leading-3! text-[#1A1A1A]!">
-          Coupons
-        </h3>
-        <div className="flex items-center! gap-3">
+      {/* ================= COUPONS ================= */}
+      <div className="w-full! p-4! flex flex-col items-start! gap-3!">
+        <Typography fontWeight={600}>Coupons</Typography>
+
+        <div className="w-full! flex items-center! gap-2">
           <TextField
-            fullWidth
-            label="Coupon"
+            label="Coupon Code"
             value={couponCode}
             onChange={handleCouponChange}
-            className="w-[200px]! md:w-[400px]! text-left!"
+            fullWidth
           />
           <Button
             variant="contained"
             onClick={handleSubmitCoupon}
-            className="h-10 bg-[#3E9D62]! rounded-lg!"
+            className="bg-[#3e9d62] h-10!"
           >
             Apply
           </Button>
         </div>
 
-        {/* Reseller or Instant toggle */}
+        {/* Normal / Instant Toggle */}
         {visiblerp && (
-          <Box className="mt-3 flex items-center gap-2">
+          <div className="flex items-center! gap-2! mt-2!">
             <Typography>Normal</Typography>
             <Switch
               checked={selectedvalue === "instant"}
@@ -125,91 +153,101 @@ export default function OrderDetailsSection({
               }
             />
             <Typography>Instant</Typography>
-          </Box>
+          </div>
         )}
       </div>
 
+      {/* ================= PRICE SUMMARY ================= */}
       <OrderPriceSummary
         prodPrice={prodPrice}
         delPrice={delPrice}
         cod={cod}
         totalPrice={totalPrice}
-        isVisible={isVisible}
-        visiblerp={visiblerp}
-        selectedvalue={selectedvalue}
-        handleSelectOption={handleSelectOption}
       />
 
-      {/* ADDRESS FORM */}
-      <div className="p-4! flex flex-col items-start! gap-5!">
-        <h3 className="font-semibold text-[20px]! leading-3! text-[#1A1A1A]!">
-          Delivery Details
-        </h3>
+      {/* ================= ADDRESS FORM ================= */}
+      <div className="w-full! p-4! flex flex-col gap-4! items-start!">
+        <Typography fontWeight={600}>Delivery Details</Typography>
 
         <form
-          className="w-full! flex flex-col gap-4!"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleProceedToPayment();
-          }}
+          onSubmit={handleSubmit(handleProceedToPayment)}
+          className="w-full! flex flex-col gap-3!"
         >
-          <div className="flex flex-col gap-3">
-            <TextField
-              fullWidth
-              label="Name"
-              name="name"
-              defaultValue={fc.name || ""}
-              required
-            />
-            <TextField
-              fullWidth
-              label="Email"
-              name="email"
-              defaultValue={fc.email || ""}
-            />
-            <TextField
-              fullWidth
-              label="Phone"
-              name="phone"
-              defaultValue={fc.phone || ""}
-              required
-            />
-            <TextField
-              fullWidth
-              label="Pincode"
-              name="pincode"
-              defaultValue={fc.pincode || ""}
-              onChange={(e) => fetchLocation(e.target.value)}
-            />
-            <TextField
-              fullWidth
-              label="District"
-              name="district"
-              defaultValue={fc.district || ""}
-            />
-            <TextField
-              fullWidth
-              label="State"
-              name="state"
-              defaultValue={fc.state || ""}
-            />
-            <TextField
-              fullWidth
-              label="Address Line 1"
-              name="address1"
-              defaultValue={fc.address1 || ""}
-            />
-            <TextField
-              fullWidth
-              label="Address Line 2"
-              name="address2"
-              defaultValue={fc.address2 || ""}
-            />
-          </div>
+          <TextField
+            label="Name"
+            {...register("name", { required: "Name is required" })}
+            error={!!errors.name}
+            helperText={errors.name?.message}
+          />
+
+          <TextField label="Email" {...register("email")} />
+
+          <TextField
+            label="Phone"
+            {...register("phone", {
+              required: "Phone is required",
+              pattern: {
+                value: /^\d{10,13}$/,
+                message: "Enter valid phone number",
+              },
+            })}
+            error={!!errors.phone}
+            helperText={errors.phone?.message}
+          />
+
+          <TextField
+            label="Pincode"
+            {...register("pincode", {
+              required: "Pincode required",
+              pattern: {
+                value: /^\d{6}$/,
+                message: "Invalid pincode",
+              },
+              onChange: async (e) => {
+                const code = e.target.value.slice(0, 6);
+                e.target.value = code;
+                if (code?.length >= 6) {
+                  const data = await fetchLocation(code);
+                  if (data?.District || data?.State) {
+                    setValue("district", data?.District);
+                    setValue("state", data?.State);
+                  }
+                }
+              },
+            })}
+            type="number"
+            error={!!errors.pincode}
+            helperText={errors.pincode?.message}
+          />
+
+          <TextField
+            label="District"
+            {...register("district")}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+          <TextField
+            label="State"
+            {...register("state")}
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
+
+          <TextField
+            label="Address Line 1"
+            {...register("address1", { required: "Address required" })}
+            error={!!errors.address1}
+            helperText={errors.address1?.message}
+          />
+
+          <TextField label="Address Line 2" {...register("address2")} />
 
           <Button
             type="submit"
-            className="w-full! h-10! bg-[#3E9D62]! rounded-lg! text-white!"
+            variant="contained"
+            className="mt-3! bg-[#3e9d62]! h-10!"
           >
             Proceed To Payment
           </Button>

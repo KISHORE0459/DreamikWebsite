@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 const Myorder = () => {
   const [orderId, setOrderId] = useState("");
 
   useEffect(() => {
     // Retrieve the order details from localStorage
-    const storedOrderDetails = JSON.parse(localStorage.getItem("OrderConfirmationData"));
+    const storedOrderDetails = JSON.parse(
+      localStorage.getItem("OrderConfirmationData")
+    );
 
     // Check if the stored order details exist
     if (storedOrderDetails) {
@@ -16,7 +19,7 @@ const Myorder = () => {
   const handleCopy = () => {
     if (orderId) {
       navigator.clipboard.writeText(orderId).then(() => {
-        alert("Order ID copied to clipboard!");
+        toast.success("Order ID copied to clipboard!");
       });
     }
   };

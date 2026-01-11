@@ -5,7 +5,8 @@ import { CartContext } from "../CartContext";
 import JSZip from "jszip";
 import Googleform from "./Googleform";
 import Swal from "sweetalert2";
-import { toast } from "react-toastify";
+import { apiEndPoint } from "../../appConfig";
+import toast from "react-hot-toast";
 
 const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   const navigate = useNavigate();
@@ -537,7 +538,9 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   // Common function to apply the coupon logic
   const applyCoupon = (code) => {
     if (offercount == 0) {
-      alert("Promocode reached limit. So continue shopping without offer");
+      toast.success(
+        "Promocode reached limit. So continue shopping without offer"
+      );
       return;
     }
     if (!code) return;
@@ -616,7 +619,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     setOrderData(updatedOrderData);
     setProdPrice(newPrice);
     setCouponUsed(true);
-    alert("Coupon applied! Total Price after discount: ₹" + newPrice);
+    "Coupon applied! Total Price after discount: ₹" + newPrice;
   };
 
   // Handle manual coupon entry
@@ -803,12 +806,16 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
       },
     };
 
-    localStorage.setItem(
-      "PriceData",
-      JSON.stringify({ prodPrice, delPrice, cod, totalPrice })
-    );
-    localStorage.setItem("PaymentDetails", JSON.stringify(deliveryDetails));
-    localStorage.setItem("FormContainer", JSON.stringify(formData));
+    try {
+      localStorage.setItem(
+        "PriceData",
+        JSON.stringify({ prodPrice, delPrice, cod, totalPrice })
+      );
+      localStorage.setItem("PaymentDetails", JSON.stringify(deliveryDetails));
+      localStorage.setItem("FormContainer", JSON.stringify(formData));
+    } catch (err) {
+      console.log("local err", err);
+    }
 
     if (paymentMode !== "cashon-payment") {
       if (influencer) {
@@ -877,13 +884,10 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
             uploadForm.append("zipfiles", zipFile, "order_images.zip");
           }
 
-          const response = await fetch(
-            "https://dreamik-intern.onrender.com/upload",
-            {
-              method: "POST",
-              body: uploadForm,
-            }
-          );
+          const response = await fetch(`${apiEndPoint}/upload`, {
+            method: "POST",
+            body: uploadForm,
+          });
 
           if (response.ok) {
             alert("Successfully Order saved.!");
@@ -895,7 +899,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
               resellerformdata.offercount = newCount;
 
               await fetch(
-                `https://dreamik-intern.onrender.com/updateReseller/${resellerformdata.id}`,
+                `${apiEndPoint}/updateReseller/${resellerformdata.id}`,
                 {
                   method: "PUT",
                   headers: {
@@ -935,6 +939,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
           setIsLoading(false);
         }
       } else {
+        console.log("working");
         navigate("/payment");
       }
     } else {
@@ -1007,13 +1012,10 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
           uploadForm.append("zipfiles", zipFile, "order_images.zip");
         }
 
-        const response = await fetch(
-          "https://dreamik-intern.onrender.com/upload",
-          {
-            method: "POST",
-            body: uploadForm,
-          }
-        );
+        const response = await fetch(`${apiEndPoint}/upload`, {
+          method: "POST",
+          body: uploadForm,
+        });
 
         if (response.ok) {
           alert("Order saved.! Our Nearest Reseller will Contact you!");
@@ -1024,7 +1026,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
             resellerformdata.offercount = newCount;
 
             await fetch(
-              `https://dreamik-intern.onrender.com/updateReseller/${resellerformdata.id}`,
+              `${apiEndPoint}/updateReseller/${resellerformdata.id}`,
               {
                 method: "PUT",
                 headers: {

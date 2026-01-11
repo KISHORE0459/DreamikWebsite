@@ -16,9 +16,6 @@ const NameSlipPreviewSection = ({
   imageTransforms,
   persImgContRef,
 }) => {
-  console.log("student details", studentDetails);
-  console.log("label transform", labelTransforms);
-  console.log("config", config);
   const selectedWatermark =
     typeof window !== "undefined"
       ? localStorage.getItem("selectedlabel")

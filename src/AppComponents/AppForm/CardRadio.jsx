@@ -10,7 +10,7 @@ const CardRadioOption = ({ value, label, selected }) => {
       control={<Radio sx={{ display: "none" }} />}
       label={
         <Box
-          className={`w-fit min-w-[60px] rounded-lg border px-4! py-2! flex items-center gap-3 transition-all
+          className={`w-fit min-w-[60px] rounded-lg border px-4! py-2! flex items-center gap-3! transition-all
             ${
               isActive
                 ? "border-green-500 bg-green-50"

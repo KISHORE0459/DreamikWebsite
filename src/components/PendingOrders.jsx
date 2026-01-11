@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
 import "../PendingOrders.css";
-import { CartContext } from './CartContext';
+import { CartContext } from "./CartContext";
+import { apiEndPoint } from "../appConfig";
+import toast from "react-hot-toast";
 
 const PendingOrders = () => {
   const [orderId, setOrderId] = useState("");
@@ -15,9 +17,7 @@ const PendingOrders = () => {
     setError(null);
 
     try {
-      const response = await fetch(
-        `https://dreamik-intern.onrender.com/retrieve/${orderId}`
-      );
+      const response = await fetch(`${apiEndPoint}/retrieve/${orderId}`);
       const data = await response.json();
       console.log("Response Data:", data);
 
@@ -55,7 +55,7 @@ const PendingOrders = () => {
     existingCart.push(productInCart);
     localStorage.setItem("OrderData", JSON.stringify(existingCart));
     addToCart();
-    alert(`${product.Name} has been added to your cart.`);
+    toast.success(`${product.Name} has been added to your cart.`);
   };
 
   return (

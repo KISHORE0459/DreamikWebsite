@@ -13,6 +13,7 @@ import ImagePersonalizationComp from "../../AppComponents/ImageEdit/ImagePersona
 import CheckoutSection from "../../AppComponents/AppCartComps/CheckoutSection";
 import { CartContext } from "../CartContext";
 import AppCustomUploadButton from "../../AppComponents/AppCommon/AppCustomUploadButton";
+import toast from "react-hot-toast";
 
 const Poster = () => {
   const canvasRef = useRef(null);
@@ -83,7 +84,7 @@ const Poster = () => {
       navigate("/Order");
     } catch (err) {
       console.error("Capture failed:", err);
-      alert("Failed to generate poster preview");
+      toast.error("Failed to generate poster preview");
     }
   };
 

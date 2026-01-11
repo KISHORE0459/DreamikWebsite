@@ -21,6 +21,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import UploadIcon from "@mui/icons-material/CloudUpload";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
+import toast from "react-hot-toast";
 
 /* ---------------- CONSTANTS ---------------- */
 const METHODS = {
@@ -112,7 +113,7 @@ const BackgroundRemover = () => {
       setProcessed(result);
     } catch (err) {
       console.error(err);
-      alert("Background removal failed");
+      toast.error("Background removal failed");
     }
 
     setLoading(false);

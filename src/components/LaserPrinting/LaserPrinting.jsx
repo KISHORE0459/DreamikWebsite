@@ -9,6 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import html2canvas from "https://cdn.jsdelivr.net/npm/html2canvas@latest/dist/html2canvas.esm.js";
 import { CartContext } from "../CartContext";
 import CheckoutSection from "../../AppComponents/AppCartComps/CheckoutSection";
+import toast from "react-hot-toast";
 
 const LaserPrinting = () => {
   const persImgContRef = useRef(null);
@@ -91,7 +92,7 @@ const LaserPrinting = () => {
       localStorage.setItem("OrderData", JSON.stringify(existingCart));
 
       addToCart();
-      alert("Product added to cart successfully!");
+      toast.success("Product added to cart successfully!");
       navigate("/Order");
     } catch (err) {
       console.error("html2canvas error:", err);

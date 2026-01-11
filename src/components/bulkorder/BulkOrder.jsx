@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../CartContext";
 import * as XLSX from "xlsx";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const BulkOrder = () => {
   const navigate = useNavigate();
@@ -86,7 +87,7 @@ const BulkOrder = () => {
   /* ---------------- GENERATE LABELS ---------------- */
   const generateLabels = () => {
     if (!textFile || imageFiles.length === 0) {
-      alert("Upload text file and image folder");
+      toast.error("Upload text file and image folder");
       return;
     }
 

@@ -1,110 +1,129 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { TextField, Button } from "@mui/material";
+import toast from "react-hot-toast";
 
-const Fullcashondelivery = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        pincode: ''
-    });
+const FullCashOnDelivery = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    pincode: "",
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-    const validateEmail = (email) => {
-        return email.endsWith('@gmail.com');
-    };
+  const validateEmail = (email) => email.endsWith("@gmail.com");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        const { name, email, phone, pincode } = formData;
+    const { name, email, phone, pincode } = formData;
 
-        if (!name || !email || !phone || !pincode) {
-            alert('Please enter all details');
-            return;
-        }
+    if (!name || !email || !phone || !pincode) {
+      toast.error("Please enter all details");
+      return;
+    }
 
-        if (!validateEmail(email)) {
-            alert('Please enter a correct mail ID');
-            return;
-        }
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid Gmail address");
+      return;
+    }
 
-        if (phone.length !== 10) {
-            alert('Please enter a valid mobile number');
-            return;
-        }
+    if (!/^\d{10}$/.test(phone)) {
+      toast.error("Please enter a valid 10-digit mobile number");
+      return;
+    }
 
-        if (pincode.length !== 6) {
-            alert('Please enter a valid pincode');
-            return;
-        }
+    if (!/^\d{6}$/.test(pincode)) {
+      toast.error("Please enter a valid 6-digit pincode");
+      return;
+    }
 
-        const date = new Date();
-        const newDate = `${date.getFullYear()}${date.getMonth()}${date.getDate()}${date.getHours()}${date.getMinutes()}${date.getSeconds()}`;
-        const fileName = `${name}${newDate}.txt`;
+    const date = new Date();
+    const fileName = `${name}-${date.getTime()}.txt`;
+    console.log("Generated File:", fileName);
 
-        console.log(fileName);
-
-        alert("Your Information Has Been Received Successfully!\nOur Team Will Contact You Through Mail To Give You the Reseller Details!");
-    };
-
-    return (
-        <div id="fcod">
-            <h2>Please Fill The Form To Contact The Resellers Near You</h2>
-            <div id="form-container">
-                <h2 className="topic">User Details</h2>
-                <form id="address-form" onSubmit={handleSubmit}>
-                    <label htmlFor="name">Name:</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        required 
-                        value={formData.name} 
-                        onChange={handleChange} 
-                    />
-
-                    <label htmlFor="email">Email:</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        value={formData.email} 
-                        onChange={handleChange} 
-                    />
-
-                    <label htmlFor="phone">Phone Number:</label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        required 
-                        value={formData.phone} 
-                        onChange={handleChange} 
-                    />
-
-                    <label htmlFor="pincode">Pincode:</label>
-                    <input 
-                        type="text" 
-                        id="pincode" 
-                        name="pincode" 
-                        maxLength="6" 
-                        required 
-                        value={formData.pincode} 
-                        onChange={handleChange} 
-                    />
-
-                    <button type="submit" id="proceedtopay">Submit</button>
-                </form>
-            </div>
-        </div>
+    toast.success(
+      "Your information has been received successfully!\nOur team will contact you shortly."
     );
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      pincode: "",
+    });
+  };
+
+  return (
+    <div className="flex items-center justify-center px-4!">
+      <div className="w-full max-w-[300px] md:max-w-[600px] bg-white rounded-xl shadow-lg p-6! flex flex-col gap-5!">
+        <div className="flex flex-col gap-0!">
+          <h2 className="text-xl font-semibold text-center text-gray-800">
+            Contact Nearby Resellers
+          </h2>
+          <p className="text-sm text-gray-500 text-center">
+            Please fill in your details and our reseller will reach out to you
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <TextField
+            label="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            fullWidth
+          />
+
+          <TextField
+            label="Email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            fullWidth
+          />
+
+          <TextField
+            label="Phone Number"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            inputProps={{ maxLength: 10 }}
+            required
+            fullWidth
+          />
+
+          <TextField
+            label="Pincode"
+            name="pincode"
+            value={formData.pincode}
+            onChange={handleChange}
+            inputProps={{ maxLength: 6 }}
+            required
+            fullWidth
+          />
+
+          <Button
+            type="submit"
+            variant="contained"
+            className="!bg-[#3E9D62] !py-2 !rounded-lg !text-white !font-semibold"
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
+    </div>
+  );
 };
 
-export default Fullcashondelivery;
+export default FullCashOnDelivery;

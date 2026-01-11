@@ -36,11 +36,11 @@ function Footer() {
   // 2️⃣ Menu links (no buttons)
   const menuLinks = [
     { name: "Dreamik AI", action: () => navigate("/") },
-    { name: "Admin Panel", action: () => navigate("/adminpanel") },
+    { name: "Admin Panel", action: () => navigate("/admin-panel") },
     { name: "Privacy Policy", external: "/privacy.html" },
     {
       name: "Terms & Conditions",
-      action: () => navigate("/termsandcondition"),
+      action: () => navigate("/terms-and-condition"),
     },
     { name: "Return & Refund", external: "/refund.html" },
     { name: "Contact Us" },
@@ -182,9 +182,9 @@ function Footer() {
       {/* COPYRIGHT */}
       <div className="flex flex-col gap-1! text-center text-sm text-gray-50! mt-10 border-t border-gray-600 pt-4!">
         <p className="text-gray-50!">
-          © 2024 by Dreamik AI. Created by Sanads Digital
+          © 2026 by Dreamik AI. Created by Zenith Labs
         </p>
-        <p className="text-gray-50!">Version: 1.1.2</p>
+        <p className="text-gray-50!">Version: 2.0</p>
       </div>
     </footer>
   );
