@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import JSZip from "jszip";
 import * as XLSX from "xlsx";
-import { toast } from "react-toastify";
 import { apiEndPoint } from "../appConfig";
+import toast from "react-hot-toast";
 
 export const usePayment = (navigate) => {
   const [orderData, setOrderData] = useState([]);

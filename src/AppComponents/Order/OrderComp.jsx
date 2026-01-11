@@ -2,7 +2,6 @@ import { useEffect, useState, useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import JSZip from "jszip";
 import Swal from "sweetalert2";
-import { toast } from "react-toastify";
 
 // CHILD COMPONENTS
 import OrderProductList from "./OrderProductList";
@@ -11,6 +10,7 @@ import OrderDetailsSection from "./OrderDetailSection";
 import Googleform from "../../components/order/Googleform";
 import { CartContext } from "../../components/CartContext";
 import { useOrderActions } from "./useOrderActions";
+import toast from "react-hot-toast";
 
 const OrderComp = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   const navigate = useNavigate();
