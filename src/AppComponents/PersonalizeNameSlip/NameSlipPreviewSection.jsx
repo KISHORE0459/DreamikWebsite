@@ -2,6 +2,7 @@
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import useBreakpointValue from "../../AppHooks/useBreakPointValues";
 
 const NameSlipPreviewSection = ({
   config,
@@ -16,6 +17,7 @@ const NameSlipPreviewSection = ({
   imageTransforms,
   persImgContRef,
 }) => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   const selectedWatermark =
     typeof window !== "undefined"
       ? localStorage.getItem("selectedlabel")
@@ -50,29 +52,30 @@ const NameSlipPreviewSection = ({
     const trans = labelTransforms[key + "Trans"];
 
     return (
-      <Typography
-        key={key}
-        variant="body1"
-        className="absolute font-bold select-none"
+      <span
+        className="absolute font-normal select-none"
         style={{
           top: labelConfig?.top,
           left: labelConfig?.left,
-          fontSize: `${trans?.fontSize}px`,
+          fontSize: isMobile ? "15px" : "25px",
+          lineHeight: "1",
+          padding: 0,
+          margin: 0,
+          display: "inline-block",
           color: trans?.color,
-          opacity: labelConfig?.opacity ?? 1,
           fontFamily: trans?.fontFamily || "Arial",
+          transformOrigin: "0 0", // ✅ CRITICAL
           transform: `
-            scale(${trans?.scale})
-            rotate(${trans?.rotate}deg)
-            translate(${trans?.translateX}px, ${trans?.translateY}px)
-            scaleX(${trans?.mirror})
-          `,
-          transition: "transform 0.12s linear",
+      translate(${trans?.translateX}px, ${trans?.translateY}px)
+      scale(${trans?.scale})
+      rotate(${trans?.rotate}deg)
+      scaleX(${trans?.mirror})
+    `,
           whiteSpace: "nowrap",
         }}
       >
         {text}
-      </Typography>
+      </span>
     );
   };
 
@@ -101,10 +104,8 @@ const NameSlipPreviewSection = ({
             : "4px",
 
           border: imageBorder ? "2px solid black" : "none",
-
           // filters
           filter: `brightness(${brightness}%) contrast(${contrast}%)`,
-
           // transforms
           transform: `
             scale(${imageTransforms?.scale})

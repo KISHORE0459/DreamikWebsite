@@ -23,7 +23,7 @@ export const usePayment = (navigate) => {
   const generateRandomString = (length = 5) => {
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     return Array.from({ length }, () =>
-      chars.charAt(Math.floor(Math.random() * chars.length))
+      chars.charAt(Math.floor(Math.random() * chars.length)),
     ).join("");
   };
 
@@ -55,7 +55,7 @@ export const usePayment = (navigate) => {
         const binary = atob(base64);
         zip.file(
           `order_image_${i + 1}.png`,
-          Uint8Array.from(binary, (c) => c.charCodeAt(0))
+          Uint8Array.from(binary, (c) => c.charCodeAt(0)),
         );
       }
     });
@@ -99,7 +99,7 @@ export const usePayment = (navigate) => {
             requestmobil: formContainer.phone,
             option: "none",
           }),
-        }
+        },
       );
 
       if (res.ok) {
@@ -127,7 +127,7 @@ export const usePayment = (navigate) => {
         "excelfile",
         new Blob([buffer], {
           type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        })
+        }),
       );
     }
 
@@ -139,7 +139,7 @@ export const usePayment = (navigate) => {
     if (!res.ok) throw new Error("Upload failed");
 
     toast.success("🎉 Payment successful! Order saved.");
-    navigate("/orderconfirmation");
+    navigate("/order-confirmation");
   };
 
   /* ---------------- PAYMENT ---------------- */

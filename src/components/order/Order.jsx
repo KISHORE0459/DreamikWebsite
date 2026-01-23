@@ -35,7 +35,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   const [rescoup, setRescoup] = useState();
   const [influencer, setInfluencer] = useState(false);
   const [offercount, setOffercount] = useState(
-    localStorage.getItem("offercount") || null
+    localStorage.getItem("offercount") || null,
   );
   const [resellerformdata, setResellerformdata] = useState();
   const [isClicked, setIsClicked] = useState(false);
@@ -114,36 +114,36 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
           addamount =
             Math.round(
               parseInt(offercutout?.original_price) *
-                (1 - parseInt(offercutout.offer_percentage) / 100)
+                (1 - parseInt(offercutout.offer_percentage) / 100),
             ) || 340;
           allprodprice +=
             Math.round(
               parseInt(offercutout?.original_price) *
-                (1 - parseInt(offercutout?.offer_percentage) / 100)
+                (1 - parseInt(offercutout?.offer_percentage) / 100),
             ) || 340;
         } else if (prod?.productcode?.startsWith("NS")) {
           if (prod.labeltype === "glossy") {
             addamount =
               Math.round(
                 parseInt(offernameslip?.original_price_glossy) *
-                  (1 - parseInt(offernameslip?.offer_percentage_glossy) / 100)
+                  (1 - parseInt(offernameslip?.offer_percentage_glossy) / 100),
               ) || 160;
             allprodprice +=
               Math.round(
                 parseInt(offernameslip?.original_price_glossy) *
-                  (1 - parseInt(offernameslip?.offer_percentage_glossy) / 100)
+                  (1 - parseInt(offernameslip?.offer_percentage_glossy) / 100),
               ) || 160;
           } else {
             addamount =
               Math.round(
                 parseInt(offernameslip?.original_price_matte) *
-                  (1 - parseInt(offernameslip?.offer_percentage_matte) / 100)
+                  (1 - parseInt(offernameslip?.offer_percentage_matte) / 100),
               ) || 100;
 
             allprodprice +=
               Math.round(
                 parseInt(offernameslip?.original_price_matte) *
-                  (1 - parseInt(offernameslip?.offer_percentage_matte) / 100)
+                  (1 - parseInt(offernameslip?.offer_percentage_matte) / 100),
               ) || 100;
           }
         }
@@ -329,7 +329,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     let result = "";
     for (let i = 0; i < length; i++) {
       result += characters.charAt(
-        Math.floor(Math.random() * characters.length)
+        Math.floor(Math.random() * characters.length),
       );
     }
     return result;
@@ -539,7 +539,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   const applyCoupon = (code) => {
     if (offercount == 0) {
       toast.success(
-        "Promocode reached limit. So continue shopping without offer"
+        "Promocode reached limit. So continue shopping without offer",
       );
       return;
     }
@@ -689,18 +689,18 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
       deliveryMode === "normal-delivery"
         ? setDelPrice(70)
         : deliveryMode === "express-delivery"
-        ? setDelPrice(120)
-        : deliveryMode === "Self-pick up"
-        ? setDelPrice(20)
-        : "";
+          ? setDelPrice(120)
+          : deliveryMode === "Self-pick up"
+            ? setDelPrice(20)
+            : "";
     } else if (selectedValue === "normal" && couponCode) {
       deliveryMode === "normal-delivery"
         ? setDelPrice(50)
         : deliveryMode === "express-delivery"
-        ? setDelPrice(100)
-        : deliveryMode === "Self-pick up"
-        ? setDelPrice(0)
-        : "";
+          ? setDelPrice(100)
+          : deliveryMode === "Self-pick up"
+            ? setDelPrice(0)
+            : "";
     }
     sessionStorage.setItem("Instant", e.target.value);
   };
@@ -731,8 +731,8 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
               product: product.productcode.startsWith("NS")
                 ? "nameslip"
                 : product.productcode?.startsWith("NSCRT")
-                ? "cutoutNameslip"
-                : "",
+                  ? "cutoutNameslip"
+                  : "",
               price: product.price,
               size: product.size,
               quantity: product.quantity,
@@ -809,7 +809,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     try {
       localStorage.setItem(
         "PriceData",
-        JSON.stringify({ prodPrice, delPrice, cod, totalPrice })
+        JSON.stringify({ prodPrice, delPrice, cod, totalPrice }),
       );
       localStorage.setItem("PaymentDetails", JSON.stringify(deliveryDetails));
       localStorage.setItem("FormContainer", JSON.stringify(formData));
@@ -843,7 +843,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                 requestmobil: form.phone.value.trim(),
                 option: "none",
               }),
-            }
+            },
           );
 
           if (res.ok) {
@@ -871,7 +871,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
 
         localStorage.setItem(
           "OrderConfirmationData",
-          JSON.stringify(orderDetails)
+          JSON.stringify(orderDetails),
         );
         try {
           const uploadForm = new FormData();
@@ -906,7 +906,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                     "Content-Type": "application/json",
                   },
                   body: JSON.stringify(resellerformdata),
-                }
+                },
               )
                 .then((response) => response.json())
                 .then((data) => {
@@ -918,12 +918,12 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                 });
             }
 
-            navigate("/orderconfirmation");
+            navigate("/order-confirmation");
             seterror(null);
           } else {
             const errorMessage = await response.text();
             alert(
-              `Failed to save order. Please try again.\nError: ${errorMessage}`
+              `Failed to save order. Please try again.\nError: ${errorMessage}`,
             );
             //google form
             seterror(true);
@@ -931,7 +931,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
         } catch (e) {
           console.error("Error uploading files:", e);
           alert(
-            "An error occurred while uploading the files. Please check your connection and try again."
+            "An error occurred while uploading the files. Please check your connection and try again.",
           );
           //google form
           seterror(true);
@@ -971,7 +971,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
               requestmobil: form.phone.value.trim(),
               option: "none",
             }),
-          }
+          },
         );
 
         if (res.ok) {
@@ -999,7 +999,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
 
       localStorage.setItem(
         "OrderConfirmationData",
-        JSON.stringify(orderDetails)
+        JSON.stringify(orderDetails),
       );
       try {
         const uploadForm = new FormData();
@@ -1033,7 +1033,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify(resellerformdata),
-              }
+              },
             )
               .then((response) => response.json())
               .then((data) => {
@@ -1045,12 +1045,12 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
               });
           }
 
-          navigate("/orderconfirmation");
+          navigate("/order-confirmation");
           seterror(null);
         } else {
           const errorMessage = await response.text();
           alert(
-            `Failed to save order. Please try again.\nError: ${errorMessage}`
+            `Failed to save order. Please try again.\nError: ${errorMessage}`,
           );
           //google form
           seterror(true);
@@ -1058,7 +1058,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
       } catch (e) {
         console.error("Error uploading files:", e);
         alert(
-          "An error occurred while uploading the files. Please check your connection and try again."
+          "An error occurred while uploading the files. Please check your connection and try again.",
         );
         //google form
         seterror(true);
@@ -1124,8 +1124,8 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                   {prod.productcode.startsWith("NS")
                     ? "nameslip"
                     : prod.productcode.startsWith("NSCRT")
-                    ? "cutoutNameslip"
-                    : ""}{" "}
+                      ? "cutoutNameslip"
+                      : ""}{" "}
                   {prod.Name}
                 </h2>
                 {Array.isArray(prod.labels) &&
@@ -1139,7 +1139,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                   <h2 className="prod-type">
                     Type:{" "}
                     {prod?.labeltype?.replace(/^./, (char) =>
-                      char.toUpperCase()
+                      char.toUpperCase(),
                     )}
                   </h2>
                 )}
@@ -1400,7 +1400,7 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                   // Ensure the main number (excluding country code) has exactly 10 digits
                   if (cleanedPhone.length < 10 || cleanedPhone.length > 13) {
                     alert(
-                      "Please enter a valid phone number with a country code or exactly 10 digits!"
+                      "Please enter a valid phone number with a country code or exactly 10 digits!",
                     );
                     return;
                   }
@@ -1545,8 +1545,8 @@ const Order = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
                   {paymentMode === "cashon-payment"
                     ? "Proceed To Order"
                     : influencer
-                    ? "Proceed to Order"
-                    : "Proceed To Payment"}
+                      ? "Proceed to Order"
+                      : "Proceed To Payment"}
                 </button>
               </form>
             </div>

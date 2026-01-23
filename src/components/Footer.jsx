@@ -51,8 +51,8 @@ function Footer() {
     { name: "Sign In" },
     { name: "View Cart", action: () => navigate("/Order") },
     { name: "My Wishlist" },
-    { name: "Track My Order", action: () => navigate("/myorder") },
-    { name: "Pending Orders", action: () => navigate("/pendingorders") },
+    { name: "Track My Order", action: () => navigate("/my-order") },
+    { name: "Pending Orders", action: () => navigate("/pending-orders") },
     { name: "Reseller Details", action: () => navigate("/location") },
     {
       name: "Feedback",

@@ -22,10 +22,9 @@ import ProductList from "./components/ProductList";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Payment from "./components/payment/Payment";
 import OrderConfirmation from "./components/orderconfirmation/OrderConfirmation";
-const PendingOrders = lazy(() => import("./components/PendingOrders"));
 
-const BackgroundRemover = lazy(() =>
-  import("./components/backgroundremover/BackgroundRemover")
+const BackgroundRemover = lazy(
+  () => import("./components/backgroundremover/BackgroundRemover"),
 );
 const PageLogger = lazy(() => import("./components/pagelogger"));
 
@@ -58,6 +57,7 @@ import TermsSection from "./TermsAndConditions";
 import { apiEndPoint } from "./appConfig";
 import AppLoader from "./AppComponents/AppLoader/AppLoader";
 import AppToastProvider from "./AppComponents/AppToast/AppToastProvider";
+import PendingOrder from "./components/PendingOrder";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -82,7 +82,7 @@ function AppContent() {
       return res.json();
     },
     retry: true,
-    refetchInterval: 30000,
+    refetchInterval: 20000,
     refetchIntervalInBackground: true,
   });
 
@@ -296,11 +296,11 @@ function AppContent() {
                 {/* terms and condition */}
                 <Route path="/terms-and-condition" element={<TermsSection />} />
                 <Route
-                  path="/orderconfirmation"
+                  path="/order-confirmation"
                   element={<OrderConfirmation />}
                 />
-                <Route path="/pendingorders" element={<PendingOrders />} />
-                <Route path="/myorder" element={<Myorder />} />
+                <Route path="/pending-orders" element={<PendingOrder />} />
+                <Route path="/my-order" element={<Myorder />} />
               </Routes>
             )}
             {/* <SplashModal visible={isVisible} setVisible={setIsVisible} /> */}

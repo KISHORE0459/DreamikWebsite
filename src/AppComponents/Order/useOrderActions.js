@@ -50,7 +50,7 @@ export const useOrderActions = ({
         setDelPrice(selectedvalue === "instant" ? 20 : 0);
       }
     },
-    [selectedvalue, setDeliveryMode, setDelPrice]
+    [selectedvalue, setDeliveryMode, setDelPrice],
   );
 
   /* ---------------- PAYMENT ---------------- */
@@ -59,13 +59,13 @@ export const useOrderActions = ({
       setPaymentMode(mode);
       setCod(mode === "partial-payment" ? 40 : 0);
     },
-    [setPaymentMode, setCod]
+    [setPaymentMode, setCod],
   );
 
   /* ---------------- COUPON INPUT ---------------- */
   const handleCouponChange = useCallback(
     (e) => setCouponCode(e.target.value),
-    [setCouponCode]
+    [setCouponCode],
   );
 
   /* ---------------- COUPON VALIDATION ---------------- */
@@ -124,7 +124,7 @@ export const useOrderActions = ({
       setvisiblerp,
       setdiscount1,
       setInfluencer,
-    ]
+    ],
   );
 
   /* ---------------- SUBMIT COUPON ---------------- */
@@ -165,20 +165,20 @@ export const useOrderActions = ({
           deliveryMode === "normal-delivery"
             ? 70
             : deliveryMode === "express-delivery"
-            ? 120
-            : 20
+              ? 120
+              : 20,
         );
       } else {
         setDelPrice(
           deliveryMode === "normal-delivery"
             ? 50
             : deliveryMode === "express-delivery"
-            ? 100
-            : 0
+              ? 100
+              : 0,
         );
       }
     },
-    [deliveryMode, setselectedvalue, setDelPrice]
+    [deliveryMode, setselectedvalue, setDelPrice],
   );
 
   /* ---------------- PINCODE ---------------- */
@@ -205,7 +205,7 @@ export const useOrderActions = ({
         return null;
       }
     },
-    [setpincode]
+    [setpincode],
   );
 
   /* ---------------- REMOVE PRODUCT ---------------- */
@@ -216,7 +216,7 @@ export const useOrderActions = ({
       setOrderData(updated);
       removeFromCart();
     },
-    [orderData, setOrderData, removeFromCart]
+    [orderData, setOrderData, removeFromCart],
   );
 
   /* ---------------- PROCEED ---------------- */
@@ -249,8 +249,8 @@ export const useOrderActions = ({
         product: code.startsWith("NS")
           ? "nameslip"
           : code.startsWith("NSCRT")
-          ? "cutoutNameslip"
-          : "",
+            ? "cutoutNameslip"
+            : "",
         price: product.price || 0,
         size: product.size || "",
         quantity: product.quantity || 0,
@@ -297,7 +297,7 @@ export const useOrderActions = ({
     localStorage.setItem("FormContainer", JSON.stringify(formData));
 
     navigate(
-      paymentMode === "cashon-payment" ? "/orderconfirmation" : "/payment"
+      paymentMode === "cashon-payment" ? "/order-confirmation" : "/payment",
     );
   };
 

@@ -18,44 +18,44 @@
     },
     "labels": {
       "name": {
-        "top": "7%",
+        "top": "9%",
         "left": "32%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "school": {
-        "top": "50%",
+        "top": "52%",
         "left": "46%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "subject": {
-        "top": "37%",
+        "top": "39%",
         "left": "49%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "roll": {
-        "top": "23%",
+        "top": "25%",
         "left": "90%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "hidden": true
       },
       "class": {
-        "top": "23%",
+        "top": "25%",
         "left": "42%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "section": {
-        "top": "23%",
+        "top": "25%",
         "left": "73%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       }
@@ -83,44 +83,44 @@
     },
     "labels": {
       "name": {
-        "top": "7%",
+        "top": "9%",
         "left": "32%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "school": {
-        "top": "50%",
+        "top": "52%",
         "left": "46%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "subject": {
-        "top": "37%",
+        "top": "39%",
         "left": "49%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "roll": {
-        "top": "23%",
+        "top": "25%",
         "left": "90%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "hidden": true
       },
       "class": {
-        "top": "23%",
+        "top": "25%",
         "left": "42%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "section": {
-        "top": "23%",
+        "top": "25%",
         "left": "73%",
-        "defaultSize": 30,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       }
@@ -150,42 +150,42 @@
       "name": {
         "top": "7%",
         "left": "32%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "school": {
         "top": "48.5%",
         "left": "46%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "subject": {
         "top": "35%",
         "left": "50%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "roll": {
         "top": "22%",
         "left": "89%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "class": {
         "top": "22%",
         "left": "42%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "section": {
         "top": "22%",
         "left": "66%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       }
@@ -201,7 +201,7 @@
       "enabled": true,
       "top": "9%",
       "left": "1%",
-      "width": "30%",
+      "width": "25%",
       "height": "50%",
       "maxWidth": "50%",
       "maxHeight": "60%",
@@ -213,44 +213,44 @@
     },
     "labels": {
       "name": {
-        "top": "7%",
+        "top": "9%",
         "left": "32%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "school": {
-        "top": "48.5%",
+        "top": "50.5%",
         "left": "46%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "subject": {
-        "top": "35%",
+        "top": "37%",
         "left": "50%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "roll": {
-        "top": "22%",
+        "top": "24%",
         "left": "89%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "class": {
-        "top": "22%",
+        "top": "24%",
         "left": "42%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       },
       "section": {
-        "top": "22%",
+        "top": "24%",
         "left": "66%",
-        "defaultSize": 25,
+        "fontSize": 25,
         "color": "#292d9e",
         "transform": true
       }

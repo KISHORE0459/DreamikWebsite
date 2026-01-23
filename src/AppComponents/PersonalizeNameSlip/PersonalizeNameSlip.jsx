@@ -193,7 +193,12 @@ const NameSlipPersonalize = () => {
   const handleDownload = async () => {
     if (!persImgRef.current) return;
 
-    const canvas = await html2canvas(persImgRef.current);
+    await document.fonts.ready;
+    const canvas = await html2canvas(persImgRef.current, {
+      scale: 2,
+      useCORS: true,
+      letterRendering: true,
+    });
     const link = document.createElement("a");
     link.download = "name-slip.png";
     link.href = canvas.toDataURL();
