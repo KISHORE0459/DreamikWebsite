@@ -53,11 +53,11 @@ const NameSlipPreviewSection = ({
 
     return (
       <span
-        className="absolute font-normal select-none"
+        className="absolute font-semibold select-none"
         style={{
           top: labelConfig?.top,
           left: labelConfig?.left,
-          fontSize: isMobile ? "15px" : "25px",
+          fontSize: isMobile ? "15px" : "27px",
           lineHeight: "1",
           padding: 0,
           margin: 0,
@@ -100,8 +100,8 @@ const NameSlipPreviewSection = ({
           borderRadius: circleImage
             ? "9999px"
             : imgCfg?.shape === "circle"
-            ? "9999px"
-            : "4px",
+              ? "9999px"
+              : "4px",
 
           border: imageBorder ? "2px solid black" : "none",
           // filters

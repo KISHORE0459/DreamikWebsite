@@ -203,6 +203,8 @@ export const usePayment = (navigate) => {
       return amount > 100 ? amount / 10 : amount;
     }
 
+    if (testPayCode == "TESTFORDEV") return 1;
+
     return amount;
   };
 

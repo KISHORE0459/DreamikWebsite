@@ -191,9 +191,7 @@ const OrderConfirmation = () => {
 
   // Initial Data Load
   useEffect(() => {
-    const stored =
-      JSON.parse(localStorage.getItem("OrderConfirmationData")) ??
-      dummyOrderData;
+    const stored = JSON.parse(localStorage.getItem("OrderConfirmationData"));
     if (stored) {
       setOrderData(stored.orderData);
       setPaymentDetails(stored.paymentDetails);
@@ -376,54 +374,6 @@ const OrderConfirmation = () => {
       </Paper>
     </div>
   );
-};
-
-const dummyOrderData = {
-  orderData: [
-    {
-      productcode: "DRM-001",
-      Name: "Custom Glossy Mug",
-      price: 499,
-      quantity: 2,
-      labeltype: "Premium Matte",
-      size: "11oz",
-      image:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==", // Pixel dummy
-    },
-    {
-      productcode: "DRM-005",
-      Name: "Personalized Photo Frame",
-      price: 899,
-      quantity: 1,
-      labeltype: "Wood Grain",
-      size: "8x10",
-      image:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
-    },
-  ],
-  paymentDetails: {
-    PaymentID: "pay_NJK123456789",
-    PaymentMode: "Online - UPI",
-    DeliveryMode: "Standard Shipping",
-  },
-  formContainer: {
-    name: "Alex Johnson",
-    email: "alex.j@example.com",
-    phone: "919876543210",
-    address1: "Flat 402, Sunshine Apartments",
-    district: "Chennai",
-    state: "Tamil Nadu",
-    pincode: "600001",
-    paymentmode: "full-payment",
-    deliverymode: "home-delivery",
-    totalprice: 1897,
-  },
-  priceDetails: {
-    totalPrice: 1897,
-    roundOff: 0,
-  },
-  orderId: "INV-2024-001",
-  OrderId2: "DRM-ORDER-9988",
 };
 
 export default OrderConfirmation;
