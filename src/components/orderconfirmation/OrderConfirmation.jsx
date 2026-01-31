@@ -229,7 +229,7 @@ const OrderConfirmation = () => {
           .catch(console.error);
       }
     } else {
-      // navigate("/payment");
+      navigate("/payment");
     }
   }, [navigate, setCartCount]);
 
@@ -290,16 +290,16 @@ const OrderConfirmation = () => {
             >
               Order Summary
             </Typography>
-            <div className="flex flex-col gap-2 items-start">
-              <List dense>
+            <div className="w-fill flex flex-col gap-2 items-start">
+              <List dense className="w-full!">
                 {orderData.map((item, idx) => (
                   <ListItem
                     key={idx}
-                    className="px-0 flex flex-row items-center gap-2 justify-between"
+                    className="w-full! px-0 flex flex-row items-center gap-2 justify-between"
                   >
                     <ListItemText
-                      primary={`${item.Name} (x${item.quantity})`}
-                      secondary={`Size: ${item.size} | Type: ${item.labeltype}`}
+                      primary={`${item.Name ?? item?.name ?? "-"} (x${item.quantity ?? "1"})`}
+                      secondary={`${item.size || item?.labelSize ? `Size: ${item.size ?? item?.labelSize}` : ""}    ${item.labeltype || item?.labelType ? `Type: ${item.labeltype ?? item?.labelType ?? "-"}` : ""}`}
                     />
                     <Typography
                       variant="body2"

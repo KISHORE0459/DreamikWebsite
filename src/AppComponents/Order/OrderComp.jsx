@@ -153,6 +153,7 @@ const OrderComp = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     setIsLoading,
     offercount,
     setOffercount,
+    setorderid,
   });
 
   /* -------------------- JSX -------------------- */

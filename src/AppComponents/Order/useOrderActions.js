@@ -40,6 +40,7 @@ export const useOrderActions = ({
   setIsLoading,
   offercount,
   setOffercount,
+  setorderid,
 }) => {
   /* ---------------- DELIVERY ---------------- */
   const handleDeliveryChange = useCallback(
@@ -347,6 +348,7 @@ export const useOrderActions = ({
         const now = new Date();
         const prefix = paymentMode === "cashon-payment" ? "COD-order" : "INF";
         const orderId = `${prefix}-${formData.name}${now.toISOString().replace(/[-:.TZ]/g, "")}-${generateRandomString()}-v1`;
+        setorderid(orderId);
 
         // A. Generate Secondary ID from AWS
         let OrderId2 = null;
