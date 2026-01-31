@@ -40,7 +40,7 @@ const OrderComp = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
   const [rescoup, setRescoup] = useState();
   const [influencer, setInfluencer] = useState(false);
   const [offercount, setOffercount] = useState(
-    localStorage.getItem("offercount") || null
+    localStorage.getItem("offercount") || null,
   );
   const [resellerformdata, setResellerformdata] = useState();
   const [isClicked, setIsClicked] = useState(false);
@@ -149,6 +149,10 @@ const OrderComp = ({ handleEditOrder, orderData, setOrderData, coupon }) => {
     navigate,
     totalPrice,
     isReseller,
+    zipFile,
+    setIsLoading,
+    offercount,
+    setOffercount,
   });
 
   /* -------------------- JSX -------------------- */

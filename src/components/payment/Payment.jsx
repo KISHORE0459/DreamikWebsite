@@ -20,8 +20,6 @@ const Payment = () => {
     isError,
   } = usePayment(navigate);
 
-  console.log("product detail", orderData, priceDetails);
-
   const [gateway, setGateway] = useState("razorpay");
   const [couponOpen, setCouponOpen] = useState(false);
 

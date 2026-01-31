@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import toast from "react-hot-toast";
+import { apiEndPoint } from "../../appConfig";
 
 export const useOrderActions = ({
   // state
@@ -35,6 +36,10 @@ export const useOrderActions = ({
   navigate,
   totalPrice,
   isReseller,
+  zipFile,
+  setIsLoading,
+  offercount,
+  setOffercount,
 }) => {
   /* ---------------- DELIVERY ---------------- */
   const handleDeliveryChange = useCallback(
@@ -219,52 +224,73 @@ export const useOrderActions = ({
     [orderData, setOrderData, removeFromCart],
   );
 
+  // helper function
+
+  const generateRandomString = (length = 5) => {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(
+        Math.floor(Math.random() * characters.length),
+      );
+    }
+    return result;
+  };
+
   /* ---------------- PROCEED ---------------- */
   const handleProceedToPayment = async (formValues) => {
+    // 1. Validation
     if (!orderData?.length) {
       toast.error("Add at least one product");
       return;
     }
 
-    const deliveryDetails = {
-      deliveryMode,
-      paymentMode,
-      prodPrice,
-      delPrice,
-      cod,
-      totalPrice,
-    };
+    setIsLoading(true);
 
+    // 2. Map Product Details (Restoring Font/Style Metadata)
     const productDetails = (orderData || []).map((product) => {
       const labels = Array.isArray(product.labels) ? product.labels : [];
       const selectedlabel = localStorage.getItem("selectedlabel") || "";
       const dynamicKey =
-        selectedlabel === "/image/waterlabel/4.png" ? "contactNo" : "rollno";
-
-      const code = product.productcode || "";
+        selectedlabel === "/image/waterlabel/4.png" ? "contact no" : "rollno";
 
       return {
         ProdName: product?.Name || "",
-        productcode: code,
-        product: code.startsWith("NS")
+        productcode: product.productcode || "",
+        product: product.productcode?.startsWith("NS")
           ? "nameslip"
-          : code.startsWith("NSCRT")
+          : product.productcode?.startsWith("NSCRT")
             ? "cutoutNameslip"
             : "",
         price: product.price || 0,
         size: product.size || "",
         quantity: product.quantity || 0,
+        subquantity: product?.size?.includes("OneSheet totally")
+          ? "4 sheets"
+          : "3 sheets",
         type: product.labeltype || "",
-
+        // Restoring the font/style logic required for printing
         name: labels[0]?.text || "",
+        "name fontsize": labels[0]?.fontSize || "",
+        "name fontColor": labels[0]?.fontColor || "",
+        "name fontFamily": labels[0]?.fontFamily || "",
+        "name fontStyle": labels[0]?.fontStyle || "",
         school: labels[1]?.text || "",
+        "school fontsize": labels[1]?.fontSize || "",
+        "school fontColor": labels[1]?.fontColor || "",
+        "schooln fontFamily": labels[1]?.fontFamily || "",
+        "school fontStyle": labels[1]?.fontStyle || "",
         subject: labels[2]?.text || "",
+        "subject fontsize": labels[2]?.fontSize || "",
+        "subject Position": labels[2]?.position || "",
         [dynamicKey]: labels[3]?.text || "",
+        [`${dynamicKey} fontsize`]: labels[3]?.fontSize || "",
         section: labels[4]?.text || "",
         class: labels[5]?.text || "",
       };
     });
 
+    // 3. Prepare Form Data
     const formData = {
       version: "Dreamik.com_v1.1",
       name: formValues.name?.trim() || "",
@@ -285,20 +311,142 @@ export const useOrderActions = ({
       totalprice: totalPrice,
       deliverymode: deliveryMode,
       paymentmode: paymentMode,
-      productDetails,
+      productDetails: productDetails,
       additionalDetails: {
         orderTime: new Date().toString(),
         browserDetails: navigator.userAgent,
       },
     };
 
-    localStorage.setItem("PriceData", JSON.stringify(deliveryDetails));
-    localStorage.setItem("PaymentDetails", JSON.stringify(deliveryDetails));
-    localStorage.setItem("FormContainer", JSON.stringify(formData));
+    // 4. Persistence to LocalStorage
+    try {
+      localStorage.setItem(
+        "PriceData",
+        JSON.stringify({ prodPrice, delPrice, cod, totalPrice }),
+      );
+      localStorage.setItem(
+        "PaymentDetails",
+        JSON.stringify({
+          deliveryMode,
+          paymentMode,
+          prodPrice,
+          delPrice,
+          cod,
+          totalPrice,
+        }),
+      );
+      localStorage.setItem("FormContainer", JSON.stringify(formData));
+    } catch (err) {
+      toast.error("Local storage full. Please clear cart and try again.");
+      setIsLoading(false);
+    }
 
-    navigate(
-      paymentMode === "cashon-payment" ? "/order-confirmation" : "/payment",
-    );
+    // 5. Handling Order Logic (COD vs Online)
+    if (paymentMode === "cashon-payment" || influencer) {
+      try {
+        const now = new Date();
+        const prefix = paymentMode === "cashon-payment" ? "COD-order" : "INF";
+        const orderId = `${prefix}-${formData.name}${now.toISOString().replace(/[-:.TZ]/g, "")}-${generateRandomString()}-v1`;
+
+        // A. Generate Secondary ID from AWS
+        let OrderId2 = null;
+        const resId = influencer ? "INF" : couponCode ? "CPN" : "CS"; // Logic for requesterid
+
+        const idRes = await fetch(
+          "https://0xij5t5kzk.execute-api.ap-south-1.amazonaws.com/prod/generate-id",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              invoiceid: orderId,
+              requesterid: resId,
+              requestmobil: formData.phone,
+              option: "none",
+            }),
+          },
+        );
+
+        if (idRes.ok) {
+          const idData = await idRes.json();
+          OrderId2 = idData.orderid;
+        }
+
+        const orderDetails = {
+          orderId,
+          OrderId2,
+          orderData,
+          paymentDetails: {
+            PaymentMode: paymentMode,
+            DeliveryMode: deliveryMode,
+          },
+          formContainer: formData,
+          priceDetails: { prodPrice, delPrice, cod, totalPrice },
+        };
+
+        // Crucial: This is what the /order-confirmation page reads to show the success message
+        localStorage.setItem(
+          "OrderConfirmationData",
+          JSON.stringify(orderDetails),
+        );
+
+        // B. Upload Files and JSON to Server
+        const uploadForm = new FormData();
+        const infoBlob = new Blob([JSON.stringify(formData)], {
+          type: "application/json",
+        });
+        uploadForm.append("info", infoBlob, "info.json");
+        uploadForm.append("orderId", orderId);
+        if (zipFile) uploadForm.append("zipfiles", zipFile, "order_images.zip");
+
+        const response = await fetch(`${apiEndPoint}/upload`, {
+          method: "POST",
+          body: uploadForm,
+        });
+
+        if (response.ok) {
+          // C. Update Reseller Offer Count
+          if (offercount) {
+            const newCount = Math.max(offercount - 1, 0);
+            setOffercount(newCount);
+            localStorage.setItem("offercount", newCount);
+
+            await fetch(
+              `${apiEndPoint}/updateReseller/${resellerformdata.id}`,
+              {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  ...resellerformdata,
+                  offercount: newCount,
+                }),
+              },
+            );
+          }
+
+          toast.success("Order saved successfully!");
+          navigate("/order-confirmation");
+        } else {
+          setIsLoading(false);
+          throw new Error("Server upload failed");
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error("Failed to process order. Please try again.");
+        setIsLoading(false);
+      }
+    } else {
+      const orderDetails = {
+        orderData,
+        formContainer: formData,
+        priceDetails: { prodPrice, delPrice, cod, totalPrice },
+      };
+
+      localStorage.setItem(
+        "OrderConfirmationData",
+        JSON.stringify(orderDetails),
+      );
+      navigate("/payment");
+    }
   };
 
   return {

@@ -27,7 +27,6 @@ const NameSlipDetail = () => {
         const res = await fetch("/nameslip_data.json");
         if (!res.ok) throw new Error("Nameslip fetch failed");
         const data = await res.json();
-        localStorage.setItem("data", JSON.stringify(data));
         return data;
       } catch (err) {
         console.error("Nameslip fetch error:", err);
@@ -219,7 +218,7 @@ const NameSlipDetail = () => {
               handlePersonalizeAndAddToCart(
                 product.id,
                 product?.template,
-                product.productcode
+                product.productcode,
               )
             }
             showHighlights={true}
@@ -229,7 +228,7 @@ const NameSlipDetail = () => {
       </div>
       <ProductPreviewComp
         images={Array.from({ length: 12 }).map(
-          (_, i) => `/image/Nsdemo/Nsdemo${(i % 3) + 1}.jpeg`
+          (_, i) => `/image/Nsdemo/Nsdemo${(i % 3) + 1}.jpeg`,
         )}
       />
     </section>

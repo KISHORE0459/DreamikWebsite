@@ -111,6 +111,27 @@ export const usePayment = (navigate) => {
       console.error(err);
     }
 
+    const baseFormContainer =
+      JSON.parse(localStorage.getItem("FormContainer")) || {};
+
+    const finalConfirmationData = {
+      orderId: id,
+      OrderId2: secondaryId,
+      orderData: orderData,
+      paymentDetails: {
+        PaymentMode: paymentMode,
+        DeliveryMode: deliveryMode,
+        RazorpayID: paymentData.PaymentID,
+      },
+      formContainer: { ...baseFormContainer, ...formContainer },
+      priceDetails: { ...priceDetails, paidAmount: finalAmount },
+    };
+
+    localStorage.setItem(
+      "OrderConfirmationData",
+      JSON.stringify(finalConfirmationData),
+    );
+
     const uploadForm = new FormData();
     uploadForm.append("payment", new Blob([JSON.stringify(paymentData)]));
     uploadForm.append("info", new Blob([JSON.stringify(formContainer)]));

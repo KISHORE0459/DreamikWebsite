@@ -30,6 +30,7 @@ import {
   CardGiftcard,
 } from "@mui/icons-material";
 import { apiEndPoint } from "../../appConfig";
+import toast from "react-hot-toast";
 
 // Move static data outside to prevent re-renders
 const STATE_CODES = {
@@ -83,6 +84,7 @@ const OrderConfirmation = () => {
   const [OrderId2, setOrderId2] = useState("");
   const { setCartCount } = useContext(CartContext);
   const [isLoading, setLoading] = useState(false);
+  const [isPdfGenerating, setIsPdfGenerating] = useState(false);
 
   // Helper: Load Image
   const loadImageAsBase64 = (path) => {
@@ -104,86 +106,100 @@ const OrderConfirmation = () => {
   // Optimized PDF Generation
   const generatePDF = useCallback(
     async (shouldDownload = false) => {
-      if (!orderId) return;
-
-      const doc = new jsPDF();
-      const marginLeft = 15;
-      const marginTop = 15;
-      const pageWidth = doc.internal.pageSize.width;
-      const rightMargin = pageWidth / 2 + 10;
-
       try {
-        const logoBase64 = await loadImageAsBase64("/image/logo.png");
-        doc.addImage(logoBase64, "PNG", marginLeft, marginTop, 25, 25);
-      } catch (e) {
-        console.warn("Logo failed to load");
-      }
+        if (!orderId) return;
 
-      doc
-        .setFontSize(16)
-        .setFont("helvetica", "bold")
-        .text("INVOICE", pageWidth / 2, marginTop + 20, { align: "center" });
+        setIsPdfGenerating(true);
+        console.log("working");
+        const doc = new jsPDF();
+        const marginLeft = 15;
+        const marginTop = 15;
+        const pageWidth = doc.internal.pageSize.width;
+        const rightMargin = pageWidth / 2 + 10;
 
-      // Left Header
-      doc.setFontSize(18).text("Dreamik AI", marginLeft, marginTop + 40);
-      doc
-        .setFontSize(10)
-        .setFont("helvetica", "normal")
-        .text(
-          [
-            "Dream it, get it from us...",
-            "Phone: +91-044-28505188",
-            "Email: dreamikai@gmail.com",
-          ],
-          marginLeft,
-          marginTop + 45,
-        );
+        try {
+          const logoBase64 = await loadImageAsBase64("/image/logo.png");
+          doc.addImage(logoBase64, "PNG", marginLeft, marginTop, 25, 25);
+        } catch (e) {
+          console.warn("Logo failed to load");
+        }
 
-      // Right Header
-      doc
-        .setFontSize(11)
-        .setFont("helvetica", "bold")
-        .text(
-          "MURVEN INFOTECH DESIGN SOLUTIONS LLP",
-          rightMargin,
-          marginTop + 40,
-        );
-      doc
-        .setFontSize(9)
-        .setFont("helvetica", "normal")
-        .text(
-          ["715-A, Spencer Plaza", "Chennai - 600 002", "GST: 33ABPFM6846A1Z8"],
-          rightMargin,
-          marginTop + 45,
-        );
+        doc
+          .setFontSize(16)
+          .setFont("helvetica", "bold")
+          .text("INVOICE", pageWidth / 2, marginTop + 20, { align: "center" });
 
-      // Table
-      autoTable(doc, {
-        startY: marginTop + 145,
-        head: [["No", "Description", "Price", "Qty", "Tax", "Total"]],
-        body: orderData.map((item, i) => [
-          i + 1,
-          item.Name,
-          `Rs. ${Math.round(item.price * 0.82)}`,
-          item.quantity,
-          "18%",
-          `Rs. ${item.price * item.quantity}`,
-        ]),
-        theme: "grid",
-        styles: { fontSize: 8 },
-      });
+        // Left Header
+        doc.setFontSize(18).text("Dreamik AI", marginLeft, marginTop + 40);
+        doc
+          .setFontSize(10)
+          .setFont("helvetica", "normal")
+          .text(
+            [
+              "Dream it, get it from us...",
+              "Phone: +91-044-28505188",
+              "Email: dreamikai@gmail.com",
+            ],
+            marginLeft,
+            marginTop + 45,
+          );
 
-      const pdfBlob = doc.output("blob");
-      if (shouldDownload) {
-        doc.save(`Invoice_${orderId}.pdf`);
-      } else {
-        const formData = new FormData();
-        formData.append("invoice", pdfBlob, `Invoice_${orderId}.pdf`);
-        formData.append("orderId", orderId);
-        fetch(`${apiEndPoint}/upload`, {
-          method: "POST",
-          body: formData,
-        }).catch(console.error);
+        // Right Header
+        doc
+          .setFontSize(11)
+          .setFont("helvetica", "bold")
+          .text(
+            "MURVEN INFOTECH DESIGN SOLUTIONS LLP",
+            rightMargin,
+            marginTop + 40,
+          );
+        doc
+          .setFontSize(9)
+          .setFont("helvetica", "normal")
+          .text(
+            [
+              "715-A, Spencer Plaza",
+              "Chennai - 600 002",
+              "GST: 33ABPFM6846A1Z8",
+            ],
+            rightMargin,
+            marginTop + 45,
+          );
+
+        // Table
+        autoTable(doc, {
+          startY: marginTop + 145,
+          head: [["No", "Description", "Price", "Qty", "Tax", "Total"]],
+          body: orderData.map((item, i) => [
+            i + 1,
+            item.Name,
+            `Rs. ${Math.round(item.price * 0.82)}`,
+            item.quantity,
+            "18%",
+            `Rs. ${item.price * item.quantity}`,
+          ]),
+          theme: "grid",
+          styles: { fontSize: 8 },
+        });
+
+        const pdfBlob = doc.output("blob");
+        if (shouldDownload) {
+          doc.save(`Invoice_${orderId}.pdf`);
+        } else {
+          const formData = new FormData();
+          formData.append("invoice", pdfBlob, `Invoice_${orderId}.pdf`);
+          formData.append("orderId", orderId);
+          fetch(`${apiEndPoint}/upload`, {
+            method: "POST",
+            body: formData,
+          }).catch(console.error);
+        }
+      } catch (err) {
+        setIsPdfGenerating(false);
+        console.warn("err", err);
+        toast.error("Error in Generating the Invoice PDF");
+      } finally {
+        setIsPdfGenerating(false);
       }
     },
     [orderId, orderData, priceDetails],
@@ -238,6 +254,16 @@ const OrderConfirmation = () => {
     }
   };
 
+  useEffect(() => {
+    localStorage.removeItem("CartCount");
+    localStorage.removeItem("FormContainer");
+    localStorage.removeItem("OrderData");
+    localStorage.removeItem("PaymentDetails");
+    localStorage.removeItem("PriceData");
+    localStorage.removeItem("keyid");
+    localStorage.removeItem("selectedlabel");
+  }, []);
+
   return (
     <div className="py-5!">
       <Paper elevation={3} className="p-2! md:p-6! bg-white rounded-xl">
@@ -264,28 +290,36 @@ const OrderConfirmation = () => {
             >
               Order Summary
             </Typography>
-            <List dense>
-              {orderData.map((item, idx) => (
-                <ListItem key={idx} className="px-0">
-                  <ListItemText
-                    primary={`${item.Name} (x${item.quantity})`}
-                    secondary={`Size: ${item.size} | Type: ${item.labeltype}`}
-                  />
-                  <Typography variant="body2" className="font-medium">
-                    Rs. {item.price * item.quantity}
-                  </Typography>
-                </ListItem>
-              ))}
-            </List>
-            <Divider className="my-2" />
-            <Box className="flex justify-between items-center mt-2!">
-              <Typography variant="subtitle1" className="font-bold">
-                Total Payable:
-              </Typography>
-              <Typography variant="h6" color="primary" className="font-bold">
-                Rs. {priceDetails.totalPrice}
-              </Typography>
-            </Box>
+            <div className="flex flex-col gap-2 items-start">
+              <List dense>
+                {orderData.map((item, idx) => (
+                  <ListItem
+                    key={idx}
+                    className="px-0 flex flex-row items-center gap-2 justify-between"
+                  >
+                    <ListItemText
+                      primary={`${item.Name} (x${item.quantity})`}
+                      secondary={`Size: ${item.size} | Type: ${item.labeltype}`}
+                    />
+                    <Typography
+                      variant="body2"
+                      className="font-medium whitespace-nowrap"
+                    >
+                      Rs. {item.price * item.quantity}
+                    </Typography>
+                  </ListItem>
+                ))}
+              </List>
+              <Divider className="my-2" />
+              <Box className="w-full! gap-1.5 flex justify-between items-center mt-2!">
+                <Typography variant="subtitle1" className="font-bold">
+                  Total Payable:
+                </Typography>
+                <Typography variant="h6" color="primary" className="font-bold">
+                  Rs. {priceDetails.totalPrice}
+                </Typography>
+              </Box>
+            </div>
           </Box>
 
           <Box className="bg-gray-50 p-4! rounded-lg">
@@ -295,18 +329,23 @@ const OrderConfirmation = () => {
             >
               Delivery Details
             </Typography>
-            <Typography variant="body2" className="mb-1!">
-              <strong>{formContainer.name}</strong>
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              {formContainer.address1}, {formContainer.district}
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-              {formContainer.state} - {formContainer.pincode}
-            </Typography>
-            <Typography variant="body2" className="mt-2!">
-              Phone: {formContainer.phone}
-            </Typography>
+            <div className="flex flex-col gap-1.5 items-start">
+              <Typography variant="body2">
+                <strong>{formContainer.name}</strong>
+              </Typography>
+              <Typography variant="body2">
+                Phone: {formContainer.phone}
+              </Typography>
+              <Typography variant="body2">
+                Email: {formContainer.email}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                {formContainer.address1}, {formContainer.district}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                {formContainer.state} - {formContainer.pincode}
+              </Typography>
+            </div>
           </Box>
         </div>
 
@@ -318,6 +357,7 @@ const OrderConfirmation = () => {
             startIcon={<PictureAsPdf />}
             onClick={() => generatePDF(true)}
             className="capitalize"
+            loading={isPdfGenerating}
           >
             Download Invoice
           </Button>
