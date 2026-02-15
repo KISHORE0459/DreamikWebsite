@@ -47,12 +47,10 @@ const CheckoutSection = ({
   const navigate = useNavigate();
   return (
     <Box className="w-full bg-white p-6! rounded-2xl! shadow-lg! flex flex-col gap-6!">
-      {/* TITLE */}
       <div className="w-full text-center mb-2!">
         <h2 className="text-[22px]! font-semibold! text-[#12345A]!">{title}</h2>
       </div>
 
-      {/* LABEL TYPE */}
       {showLabelType && (
         <FormControl fullWidth>
           <InputLabel>Label Type</InputLabel>
@@ -71,7 +69,6 @@ const CheckoutSection = ({
         </FormControl>
       )}
 
-      {/* LABEL SIZE */}
       {showLabelSize && (
         <FormControl fullWidth>
           <InputLabel>Label Size</InputLabel>
@@ -90,7 +87,6 @@ const CheckoutSection = ({
         </FormControl>
       )}
 
-      {/* QUANTITY */}
       <div className="flex items-center gap-4!">
         <span className="text-[18px]! font-medium! text-[#1A1A1A]!">
           Quantity:
@@ -129,14 +125,13 @@ const CheckoutSection = ({
         </Button>
       </div>
 
-      {/* PRICE */}
       <div className="flex items-center gap-1!">
         <span className="text-[18px]! font-medium! text-[#1A1A1A]!">
           Price:
         </span>
         <MdCurrencyRupee className="text-[#3E9D62]!" />
         <span className="text-[22px]! font-semibold! text-[#3E9D62]!">
-          {price}
+          {price * quantity}
         </span>
       </div>
 

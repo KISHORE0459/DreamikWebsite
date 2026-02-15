@@ -58,6 +58,7 @@ import { apiEndPoint } from "./appConfig";
 import AppLoader from "./AppComponents/AppLoader/AppLoader";
 import AppToastProvider from "./AppComponents/AppToast/AppToastProvider";
 import PendingOrder from "./components/PendingOrder";
+import CustomPencil from "./components/customPencils/customPencil";
 
 function AppContent() {
   const [isVisible, setIsVisible] = useState(true);
@@ -301,6 +302,7 @@ function AppContent() {
                 />
                 <Route path="/pending-orders" element={<PendingOrder />} />
                 <Route path="/my-order" element={<Myorder />} />
+                <Route path="/custom-pencil" element={<CustomPencil />} />
               </Routes>
             )}
             {/* <SplashModal visible={isVisible} setVisible={setIsVisible} /> */}

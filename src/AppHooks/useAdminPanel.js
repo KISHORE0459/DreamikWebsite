@@ -23,6 +23,7 @@ export const useAdminPanel = () => {
     whatsappno: "",
     address1: "",
     address2: "",
+    digipin: "",
     pincode: "",
     district: "",
     state: "",
@@ -46,7 +47,7 @@ export const useAdminPanel = () => {
     e.preventDefault();
     const admin = adminData.find(
       (u) =>
-        u.name === loginDetails.name && u.password === loginDetails.password
+        u.name === loginDetails.name && u.password === loginDetails.password,
     );
     admin ? setLoggedIn(true) : toast.error("Invalid username or password!");
   };

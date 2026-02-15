@@ -16,6 +16,7 @@ const CutoutNameSlipPersonalize = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const persImgRef = useRef(null);
+  const [isPreview, setIsPreview] = useState(false);
 
   // -------------------------------
   // ✅ ALL HOOKS MUST BE HERE AT TOP
@@ -69,7 +70,9 @@ const CutoutNameSlipPersonalize = () => {
 
   const [quantity, setQuantity] = useState(1);
   const [labelType, setLabelType] = useState("glossy");
-  const [labelSize, setLabelSize] = useState("Medium");
+  const [labelSize, setLabelSize] = useState(
+    "Medium - (100mm × 44mm) 12 labels - 36nos",
+  );
   const [extraSheet, setExtraSheet] = useState(false);
 
   const cutoutConfigs = {
@@ -82,12 +85,12 @@ const CutoutNameSlipPersonalize = () => {
     },
 
     labels: {
-      name: { top: "22%", left: "31%" },
-      school: { top: "64%", left: "49%" },
-      class: { top: "36%", left: "42%" },
-      section: { top: "36%", left: "74%" },
-      roll: { top: "55%", left: "30%" },
-      subject: { top: "50%", left: "50%" },
+      name: { top: "23%", left: "31%" },
+      school: { top: "67%", left: "49%" },
+      class: { top: "38%", left: "42%" },
+      section: { top: "38%", left: "74%" },
+      roll: { top: "57%", left: "30%" },
+      subject: { top: "52%", left: "50%" },
     },
   };
 
@@ -146,13 +149,33 @@ const CutoutNameSlipPersonalize = () => {
   const price = product.price + (extraSheet ? 40 : 0);
 
   const handleDownload = async () => {
-    const canvas = await html2canvas(persImgRef.current, {
-      backgroundColor: null,
-    });
-    const link = document.createElement("a");
-    link.download = "cutout.png";
-    link.href = canvas.toDataURL();
-    link.click();
+    setIsPreview(true);
+
+    await setTimeout(() => {}, 300);
+
+    if (!persImgRef.current) {
+      console.error("Target element not found.");
+      return;
+    }
+
+    try {
+      const canvas = await html2canvas(persImgRef.current, {
+        backgroundColor: null,
+        useCORS: true,
+        logging: true,
+      });
+
+      const dataUrl = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.download = "cutout.png";
+      link.href = dataUrl;
+      link.click();
+
+      setIsPreview(false);
+    } catch (err) {
+      setIsPreview(false);
+      console.error("Caught error:", err);
+    }
   };
 
   const handleAddToCart = async () => {
@@ -204,6 +227,7 @@ const CutoutNameSlipPersonalize = () => {
           persImgContRef={persImgRef}
           isImageBack={isImageBack}
           config={cutoutConfigs}
+          isPreview={isPreview}
         />
 
         {/* RIGHT SIDE - CONTROLS */}

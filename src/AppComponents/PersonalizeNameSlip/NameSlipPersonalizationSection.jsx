@@ -87,6 +87,7 @@ export default function NameSlipPersonalizationSection({
           onChange={(v) => updateField("schoolName", v)}
           labelTransforms={labelTransforms}
           setLabelTransforms={setLabelTransforms}
+          maxLen={32}
         />
 
         <Accordion

@@ -22,13 +22,14 @@ const NameSlipPersonalize = () => {
   const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
   const persImgRef = useRef(null);
+  const [isPreview, setIsPreview] = useState(false);
 
   // -----------------------------------------
   // TEMPLATE
   // -----------------------------------------
   const templateConfig = useMemo(
     () => templateConfigs?.[templateID],
-    [templateID]
+    [templateID],
   );
 
   if (!templateConfig) {
@@ -140,9 +141,6 @@ const NameSlipPersonalize = () => {
 
   const [fontFamily, setFontFamily] = useState("Arial");
 
-  // -----------------------------------------
-  // COLOR CHANGE HANDLER (updates all labels)
-  // -----------------------------------------
   const handlecolorchange = (hex) => {
     setLabelTransforms((prev) => {
       const updated = {};
@@ -153,18 +151,14 @@ const NameSlipPersonalize = () => {
     });
   };
 
-  // -----------------------------------------
-  // DELETE IMAGE HANDLER
-  // -----------------------------------------
   const handleDeleteImage = () => {
     setSelectedImage(null);
   };
 
-  // -----------------------------------------
-  // CHECKOUT STATE
-  // -----------------------------------------
   const [labelType, setLabelType] = useState("matte");
-  const [labelSize, setLabelSize] = useState("Medium - 100 × 44 mm");
+  const [labelSize, setLabelSize] = useState(
+    "Medium - (100mm × 44mm) 12 labels - 36nos",
+  );
   const [extraSheet, setExtraSheet] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
@@ -191,18 +185,33 @@ const NameSlipPersonalize = () => {
   // DOWNLOAD IMAGE
   // -----------------------------------------
   const handleDownload = async () => {
-    if (!persImgRef.current) return;
+    setIsPreview(true);
 
-    await document.fonts.ready;
-    const canvas = await html2canvas(persImgRef.current, {
-      scale: 2,
-      useCORS: true,
-      letterRendering: true,
-    });
-    const link = document.createElement("a");
-    link.download = "name-slip.png";
-    link.href = canvas.toDataURL();
-    link.click();
+    await setTimeout(() => {}, 300);
+
+    if (!persImgRef.current) {
+      console.error("Target element not found.");
+      return;
+    }
+
+    try {
+      const canvas = await html2canvas(persImgRef.current, {
+        backgroundColor: null,
+        useCORS: true,
+        logging: true,
+      });
+
+      const dataUrl = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.download = "cutout.png";
+      link.href = dataUrl;
+      link.click();
+
+      setIsPreview(false);
+    } catch (err) {
+      setIsPreview(false);
+      console.error("Caught error:", err);
+    }
   };
 
   // -----------------------------------------
@@ -220,12 +229,12 @@ const NameSlipPersonalize = () => {
 
         const now = new Date();
         const formattedDateTime = `${now.getFullYear()}-${String(
-          now.getMonth() + 1
+          now.getMonth() + 1,
         ).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}T${String(
-          now.getHours()
+          now.getHours(),
         ).padStart(2, "0")}:${String(now.getMinutes()).padStart(
           2,
-          "0"
+          "0",
         )}:${String(now.getSeconds()).padStart(2, "0")}`;
 
         // Ensure price and quantity are being passed correctly
@@ -342,6 +351,7 @@ const NameSlipPersonalize = () => {
           labelTransforms={labelTransforms}
           studentDetails={studentDetails}
           persImgContRef={persImgRef}
+          isPreview={isPreview}
         />
       </div>
 

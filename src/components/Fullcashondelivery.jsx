@@ -50,7 +50,7 @@ const FullCashOnDelivery = () => {
     console.log("Generated File:", fileName);
 
     toast.success(
-      "Your information has been received successfully!\nOur team will contact you shortly."
+      "Your information has been received successfully!\nOur team will contact you shortly.",
     );
 
     setFormData({

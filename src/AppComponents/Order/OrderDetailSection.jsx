@@ -57,6 +57,7 @@ export default function OrderDetailsSection({
       address1: fc.address1 || "",
       address2: fc.address2 || "",
       landmark: fc.landmark || "",
+      digipin: fc.digipin || "",
     },
   });
 
@@ -243,6 +244,23 @@ export default function OrderDetailsSection({
           />
 
           <TextField label="Address Line 2" {...register("address2")} />
+
+          <div className="w-full flex flex-col gap-1 justify-start items-start">
+            <TextField
+              label="Digi PIN"
+              {...register("digipin")}
+              className="w-full"
+            />
+            <div className="w-full flex justify-end items-end">
+              <a
+                href="https://www.digipin.com/"
+                target="_blank"
+                className="text-blue-300 hover:text-blue-400 underline"
+              >
+                Get your digi pin here
+              </a>
+            </div>
+          </div>
 
           <Button
             type="submit"

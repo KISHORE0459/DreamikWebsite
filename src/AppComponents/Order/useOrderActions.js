@@ -300,6 +300,7 @@ export const useOrderActions = ({
       whatsappno: formValues.whatsappno || "",
       address1: formValues.address1 || "",
       address2: formValues.address2 || "",
+      digipin: formValues.digipin || "",
       pincode: formValues.pincode || "",
       district: formValues.district || "",
       state: formValues.state || "",

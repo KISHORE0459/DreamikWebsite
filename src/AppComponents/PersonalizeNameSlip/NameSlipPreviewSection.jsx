@@ -1,7 +1,6 @@
 "use client";
 
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import useBreakpointValue from "../../AppHooks/useBreakPointValues";
 
 const NameSlipPreviewSection = ({
@@ -16,6 +15,7 @@ const NameSlipPreviewSection = ({
   circleImage,
   imageTransforms,
   persImgContRef,
+  isPreview = false,
 }) => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const selectedWatermark =
@@ -52,7 +52,7 @@ const NameSlipPreviewSection = ({
     const trans = labelTransforms[key + "Trans"];
 
     return (
-      <span
+      <h3
         className="absolute font-semibold select-none"
         style={{
           top: labelConfig?.top,
@@ -66,7 +66,7 @@ const NameSlipPreviewSection = ({
           fontFamily: trans?.fontFamily || "Arial",
           transformOrigin: "0 0", // ✅ CRITICAL
           transform: `
-      translate(${trans?.translateX}px, ${trans?.translateY}px)
+      translate(${trans?.translateX}px, ${isPreview ? trans?.translateY - 15 : trans?.translateY}px)
       scale(${trans?.scale})
       rotate(${trans?.rotate}deg)
       scaleX(${trans?.mirror})
@@ -75,7 +75,7 @@ const NameSlipPreviewSection = ({
         }}
       >
         {text}
-      </span>
+      </h3>
     );
   };
 

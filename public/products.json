@@ -188,14 +188,14 @@
     "category": "Stationary",
     "image": "productlogos/customized_pencil_logo.webp",
     "productcode": "5e10bf",
-    "price": 100.0,
+    "price": 150.0,
     "status": 1,
     "logo": "/AddLogo/PencilLogo.svg",
-    "props": ["name slips", "label", "logo", "custamize", "5e10bf"],
-    "outOfStock": true,
+    "props": ["pencil", "name", "customizable", "custamize", "5e10bf"],
+    "outOfStock": false,
     "Reseller": false,
     "rating": 5,
-    "url": "/cutout-name-slip"
+    "url": "/custom-pencil"
   },
   "Notebooks": {
     "name": "Notebooks",

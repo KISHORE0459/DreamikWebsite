@@ -166,6 +166,10 @@ const OrderConfirmation = () => {
             marginTop + 45,
           );
 
+        doc
+          .setFontSize(11)
+          .text(`Invoice ID: ${orderId}`, marginLeft, marginTop + 70);
+
         // Table
         autoTable(doc, {
           startY: marginTop + 145,
