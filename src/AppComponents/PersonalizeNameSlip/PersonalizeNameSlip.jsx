@@ -221,6 +221,8 @@ const NameSlipPersonalize = () => {
     if (quantity <= 0) {
       return toast.error("Set quantity atleast 1 ");
     }
+    setIsPreview(true);
+    await setTimeout(() => {}, 300);
 
     if (persImgRef.current) {
       try {
@@ -303,6 +305,8 @@ const NameSlipPersonalize = () => {
           }
         });
 
+        setIsPreview(false);
+
         const existingCart =
           JSON.parse(localStorage.getItem("OrderData")) || [];
 
@@ -320,21 +324,16 @@ const NameSlipPersonalize = () => {
       } catch (error) {
         console.error("Error capturing the div:", error);
         toast.error("Error in adding product");
+        setIsPreview(false);
       }
     }
     navigate("/Order");
   };
 
-  // -----------------------------------------
-  // WHATSAPP
-  // -----------------------------------------
   const sendToWhatsApp = () => {
     window.open("https://wa.me/919498088659", "_blank");
   };
 
-  // -----------------------------------------
-  // UI LAYOUT (MATCHING YOUR SCREENSHOT)
-  // -----------------------------------------
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4!">
       {/* LEFT SIDE — PREVIEW */}

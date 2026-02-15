@@ -179,32 +179,43 @@ const CutoutNameSlipPersonalize = () => {
   };
 
   const handleAddToCart = async () => {
-    const canvas = await html2canvas(persImgRef.current, {
-      backgroundColor: null,
-    });
+    try {
+      setIsPreview(true);
+      await setTimeout(() => {}, 300);
 
-    const img = canvas.toDataURL();
+      const canvas = await html2canvas(persImgRef.current, {
+        backgroundColor: null,
+        useCORS: true,
+        logging: true,
+      });
 
-    const item = {
-      image: img,
-      productID: product.productcode,
-      name: product.name,
-      quantity,
-      labelType,
-      labelSize,
-      extraSheet,
-      price: price * quantity,
-      selectedImage,
-      studentDetails,
-      labelTransforms,
-    };
+      const img = canvas.toDataURL();
 
-    const prev = JSON.parse(localStorage.getItem("OrderData")) || [];
-    prev.push(item);
-    localStorage.setItem("OrderData", JSON.stringify(prev));
+      const item = {
+        image: img,
+        productID: product.productcode,
+        name: product.name,
+        quantity,
+        labelType,
+        labelSize,
+        extraSheet,
+        price: price * quantity,
+        selectedImage,
+        studentDetails,
+        labelTransforms,
+      };
+      setIsPreview(false);
 
-    toast.success("Added to cart!");
-    navigate("/Order");
+      const prev = JSON.parse(localStorage.getItem("OrderData")) || [];
+      prev.push(item);
+      localStorage.setItem("OrderData", JSON.stringify(prev));
+
+      toast.success("Added to cart!");
+      navigate("/Order");
+    } catch (err) {
+      setIsPreview(false);
+      console.err(err);
+    }
   };
 
   // -------------------------------

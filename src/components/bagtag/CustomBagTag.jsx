@@ -21,6 +21,7 @@ import toast from "react-hot-toast";
 const CustomBagTag = () => {
   // commit to change the path
   const canvasRef = useRef(null);
+  const [isPreview, setIsPreview] = useState(false);
 
   const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const CustomBagTag = () => {
       scale: 1,
       rotate: 0,
       translateX: 0,
-      translateY: 400,
+      translateY: 350,
       mirror: 1,
       color: "#000",
       fontFamily: "Arial",
@@ -76,12 +77,26 @@ const CustomBagTag = () => {
 
   /* ---------------- DOWNLOAD ---------------- */
   const handleDownload = async () => {
-    if (!canvasRef.current) return;
-    const canvas = await html2canvas(canvasRef.current, { scale: 2 });
-    const link = document.createElement("a");
-    link.download = "bagtag.png";
-    link.href = canvas.toDataURL();
-    link.click();
+    try {
+      if (!canvasRef.current) return;
+
+      setIsPreview(true);
+      await setTimeout(() => {}, 300);
+
+      const canvas = await html2canvas(canvasRef.current, {
+        backgroundColor: null,
+        useCORS: true,
+        logging: true,
+      });
+      const link = document.createElement("a");
+      link.download = "bagtag.png";
+      link.href = canvas.toDataURL();
+      setIsPreview(false);
+      link.click();
+    } catch (err) {
+      setIsPreview(false);
+      console.error(err);
+    }
   };
 
   const handleAddToCart = async () => {
@@ -92,19 +107,25 @@ const CustomBagTag = () => {
 
     if (!canvasRef.current) return;
 
+    setIsPreview(true);
+    setTimeout(() => {}, 300);
+
     try {
-      // 1️⃣ Capture preview
-      const canvas = await html2canvas(canvasRef.current, { scale: 2 });
+      const canvas = await html2canvas(canvasRef.current, {
+        backgroundColor: null,
+        useCORS: true,
+        logging: true,
+      });
       const imageData = canvas.toDataURL("image/png");
 
       // 2️⃣ Timestamp (same format)
       const now = new Date();
       const formattedDateTime = `${now.getFullYear()}-${String(
-        now.getMonth() + 1
+        now.getMonth() + 1,
       ).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}T${String(
-        now.getHours()
+        now.getHours(),
       ).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(
-        now.getSeconds()
+        now.getSeconds(),
       ).padStart(2, "0")}`;
 
       // 3️⃣ Extract label data (name only)
@@ -146,6 +167,7 @@ const CustomBagTag = () => {
 
       existingCart.push(productDetails);
 
+      setIsPreview(false);
       localStorage.setItem("OrderData", JSON.stringify(existingCart));
 
       // 6️⃣ Update cart UI
@@ -156,6 +178,7 @@ const CustomBagTag = () => {
     } catch (err) {
       console.error("Add to cart failed:", err);
       toast.error("Something went wrong while adding to cart");
+      setIsPreview(false);
     }
   };
 
@@ -176,10 +199,7 @@ const CustomBagTag = () => {
             }}
           >
             {bgImage && (
-              <img
-                src={bgImage}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <img src={bgImage} className="absolute inset-0 w-full h-full" />
             )}
 
             {selectedImage && (
@@ -193,11 +213,13 @@ const CustomBagTag = () => {
                   left: "20%",
                   transform: `
             translate(${imageTransforms.translateX}px, ${
-                    imageTransforms.translateY
-                  }px)
+              isPreview
+                ? imageTransforms.translateY - 15
+                : imageTransforms.translateY
+            }px)
             scale(${imageTransforms.scale * imageTransforms.mirror}, ${
-                    imageTransforms.scale
-                  })
+              imageTransforms.scale
+            })
             rotate(${imageTransforms.rotate}deg)
           `,
                   border: imageBorder ? "2px solid #000" : "none",
